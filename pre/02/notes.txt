@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW01
+2021-09-27
+*/
 
+Our code worked fine since we typed all of the parts of the code correctly. 
