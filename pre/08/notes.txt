@@ -4,4 +4,4 @@ HW05 -- SummerHW08
 2021-09-27
 */
 
-Weichen and Brian did not see the codingbat problems at the bottom of the page and only finished up to and including Arrays. 
+We didn't really have trouble with most of these. We just did them through trial and errors. 
