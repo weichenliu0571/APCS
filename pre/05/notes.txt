@@ -5,4 +5,4 @@ HW05 -- SummerHW05
 */
 
 
-We used conditional statements and the instructions to figure out how we would set up the algoritms to print what we want. 
+We used conditional statements and the instructions to figure out how we would set up the algorithms to print what we want. 
