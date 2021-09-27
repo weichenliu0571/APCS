@@ -1,1 +1,8 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW05
+2021-09-27
+*/
 
+
+We used conditional statements and the instructions to figure out how we would set up the algoritms to print what we want. 
