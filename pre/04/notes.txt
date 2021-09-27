@@ -1,1 +1,8 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW04
+2021-09-27
+*/
 
+
+We just noted how useful these conditionals would be for the future. 
