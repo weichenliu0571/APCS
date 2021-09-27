@@ -1,1 +1,7 @@
+/* Giant Pandas (Brian Li, Melody, Weichen Liu)
+APCS
+HW05 -- SummerHW08
+2021-09-27
+*/
 
+Weichen and Brian did not see the codingbat problems at the bottom of the page and only finished up to and including Arrays. 
