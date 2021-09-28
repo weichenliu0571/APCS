@@ -1,1 +1,13 @@
+Giant Pandas (Brian Li, Melody Lew, Weichen Liu)
+APCS
+HW06 -- paradigms
+2021-09-28
 
+
+
+Racket: 
+
+#lang racket
+(display "Hello World")
+
+Netlogo
