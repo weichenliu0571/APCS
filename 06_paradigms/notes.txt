@@ -10,4 +10,12 @@ Racket:
 #lang racket
 (display "Hello World")
 
-Netlogo
+Netlogo:
+
+write "Hello World"
+
+Python:
+
+print("Hello World")
+
+All of them contain Hello World in parenthesis. 
