@@ -18,4 +18,9 @@ Python:
 
 print("Hello World")
 
+
+Similarities:
 All of them contain Hello World in parenthesis. 
+
+Differences:
+The syntax is different. 
