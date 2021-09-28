@@ -8,19 +8,21 @@ HW06 -- paradigms
 Racket: 
 
 #lang racket
-(display "Hello World")
+(display "Hello, world!")
 
 Netlogo:
 
-write "Hello World"
+to helloWorld
+  print "Hello, world!"
+end
 
 Python:
 
-print("Hello World")
+print("Hello, world!")
 
 
 Similarities:
-All of them contain Hello World in parenthesis. 
+All of them contain Hello World in quotation. 
 
 Differences:
-The syntax is different. 
+The syntax is different. The print function is inside the parenthesis for racket, but outside for python. Netlogo does not even have parenthesis. Netlogo seems to be the most complicated because you have to make a whole method to print "Hello, world!".
