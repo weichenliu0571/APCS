@@ -7,4 +7,4 @@ HW06 -- Scheme's Hello, World!
 
 
 #lang racket
-(display "Hello World")
+(display "Hello, World!")
