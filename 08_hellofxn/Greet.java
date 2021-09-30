@@ -14,9 +14,9 @@ UNRESOLVED QUESTIONS
 
 public class Greet {
     public static void main(String[] args) {
-        greet("Tyler Herro");
-        greet("Anthony Davis");
-        greet("Trae Young");
+        greet("Kevin Durant");
+        greet("Jordan Clark");
+        greet("Lebron James");
     }
     
     public static void greet(String name) {
