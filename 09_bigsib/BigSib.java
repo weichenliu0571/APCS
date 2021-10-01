@@ -7,8 +7,6 @@ HW09 -- What Are BigSibs Good For?
 
 
 public class BigSib {
-    public static void main(String[] args) {
-    }
     
     public static void greet(String name) {
     	System.out.println("Why, hello there, " + name + ". How do you do?");
