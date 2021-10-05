@@ -20,7 +20,7 @@ public class BigSib {
  }
  
  public static String greet(String x) {
-  String answer = helloMsg + " " + x;
+  String answer = x + " " + x;
   return answer;
  }
  
