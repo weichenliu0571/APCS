@@ -10,4 +10,15 @@ UNRESOLVED QUESTIONS
  0. 
 */
 
-
+public class BigSib(String x) {
+ 
+ public String helloMsg;
+ 
+ public static String setHelloMsg(String x) {
+  helloMsg = x;
+ }
+ 
+ public static String greet(String x) {
+  String answer = helloMsg + " " + x;
+ }
+}
