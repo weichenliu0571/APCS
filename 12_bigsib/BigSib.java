@@ -15,7 +15,8 @@ public class BigSib {
  public static String helloMsg;
  
  public static String setHelloMsg(String x) {
-  helloMsg = x;
+  x = helloMsg;
+  return x;
  }
  
  public static String greet(String x) {
