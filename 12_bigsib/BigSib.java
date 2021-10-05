@@ -1,5 +1,5 @@
 /*
-Giant Pandas (Brian Li, Melody Lew, Weichen Liu, Robert, Blueface, Ollie)
+Giant Rabbit (Brian Wang, Weichen Liu, Blueface)
 APCS
 HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
 2021-10-05
