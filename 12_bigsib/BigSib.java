@@ -10,7 +10,7 @@ UNRESOLVED QUESTIONS
  0. 
 */
 
-public class BigSib(String x) {
+public class BigSib {
  
  public static String helloMsg;
  
@@ -22,4 +22,5 @@ public class BigSib(String x) {
   String answer = helloMsg + " " + x;
   return answer;
  }
+ 
 }
