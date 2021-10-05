@@ -14,7 +14,6 @@ UNRESOLVED QUESTIONS
 
 public class BigSib {
  
- public String helloMsg;
  
  public String setHelloMsg(String x) {
   helloMsg = x;
