@@ -12,7 +12,7 @@ UNRESOLVED QUESTIONS
 
 public class BigSib(String x) {
  
- public String helloMsg;
+ public static String helloMsg;
  
  public static String setHelloMsg(String x) {
   helloMsg = x;
