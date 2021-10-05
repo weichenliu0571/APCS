@@ -18,7 +18,7 @@ public class Greet {
     richard.setHelloMsg( "Word up" );
     
     greeting = richard.greet( "freshman" );
-    System.out.println( greeting )
+    System.out.println( greeting );
       
   } // end main()
 } // end Greet
