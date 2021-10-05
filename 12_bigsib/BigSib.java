@@ -15,12 +15,12 @@ public class BigSib {
  public static String helloMsg;
  
  public static String setHelloMsg(String x) {
-  x = helloMsg;
-  return x;
+  helloMsg = x;
+  return helloMsg;
  }
  
  public static String greet(String x) {
-  String answer = x + " " + x;
+  String answer = helloMsg + " " + x;
   return answer;
  }
  
