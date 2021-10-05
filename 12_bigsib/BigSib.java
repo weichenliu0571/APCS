@@ -12,10 +12,10 @@ UNRESOLVED QUESTIONS
 
 public class BigSib {
  
- public static String helloMsg;
+ public String helloMsg;
  
- public static String setHelloMsg(String x) {
-  helloMsg = new String(x);
+ public String setHelloMsg(String x) {
+  helloMsg = x;
   return helloMsg;
  }
  
