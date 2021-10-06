@@ -1,13 +1,14 @@
 /*
 Giant Rabbit (Brian Wang, Weichen Liu, Blueface, Dolphin)
 APCS
-HW12 -- Where do BigSibs Come From?
+HW13 -- Where do BigSibs Come From?
 2021-10-06
 DISCOVERIES
- 0. 
+ 0. The constructor removes the need for the method setHelloMsg. 
+ 1. Instead of needing to use another line to invoke setHelloMsg, the constructor runs immediatly after you create a new object. It runs when new is called.
     
 UNRESOLVED QUESTIONS
- 0. 
+ 0. What else can we do with constructors?
 */
 
 public class Greet {
