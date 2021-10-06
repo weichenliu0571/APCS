@@ -14,15 +14,10 @@ public class Greet {
   public static void main(String[] args) {
     String greeting;
     
-    BigSib richard = new BigSib(); // creates an object called richard whose class is BigSib
-    BigSib johnson = new BigSib();
-    BigSib jacob = new BigSib();
-    BigSib justin = new BigSib();
-   
-    richard.setHelloMsg( "Word up" ); // the instance variable "HelloMsg" in the object richard is set to "Word Up" 
-    johnson.setHelloMsg( "Salutations" );
-    jacob.setHelloMsg( "Hey ya");
-    justin.setHelloMsg( "Sup");
+    BigSib richard = new BigSib( "Word up" ); // creates an object called richard whose class is BigSib
+    BigSib johnson = new BigSib( "Salutations" );
+    BigSib jacob = new BigSib( "Hey ya" );
+    BigSib justin = new BigSib( "Sup" );
     
     greeting = richard.greet( "freshman" ); // The String greeting is set to = to the String that is returned when the method greet in the object richard is invoked. 
     System.out.println( greeting ); // Just prints the string
