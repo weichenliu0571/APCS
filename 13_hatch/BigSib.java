@@ -15,15 +15,11 @@ public class BigSib {
   Private String helloMsg;
   
   public BigSib( String Msg ) {
-    setHelloMsg(Msg);
+    helloMsg = Msg;
   }
   
-  //methods
-  public void setHelloMsg( String newMsg ) {
-    HelloMsg = newMsg;
-  }
  
  public String greet(String name) {
-  return HelloMsg + " " + name;
+  return helloMsg + " " + name;
  }
 }
