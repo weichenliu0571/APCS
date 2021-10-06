@@ -1,5 +1,5 @@
 /*
-Giant Rabbit (Brian Wang, Weichen Liu, Blueface, Dolphin
+Giant Rabbit (Brian Wang, Weichen Liu, Blueface, Dolphin)
 APCS
 HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
 2021-10-06
