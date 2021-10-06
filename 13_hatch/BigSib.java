@@ -12,7 +12,7 @@ UNRESOLVED QUESTIONS
 
 public class BigSib {
   //instance vars
-  Private String helloMsg;
+  String helloMsg;
   
   public BigSib( String Msg ) {
     helloMsg = Msg;
