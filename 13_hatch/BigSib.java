@@ -1,7 +1,7 @@
 /*
 Giant Rabbit (Brian Wang, Weichen Liu, Blueface, Dolphin)
 APCS
-HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
+HW12 -- Where do BigSibs Come From?
 2021-10-06
 DISCOVERIES
  0. 
