@@ -9,16 +9,16 @@ public class Greet {
     greeting = richard.greet("freshman");
     System.out.println(greeting);
     
-    tracy.setHelloMsg("Salutations")
+    tracy.setHelloMsg("Salutations");
     greeting = tracy.greet("Dr. Spaceman");
     System.out.println(greeting);
  
-    grizz.setHelloMsg("Hey ya")
+    grizz.setHelloMsg("Hey ya");
     greeting = grizz.greet("Kong Fooey");
     System.out.println(greeting);
     
     
-    dotCom.setHelloMsg("Sup")
+    dotCom.setHelloMsg("Sup");
     greeting = dotCom.greet("mom");
     System.out.println(greeting);
     
