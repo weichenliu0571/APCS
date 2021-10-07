@@ -2,7 +2,7 @@
 public class Greet {
   public static void main( String[] args ) {
     String greeting;
-    BigSib richard = new BigSib("Word Up");
+    BigSib richard = new BigSib();
     BigSib grizz = new BigSib("Hey ya");
     BigSib dotCom = new BigSib("Sup");
     BigSib tracy = new BigSib("Salutations");
