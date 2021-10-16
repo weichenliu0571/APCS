@@ -1,3 +1,33 @@
+/*
+Geese (Brian Li, Weichen Liu, Anthony Sun, Kahoot, Blueface, Corn)
+APCS
+Hw18 -- CPA-One
+2021-10-18
+
+DISCOVERIES
+- Static is needed to use instance variables in the same class. 
+- If a class is executable, then its method must be static. 
+- You could use a setter method to change private variables.
+
+QCC
+- Is it possible to not use static when running a method in the same class. 
+
+
+Q2
+- When generating an instance of a class, new ClassName();, parenthesis are used, which denotes a method(function is called). 
+- An object is created, which means that something returned the object when instance is created.
+
+
+Q3: 
+- create object
+- try System.out.println(objName)
+- check is valid output is given.
+*/
+
+
+
+
+
 public class BankAccount {
   private static String name;
   private static String password;
