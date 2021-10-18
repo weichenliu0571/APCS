@@ -113,9 +113,9 @@ public class BankAccount {
     bc.setName("Sheesh");
     bc.setPasswd("brokeme123");
     System.out.println("\nShould not work:");
-    ba.setPin((short) 12345);
-    ba.setAcctNum(99999);
-    ba.setBalance(100);
+    bc.setPin((short) 12345);
+    bc.setAcctNum(99999);
+    bc.setBalance(100);
     System.out.println(bc.toString());
     System.out.println(bc.authenticate(0 , "brokeme123"));
     
