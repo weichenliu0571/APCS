@@ -42,11 +42,10 @@ public class BankAccount {
     int oldAcctNum = acctNum;
     if (newAcctNum >= 100000000 && newAcctNum < 999999999) {
        acctNum = newAcctNum;
-    } else {
+    }
        acctNum = 999999999;
        System.out.println("ERROR! Account number invalid!");
-    }
-    return oldAcctNum;
+       return oldAcctNum;
   }
 
   public double setBalance( double newBalance ) {
@@ -65,18 +64,16 @@ public class BankAccount {
     if (balance - withdrawAmount >= 0) {
     balance = balance - withdrawAmount;
        return true;
-    } else {
+    } 
        System.out.println("ERROR! Not enough Money!");
        return false; 
-    }
   }
         
   public boolean authenticate(int givenAccNum, String givenPassword) {
      if (acctNum == givenAccNum && passwd == givenPassword) {
         return true;
-     } else {
+     } 
         return false;
-     }
   }
 
 
