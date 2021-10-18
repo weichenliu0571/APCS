@@ -97,6 +97,7 @@ public class BankAccount {
     ba.setPasswd("qwertyuiop1234mydogiscalledsnowball");   
     ba.setPin((short) 1234);  
     ba.setAcctNum(100000012);  
+    ba.setAcctNum(0);
     ba.setBalance(100);  
     System.out.println(ba.toString());  
     System.out.println("\ndeposited 40 dollars:");  
