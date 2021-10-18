@@ -32,7 +32,7 @@ public class BankAccount {
      if (newPin >= 1000 && newPin < 9999) {
         pin = newPin;
      } else {
-        pin = 9999;
+        pin = 999;
         System.out.println("ERROR! Pin is invalid!");
         }
     return oldPin;
@@ -43,7 +43,7 @@ public class BankAccount {
     if (newAcctNum >= 100000000 && newAcctNum < 999999999) {
        acctNum = newAcctNum;
     } else {
-       acctNum = 999999999;
+       acctNum = 99999999;
        System.out.println("ERROR! Account number invalid!");
     }
     return oldAcctNum;
