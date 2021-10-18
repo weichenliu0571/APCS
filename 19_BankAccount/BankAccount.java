@@ -121,6 +121,13 @@ public class BankAccount {
     System.out.println("\nwithdrew 50 dollars:");  
     ba.withdraw(50);  
     System.out.println(ba.toString());  
+     
+    BankAccount bc = new BankAccount();
+    bc.setName("Sheesh");
+    bc.setPasswd("brokeme123");
+    System.out.println("Should not work:")
+    short pin = 12346;
+    
   }//end main()
 
 }//end class BankAccount
