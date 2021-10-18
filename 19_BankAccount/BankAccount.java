@@ -44,7 +44,7 @@ public class BankAccount {
     short oldPin = pin;
      if (newPin >= 1000 && newPin < 9999) {
         pin = newPin;
-     } else (
+     } else {
         pin = 9999;
         System.out.println("ERROR! Pin is invalid!");
         }
