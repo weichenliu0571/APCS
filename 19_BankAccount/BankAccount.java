@@ -125,7 +125,7 @@ public class BankAccount {
     BankAccount bc = new BankAccount();
     bc.setName("Sheesh");
     bc.setPasswd("brokeme123");
-    System.out.println("Should not work:")
+    System.out.println("Should not work:");
     short pin = 12346;
     
   }//end main()
