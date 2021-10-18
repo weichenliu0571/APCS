@@ -118,6 +118,10 @@ public class BankAccount {
     bc.setBalance(100);
     System.out.println(bc.toString());
     System.out.println(bc.authenticate(0 , "brokeme123"));
+    System.out.println("\nwithdrew 150 dollars, should not work:");  
+    bc.withdraw(150);  
+    System.out.println(bc.toString());  
+    
     
   }//end main()
 
