@@ -85,9 +85,9 @@ public class BankAccount {
         
   public boolean authenticate(int givenAccNum, String givenPassword) {
      if (acctNum == givenAccNum && passwd == givenPassword) {
-        return true
+        return true;
      } else {
-        return false
+        return false;
      }
   }
 
