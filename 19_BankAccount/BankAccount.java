@@ -92,10 +92,10 @@ public class BankAccount {
     ba.setAcctNum(100000012);  
     ba.setBalance(100);  
     System.out.println(ba.toString());  
-    System.out.println("\\ndeposited 40 dollars:");  
+    System.out.println("\ndeposited 40 dollars:");  
     ba.deposit(40);  
     System.out.println(ba.toString());  
-    System.out.println("\\nwithdrew 50 dollars:");  
+    System.out.println("\nwithdrew 50 dollars:");  
     ba.withdraw(50);  
     System.out.println(ba.toString());  
   }//end main()
