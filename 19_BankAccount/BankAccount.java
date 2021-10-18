@@ -42,9 +42,10 @@ public class BankAccount {
     int oldAcctNum = acctNum;
     if (newAcctNum >= 100000000 && newAcctNum < 999999999) {
        acctNum = newAcctNum;
-    }
+    }  else {
        acctNum = 999999999;
        System.out.println("ERROR! Account number invalid!");
+    }
        return oldAcctNum;
   }
 
