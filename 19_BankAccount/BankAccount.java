@@ -115,7 +115,7 @@ public class BankAccount {
     System.out.println("Should not work:");
     ba.setPin((short) 12345);
     ba.setAcctNum(99999);
-    System.out.println(AcctNum);
+    System.out.println(bc.toString());
     
   }//end main()
 
