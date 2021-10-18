@@ -42,13 +42,23 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    pin = newPin;
+     if (newPin >= 1000 && newPin < 9999) {
+        pin = newPin;
+     } else (
+        pin = 9999;
+        System.out.println("ERROR! Pin is invalid!");
+        }
     return oldPin;
   }
 
   public int setAcctNum( int newAcctNum ) {
     int oldAcctNum = acctNum;
-    acctNum = newAcctNum;
+    if (newAcctNum >= 100000000 && newAcctNum < 999999999) {
+       acctNum = newAcctNum;
+    } else {
+       acctNum = 999999999;
+       System.out.println("ERROR! Account number invalid!");
+    }
     return oldAcctNum;
   }
 
@@ -64,8 +74,21 @@ public class BankAccount {
     balance = balance + depositAmount;
   }
 
-  public void withdraw( double withdrawAmount ) {
+  public boolean withdraw( double withdrawAmount ) {
+    if (balance - withdrawAmount >= 0) {
     balance = balance - withdrawAmount;
+    } else {
+       System.out.println("ERROR! Not enough Money!");
+       return false; 
+    }
+  }
+        
+  public boolean authenticate(int givenAccNum, String givenPassword) {
+     if (acctNum == givenAccNum && passwd == givenPassword) {
+        return true
+     } else {
+        return false
+     }
   }
 
 
