@@ -77,6 +77,7 @@ public class BankAccount {
   public boolean withdraw( double withdrawAmount ) {
     if (balance - withdrawAmount >= 0) {
     balance = balance - withdrawAmount;
+       return true;
     } else {
        System.out.println("ERROR! Not enough Money!");
        return false; 
