@@ -32,7 +32,7 @@ public class BankAccount {
      if (newPin >= 1000 && newPin < 9999) {
         pin = newPin;
      } else {
-        pin = 999;
+        pin = 9999;
         System.out.println("ERROR! Pin is invalid!");
         }
     return oldPin;
@@ -43,7 +43,7 @@ public class BankAccount {
     if (newAcctNum >= 100000000 && newAcctNum < 999999999) {
        acctNum = newAcctNum;
     } else {
-       acctNum = 99999999;
+       acctNum = 999999999;
        System.out.println("ERROR! Account number invalid!");
     }
     return oldAcctNum;
@@ -112,10 +112,11 @@ public class BankAccount {
     BankAccount bc = new BankAccount();
     bc.setName("Sheesh");
     bc.setPasswd("brokeme123");
-    System.out.println("Should not work:");
+    System.out.println("/nShould not work:");
     ba.setPin((short) 12345);
     ba.setAcctNum(99999);
     System.out.println(bc.toString());
+    System.out.println(authenticate("Sheesh" , "brokeme123"));
     
   }//end main()
 
