@@ -112,7 +112,7 @@ public class BankAccount {
     BankAccount bc = new BankAccount();
     bc.setName("Sheesh");
     bc.setPasswd("brokeme123");
-    System.out.println("/nShould not work:");
+    System.out.println("\nShould not work:");
     ba.setPin((short) 12345);
     ba.setAcctNum(99999);
     System.out.println(bc.toString());
