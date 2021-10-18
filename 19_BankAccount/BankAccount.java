@@ -114,7 +114,7 @@ public class BankAccount {
     bc.setPasswd("brokeme123");
     System.out.println("Should not work:");
     ba.setPin((short) 12345);
-    ba.setAcctNum(9999999999);
+    ba.setAcctNum(99999);
     System.out.println(AcctNum);
     
   }//end main()
