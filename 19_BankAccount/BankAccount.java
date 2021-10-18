@@ -109,9 +109,8 @@ public class BankAccount {
     // INSERT YOUR METHOD CALLS FOR TESTING HERE  
     BankAccount ba = new BankAccount();  
     ba.setName("Geese");  
-    ba.setPasswd("qwertyuiop1234mydogiscalledsnowball");  
-    short pin = 1234;  
-    ba.setPin(pin);  
+    ba.setPasswd("qwertyuiop1234mydogiscalledsnowball");   
+    ba.setPin((short) 1234);  
     ba.setAcctNum(100000012);  
     ba.setBalance(100);  
     System.out.println(ba.toString());  
@@ -126,7 +125,7 @@ public class BankAccount {
     bc.setName("Sheesh");
     bc.setPasswd("brokeme123");
     System.out.println("Should not work:");
-    short pin = 12346;
+    ba.setPin((short) 12345);
     
   }//end main()
 
