@@ -1,19 +1,6 @@
 /**
-   Clyde "Thluffy" Sinclair
-   APCS pd0
-   HW18 -- building a more meaningful class
-   2021-10-18
-   instance variables for storing...
-   account holder's full name
-   account password
-   4-digit PIN
-   9-digit account number
-   account balance
-   and methods for...
-   setting each attribute
-   printing out all of an account’s info at once
-   depositing money
-   withdrawing money
+DISCOVERIES
+- You have to return a boolean in both parts of the if else statement if you plan to make the return type of the method a boolean. 
 **/
 
 public class BankAccount {
@@ -127,6 +114,8 @@ public class BankAccount {
     bc.setPasswd("brokeme123");
     System.out.println("Should not work:");
     ba.setPin((short) 12345);
+    ba.setAcctNum(999999999999999999);
+    System.out.println(AcctNum);
     
   }//end main()
 
