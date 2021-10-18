@@ -116,7 +116,7 @@ public class BankAccount {
     ba.setPin((short) 12345);
     ba.setAcctNum(99999);
     System.out.println(bc.toString());
-    System.out.println(authenticate("Sheesh" , "brokeme123"));
+    System.out.println(authenticate(0 , "brokeme123"));
     
   }//end main()
 
