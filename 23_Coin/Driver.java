@@ -1,3 +1,18 @@
+// TNPG: kraken (Ryan Lau + Jon and Weichen Liu + Blueface)
+// APCS
+// HW23 -- What Does Equality Look Like?
+// 2021-10-22
+// time spent: 1.0 hrs
+
+/*
+DISCOVERIES
+    0. The "this" keyword is an alias for THIS OBJECT.
+UNRESOLVED QUESTIONS
+    0. Should we assume the bias to be 0.5 and the upFace to be heads in the constructor?
+    1. Should we use the "this" keyword when it is not necessary but to be more clear?
+*/
+
+
 /***
     driver for class Coin
 
