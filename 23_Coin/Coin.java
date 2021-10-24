@@ -97,15 +97,15 @@ public class Coin {
      * Returns value assigned.
      ***/
     private double assignValue(String s) {
-        if (s.equals("penny")) {
+        if (s == "penny")) {
             value = 0.01;
-        } else if (s.equals("nickel")) {
+        } else if (s == "nickel")) {
             value = 0.05;
-        } else if (s.equals("dime")) {
+        } else if (s == "dime")) {
             value = 0.10;
-        } else if (s.equals("quarter")) {
+        } else if (s == "quarter")) {
             value = 0.25;
-        } else if (s.equals("half dollar")) {
+        } else if (s == "half dollar")) {
             value = 0.5;
         } else {
             value = 1.0;
