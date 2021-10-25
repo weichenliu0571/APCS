@@ -6,10 +6,10 @@
 
 /*
 DISCOVERIES
-    0. 
+    0. ! can be used in front of a boolean expression to control a case where the boolean expression is not met.
 
 UNRESOLVED QUESTIONS
-    0. 
+    0. Is it possible to use multiple while loops to make the code cleaner? 
 */
 
 import java.lang.Math;
