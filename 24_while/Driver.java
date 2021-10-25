@@ -1,3 +1,21 @@
+
+// TNPG: kraken (Ryan Lau + Jon and Weichen Liu + Blueface)
+// APCS
+// HW24 -- Using while loop to determine numbers of matches
+// 2021-10-25
+// time spent: 1.0 hrs
+
+/*
+DISCOVERIES
+    0. ! can be used in front of a boolean expression in the while loop to control a case where the boolean expression is not met. 
+
+UNRESOLVED QUESTIONS
+    0. Is it possible to use multiple while loops to make the code cleaner? 
+    
+POST-v0 MODS
+      0. Removed the reset of name and value in .reset()
+*/
+
 /***
     driver for class Coin
 
