@@ -6,10 +6,13 @@
 
 /*
 DISCOVERIES
-    0. ! can be used in front of a boolean expression to control a case where the boolean expression is not met.
+    0. ! can be used in front of a boolean expression in the while loop to control a case where the boolean expression is not met. 
 
 UNRESOLVED QUESTIONS
     0. Is it possible to use multiple while loops to make the code cleaner? 
+    
+POST-v0 MODS
+      0. Removed the reset of name and value in .reset()
 */
 
 import java.lang.Math;
@@ -118,9 +121,7 @@ public class Coin {
      * postcond: Coin's attribs reset to starting vals
      ***/
     public void reset(String s, double d) {
-        value = 0.0;
         upFace = s;
-        name = "";
         flipCtr = 0;
         headsCtr = 0;
         tailsCtr = 0;
