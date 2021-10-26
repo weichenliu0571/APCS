@@ -1,7 +1,7 @@
 // Geese: Brian Li + Robert, Anthony Sun + Corn, Weichen Liu + Blueface
 // APCS
 // HW25 -- while and recursion
-// 2021-10=26
+// 2021-10-26
 // time spent: 0.4 hours
 
 /*
@@ -10,6 +10,7 @@ DISCO
 1. Our while loop requires an initialization, test (boolean expression), and increment.
 QCC
 0. Is it conventional to have two base cases? For example, for fenceR, we technically have two base cases: 0 and 1. Is this appropriate? Is there a better way to go about this?
+
 */
 
 public class Repeater{
