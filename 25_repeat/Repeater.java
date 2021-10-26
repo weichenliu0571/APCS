@@ -31,11 +31,11 @@ public class Repeater{
 
   // recursive method
   public static String fenceR(int numPosts){
-    if (numPosts == 1){
-      return "|";
-    }
-    else if (numPosts == 0){
+    if (numPosts == 0){
       return "";
+    }
+    else if (numPosts == 1){
+      return "|";
     }
     else {
       return "|--" + fenceR(numPosts - 1);
