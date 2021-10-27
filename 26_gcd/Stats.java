@@ -137,7 +137,7 @@ public class Stats {
 	
   //main method for testing functionality
   public static void main( String[] args ) {
-	System.out.println("TESTING BRUTE FORCE METHOD:");
+	System.out.println("\nTESTING BRUTE FORCE METHOD:");
 	System.out.println(gcd(15,18));
 	System.out.println("...should be 3");
 	System.out.println(gcd(3,14));
