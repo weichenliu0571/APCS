@@ -103,19 +103,14 @@ public class Stats {
   }
 	
   public static int gcdER( int a, int b) {
-	  int lower = 0;
-	  int higher = 0;
+	  int lower = a;
 	  if (a == b) {
 		  return a;
 	  } else {
-		  if (a > b) {
-			  higher = a;
+		  if (b < a) {
 			  lower = b;
-		  } else {
-			  higher = b;
-			  lower = a;
-		  }
-		  return (gcd(lower, higher - lower));
+		  } 
+		  return gcdER(lower, Math.abs(a - b));
 	  }  
   }
 
