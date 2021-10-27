@@ -144,7 +144,7 @@ public class Stats {
 	System.out.println(gcd(3,14));
 	System.out.println(gcd(16,28));
 	System.out.println(gcdER(5,18));
-	System.out.println(gcdEW(5,18));
+	
   }
 
 }//end class
