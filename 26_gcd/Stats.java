@@ -127,8 +127,10 @@ public class Stats {
 		  if ((higher - lower) < lower) {
 			  difference = higher - lower;
 			  higher = lower;
+			  lower = difference;
 		  } else {
 			  difference = higher - lower;
+			  higher = difference;
 		  }
 	  }
 	  return difference;	  
