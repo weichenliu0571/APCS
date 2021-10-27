@@ -137,15 +137,27 @@ public class Stats {
 	
   //main method for testing functionality
   public static void main( String[] args ) {
+	System.out.println("TESTING BRUTE FORCE METHOD:");
 	System.out.println(gcd(15,18));
+	System.out.println("...should be 3");
 	System.out.println(gcd(3,14));
+	System.out.println("...should be 1");
 	System.out.println(gcd(16,28));
+	System.out.println("...should be 4");
+	System.out.println("\nTESTING RECURSIVE METHOD:");
 	System.out.println(gcdER(15,18));
+	System.out.println("...should be 3");
 	System.out.println(gcdER(3,14));
+	System.out.println("...should be 1");
 	System.out.println(gcdER(16,28));
+	System.out.println("...should be 4");
 	System.out.println(gcdEW(15,18));
+	System.out.println("\nTESTING WHILE LOOP METHOD:");
+	System.out.println("...should be 3");
 	System.out.println(gcdEW(3,14));
+	System.out.println("...should be 1");
 	System.out.println(gcdEW(16,28));
+	System.out.println("...should be 4");
   }
 
 }//end class
