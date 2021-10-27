@@ -13,7 +13,6 @@ QCC:
 - Is there a more efficient way to replace the higher and lower numbers in gcdEW()?
 */
 
-// skeleton taken from the closet
 
 public class Stats {
 
@@ -80,27 +79,24 @@ public class Stats {
 	return Math.cbrt(a*b*c);
   }
   
-  public static int gcd( int a , int b) {
-	  int gcd = 0;
-	  int divisor = 1;
-	  int higher = 0;
-	  int lower = 0;
-	  if (a > b) {
-		  higher = a;
-		  lower = b;
-	  } else {
-		  higher = b;
-		  lower = a;
-	  }
-	  while (divisor <= lower) {
-		  if (higher % divisor == 0 && lower % divisor == 0) {
-			  gcd = divisor;
-			  divisor ++;
-		  } else {
-			  divisor ++;
-		  }
-	  }
-	  return gcd;
+  public static int gcd(int a, int b){
+    int smaller;
+    int counter = 1;
+    int accumulatedGCD = 1;
+    if (a > b){
+      smaller = b;
+    }
+    else{
+      smaller = a;
+    }
+
+    while (counter <= smaller){
+      if (a % counter == 0 && b % counter == 0){
+        accumulatedGCD = counter;
+      }
+      counter++;
+    }
+    return accumulatedGCD;
   }
 	
   public static int gcdER( int a, int b) {
