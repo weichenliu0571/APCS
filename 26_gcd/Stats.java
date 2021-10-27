@@ -101,6 +101,23 @@ public class Stats {
 	  }
 	  return gcd;
   }
+	
+  public static int gcdER( int a, int b) {
+	  int lower = 0;
+	  int higher = 0;
+	  if (a == b) {
+		  return a;
+	  } else {
+		  if (a > b) {
+			  higher = a;
+			  lower = b;
+		  } else {
+			  higher = b;
+			  lower = a;
+		  }
+		  return (gcd(lower, higher - lower));
+			  
+  }
 
   //main method for testing functionality
   public static void main( String[] args ) {
