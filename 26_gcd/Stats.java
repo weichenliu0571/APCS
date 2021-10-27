@@ -1,15 +1,16 @@
 // Geese: Weichen Liu + Blueface, Anthony Sun + Corn, Brian Li + Robert
 // APCS
-// HW21 -- Building Drivers and Stat Methods
-// 2021-10-21
+// HW26 -- Using Recursive method and While loop to find GCD
+// 2021-10-27
 
 /*
 DISCO:
-- When trying to convert values from one type to another (e.g. double to int), you will get an error stating incompatible types if there is a change in precision.
+- We have to set the base case of the recursive method to be (a == b). 
+- If you misplace a braces, the error: class, interface or enum expected may show up.
+
 
 QCC:
-- How would you go about changing a double to an int WITHOUT typecasting? Due to the differeces in precision, it doesn't seem like there is a clean method of doing so.
-- With the method geoMean() that returns an int, we saw that it returns 0 when we would expect an error or NaN (such as when taking the square root of a negative value). We believe that this is a result of an int not being able to store NaN as a data value, resulting in it returning 0, instead.
+- Is there a more efficient way to replace the higher and lower numbers in gcdEW()?
 */
 
 // skeleton taken from the closet
