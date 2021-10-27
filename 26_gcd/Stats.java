@@ -78,11 +78,30 @@ public class Stats {
   public static double geoMean(double a, double b, double c) {
 	return Math.cbrt(a*b*c);
   }
-
+  
+  public static int gcd( int a , int b) {
+	  int gcd = 0;
+	  int divisor = 1;
+	  if (int a > int b) {
+		  int higher = a;
+		  int lower = b;
+	  } else {
+		  int higher = b;
+		  int lower = a;
+	  }
+	  while (answer <= lower) {
+		  if (higher % divisor == 0 && lower % divisor == 0) {
+			  gcd = divisor;
+			  divisor ++;
+		  } else {
+			  divisor ++;
+		  }
+	  }
+  }
 
   //main method for testing functionality
   public static void main( String[] args ) {
-	System.out.println("ran");
+	System.out.println(gcd(3,14);
   }
 
 }//end class
