@@ -118,6 +118,7 @@ public class Stats {
   public static int gcdEW( int a, int b) {
 	  int lower = a;
 	  int higher = b;
+	  int difference = 0;
 	  if (b < a) {
 		  lower = b;
 		  higher = a;
