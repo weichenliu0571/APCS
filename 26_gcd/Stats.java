@@ -119,12 +119,37 @@ public class Stats {
 	  }  
   }
 
+  public static int gcdEW( int a, int b) {
+	  int lower = 0;
+	  int higher = 0;
+	  int difference = 0;
+	  if (a > b) {
+		  higher = a;
+		  lower = b;
+	  } else {
+		  higher = b;
+		  lower = a;
+	  }
+	  while ( difference != lower) {
+		  if ((higher - lower) < lower) {
+			  difference = higher - lower;
+			  higher = lower;
+		  } else {
+			  difference = higher - lower;
+		  }
+		  return difference;
+	  }
+	  
+	  
+  }
+		
   //main method for testing functionality
   public static void main( String[] args ) {
 	System.out.println(gcd(15,18));
 	System.out.println(gcd(3,14));
 	System.out.println(gcd(16,28));
 	System.out.println(gcdER(5,18));
+	System.out.println(gcdEW(5,18));
   }
 
 }//end class
