@@ -99,6 +99,7 @@ public class Stats {
 			  divisor ++;
 		  }
 	  }
+	  return gcd;
   }
 
   //main method for testing functionality
