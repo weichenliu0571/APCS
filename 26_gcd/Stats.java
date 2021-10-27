@@ -113,11 +113,10 @@ public class Stats {
 		  return gcdER(lower, Math.abs(a - b));
 	  }  
   }
-
+	
+/*
   public static int gcdEW( int a, int b) {
-	  int lower = 0;
-	  int higher = 0;
-	  int difference = 0;
+	  int lower = a;
 	  if (a > b) {
 		  higher = a;
 		  lower = b;
@@ -136,7 +135,9 @@ public class Stats {
 	  return difference;
   }	  
   }
-		
+  
+  */
+	
   //main method for testing functionality
   public static void main( String[] args ) {
 	System.out.println(gcd(15,18));
