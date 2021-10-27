@@ -123,7 +123,7 @@ public class Stats {
 		  lower = b;
 		  higher = a;
 	  } 
-	  while ( difference != higher) {
+	  while ( higher != lower) {
 		  if ((higher - lower) < lower) {
 			  difference = higher - lower;
 			  higher = lower;
