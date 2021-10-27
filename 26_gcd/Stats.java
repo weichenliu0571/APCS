@@ -82,7 +82,7 @@ public class Stats {
   public static int gcd( int a , int b) {
 	  int gcd = 0;
 	  int divisor = 1;
-	  if (int a > int b) {
+	  if (a > b) {
 		  int higher = a;
 		  int lower = b;
 	  } else {
