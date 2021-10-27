@@ -153,6 +153,7 @@ public class Stats {
 	System.out.println("...should be 4");
 	System.out.println(gcdEW(15,18));
 	System.out.println("\nTESTING WHILE LOOP METHOD:");
+	System.out.println(gcdEW(15,18));
 	System.out.println("...should be 3");
 	System.out.println(gcdEW(3,14));
 	System.out.println("...should be 1");
