@@ -89,7 +89,7 @@ public class Stats {
 		  int higher = b;
 		  int lower = a;
 	  }
-	  while (answer <= lower) {
+	  while (divisor <= lower) {
 		  if (higher % divisor == 0 && lower % divisor == 0) {
 			  gcd = divisor;
 			  divisor ++;
