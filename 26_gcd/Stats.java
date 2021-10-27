@@ -137,10 +137,9 @@ public class Stats {
 		  } else {
 			  difference = higher - lower;
 		  }
-		  return difference;
 	  }
-	  
-	  
+	  return difference;
+  }	  
   }
 		
   //main method for testing functionality
