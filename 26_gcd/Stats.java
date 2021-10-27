@@ -133,7 +133,7 @@ public class Stats {
 			  higher = difference;
 		  }
 	  }
-	  return difference;	  
+	  return lower;	  
   }
   
   
