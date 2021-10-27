@@ -82,12 +82,14 @@ public class Stats {
   public static int gcd( int a , int b) {
 	  int gcd = 0;
 	  int divisor = 1;
+	  int higher = 0;
+	  int lower = 0;
 	  if (a > b) {
-		  int higher = a;
-		  int lower = b;
+		  higher = a;
+		  lower = b;
 	  } else {
-		  int higher = b;
-		  int lower = a;
+		  higher = b;
+		  lower = a;
 	  }
 	  while (divisor <= lower) {
 		  if (higher % divisor == 0 && lower % divisor == 0) {
