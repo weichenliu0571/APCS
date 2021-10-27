@@ -114,16 +114,14 @@ public class Stats {
 	  }  
   }
 	
-/*
+
   public static int gcdEW( int a, int b) {
 	  int lower = a;
-	  if (a > b) {
-		  higher = a;
+	  int higher = b;
+	  if (b < a) {
 		  lower = b;
-	  } else {
-		  higher = b;
-		  lower = a;
-	  }
+		  higher = a;
+	  } 
 	  while ( difference != higher) {
 		  if ((higher - lower) < lower) {
 			  difference = higher - lower;
@@ -132,11 +130,10 @@ public class Stats {
 			  difference = higher - lower;
 		  }
 	  }
-	  return difference;
-  }	  
+	  return difference;	  
   }
   
-  */
+  
 	
   //main method for testing functionality
   public static void main( String[] args ) {
