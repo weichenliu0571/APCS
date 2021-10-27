@@ -11,6 +11,9 @@ DISCO:
 
 QCC:
 - Is there a more efficient way to replace the higher and lower numbers in gcdEW()?
+
+ALGO:
+- By constantly replacing the higher number in the argument list with the difference between the higher number and the smaller number, we can achieve a point where the higher number is equal to the lower number. That is when we return either number.
 */
 
 
