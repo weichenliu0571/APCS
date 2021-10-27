@@ -80,24 +80,24 @@ public class Stats {
   }
   
   public static int gcd(int a, int b){
-    int smaller;
-    int counter = 1;
-    int accumulatedGCD = 1;
-    if (a > b){
-      smaller = b;
-    }
-    else{
-      smaller = a;
-    }
-
-    while (counter <= smaller){
-      if (a % counter == 0 && b % counter == 0){
-        accumulatedGCD = counter;
+      int smaller;
+      int counter = 1;
+      int accumulatedGCD = 1;
+      if (a > b){
+        smaller = b;
       }
-      counter++;
+      else{
+        smaller = a;
+      }
+
+      while (counter <= smaller){
+        if (a % counter == 0 && b % counter == 0){
+          accumulatedGCD = counter;
+        }
+        counter++;
+      }
+      return accumulatedGCD;
     }
-    return accumulatedGCD;
-  }
 	
   public static int gcdER( int a, int b) {
 	  int lower = a;
