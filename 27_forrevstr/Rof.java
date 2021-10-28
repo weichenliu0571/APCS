@@ -10,7 +10,7 @@ public class Rof {
 	public static String reverseF(String s) {
 	String result = "";
 		for(int i = s.length(); i == 0; i --) {
-			result += s.substring(i - 1, i - 2);
+			result += s.substring(i - 2, i - 1);
 		}
 		return result;
 	}
