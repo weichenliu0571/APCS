@@ -7,6 +7,10 @@ public class forj {
 		return result;
 	}
 	
+	public static String reverseF(String s) {
+		for(int i = 
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(fenceF(1));
 	}
