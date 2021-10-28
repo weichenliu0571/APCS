@@ -8,8 +8,8 @@ public class forj {
 	}
 	
 	public static String reverseF(String s) {
-		String result = "";
-		for(int i = s.length(); i = 0; i --;) {
+	String result = "";
+		for(int i = s.length(); i = 0; i --) {
 			result += s.substring(i - 1, i - 2);
 		}
 		return result;
