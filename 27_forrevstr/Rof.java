@@ -1,4 +1,4 @@
-public class forj {
+public class Rof {
 	public static String fenceF(int posts) {
 	String result = "|";
 		for(int i = 1; i < posts; i ++) {
