@@ -25,7 +25,7 @@ public class Rof {
 	public static String reverseF(String s) {
 		String result = "";
 		int stringLength = s.length();
-		for(int i = stringLength; i > 0; i --) {
+		for(int i = stringLength + 1; i > 1; i --) {
 			result += s.substring(i - 2, i - 1);
 		}
 		return result;
