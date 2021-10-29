@@ -1,39 +1,55 @@
-// Giant Squid :: 
-// APCS
-// HW27 - Using for loop and recursion to do repetitions
-// 2021-10-27
+// Giant Squid :: Weichen Liu + Blueface, Josiah Moltz +
+// APCS pd06
+// HW27 FOR the Love of Strings / String. methods / Using for loop and recursion to do repetitions with String methods
+// 2021-10-28
+// time spent: .4 hour (24 minutes)
 
 /*
-DISCO:
-- We have to set the base case of the recursive method to be (a == b). 
-- If you misplace a braces, the error: class, interface or enum expected may show up.
-QCC:
-- Is there a more efficient way to replace the higher and lower numbers in gcdEW()?
-ALGO:
-- By constantly replacing the higher number in the argument list with the difference between the higher number and the smaller number, we can achieve a point where the higher number is equal to the lower number. That is when we return either number.
+DISCO
+  -You can increment or decrement in a for loop
+  -.substring goes up to BUT NOT INCLUDING the endIndex given.
+
+QCC
+  -Is there a method to instantly print a reversed string?
 */
 
 public class Rof {
 	public static String fenceF(int posts) {
-		String result = "|";
+	String result = "|";
 		for(int i = 1; i < posts; i ++) {
 			result += "--|";
 		}
 		return result;
 	}
-	
-	public static String reverseF(String s) {
-		String result = "";
-		int stringLength = s.length();
-		for(int i = stringLength; i > 1; i --) {
-			result += s.substring(i - 1, i);
-		}
-		return result;
-	}
-	
-	
+
+  public static String reverseF(String s) {
+    String result = "";
+    int stringLength = s.length();
+    for(int i = stringLength; i > 0; i --) {
+      result += s.substring(i - 1, i);
+    }
+    return result;
+  }
+
+  public static String reverseR(String s) {
+    int length = s.length();
+    if ( length == 1 ) {
+      return s;
+    }
+    else {
+      String last = s.substring(length - 1, length);
+      String upToLast = s.substring(0,length - 1);
+      return last + reverseR(upToLast);
+    }
+  }
+
 	public static void main(String[] args) {
 		System.out.println(fenceF(1));
+    System.out.println(fenceF(2));
+    System.out.println(fenceF(3));
 		System.out.println(reverseF("stressed"));
+    System.out.println(reverseF("hello world"));
+    System.out.println(reverseR("stressed"));
+    System.out.println(reverseR("hello world"));
 	}
 }
