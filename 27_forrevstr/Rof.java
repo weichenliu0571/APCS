@@ -1,6 +1,6 @@
 // Giant Squid :: 
 // APCS
-// HW27 - Using for loops to 
+// HW27 - Using for loop and recursion to do repetitions
 // 2021-10-27
 
 /*
@@ -25,8 +25,8 @@ public class Rof {
 	public static String reverseF(String s) {
 		String result = "";
 		int stringLength = s.length();
-		for(int i = stringLength; i > 0; i --) {
-			result += s.substring(i - 1, i - 2);
+		for(int i = stringLength; i > 1; i --) {
+			result += s.substring(i - 2, i - 1);
 		}
 		return result;
 	}
