@@ -9,8 +9,9 @@ public class Rof {
 	
 	public static String reverseF(String s) {
 	String result = "";
-		for(int i = s.length(); i == 0; i --) {
-			result += s.substring(i - 2, i - 1);
+	String stringLength = s.length();
+		for(int i = 0; i < stringLength; i ++) {
+			result += s.substring(stringLength - (i+1), stringLength - i);
 		}
 		return result;
 	}
