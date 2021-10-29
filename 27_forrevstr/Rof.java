@@ -31,9 +31,6 @@ public class Rof {
 		return result;
 	}
 	
-	public static String reverseR(String s) {
-		
-	}
 	
 	public static void main(String[] args) {
 		System.out.println(fenceF(1));
