@@ -1,3 +1,18 @@
+// Weichen Liu + Blueface
+// APCS pd06
+// HW28 -- String2 from coding bat
+// 2021-10-29
+// time spent: .5 hour (30 minutes)
+
+/*
+DISCO
+- We can prevent the OUTOFBOUNDS error by not allowing the .substring() to include an index of a string that is equal or greater than the length of the string.
+
+QCC
+- Is there a cleaner method that works like .substring()? Ex. Python lets you just include the index of the string to print a certain char from the string.
+
+*/
+
 public class String2 {
  // https://codingbat.com/prob/p165312 
     /*
@@ -7,7 +22,7 @@ public class String2 {
     public static String doubleChar(String str) {
       String result = "";
       for (int i = 0; i < str.length(); i++){
-        accumulator += str.substring(i, i+1) + str.substring(i, i+1);
+        result += str.substring(i, i+1) + str.substring(i, i+1);
       }
       return result;
     }
