@@ -1,4 +1,4 @@
-// Giant Squid :: Weichen Liu + Blueface
+// Weichen Liu + Blueface
 // APCS pd06
 // HW28 -- String1 from coding bat
 // 2021-10-29
