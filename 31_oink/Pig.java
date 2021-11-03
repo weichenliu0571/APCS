@@ -32,7 +32,6 @@
 public class Pig
 {
   //Q: How does this initialization make your life easier?
-  //It declares a constant that can be accessed anywhere in the class.
   private static final String VOWELS = "aeiou";
 
 
@@ -131,4 +130,3 @@ public class Pig
   }//end main()
 
 }//end class Pig
-
