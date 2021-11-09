@@ -14,13 +14,13 @@
  * - What is the most efficient loop that goes through every word in the input that we give Scanner?
  * 
  * HOW WE UTILIZED SCANNER DEMO (v2)
- *
+ * - We used the while loop with the .hasNext(), but instead of using .next(), we used .nextLine() to check the entirety of the input on the line. We did this to consider inputs that have more than one word. 
  *
  * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
  * - The scanner runs .next() twice on an input that only has one word. The second .next() causes the problem. 
  *
  * NEW IN v3 
- * - 
+ * - We considered words with multiple capitals. 
  *
 HOW WE UTILIZED SCANNER DEMO (v<version num in which you incorporated Scanner functionality>)
 WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
