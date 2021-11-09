@@ -9,7 +9,7 @@
  * - scan.next() checks for the next word in the input.
  *
  * QCC
- * - How do we create a while loop that goes through every word in the input that we give scanner?
+ * - What is the most efficient loop that goes through every word in the input that we give scanner?
  *
  * class Pig
  * a Pig Latin translator
