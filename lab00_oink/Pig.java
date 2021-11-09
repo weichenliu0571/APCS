@@ -178,7 +178,7 @@ public class Pig {
     String end = "";
     String ans = "";
 
-    if (PUNCS.indexOf(w.substring( w.length() - 1, w.length() ) ) > -1){
+    if (isPunc(w.substring( w.length() - 1, w.length() ) ) ){
       end = w.substring(w.length() - 1, w.length());
       w = w.substring(0, w.length() - 1);
     }
