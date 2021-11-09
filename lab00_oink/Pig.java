@@ -1,5 +1,5 @@
 /***
- * Aliens ( Weichen Liu + Blueface, Brian Li + Robert, )
+ * Aliens ( Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
  * Lab v0 -- Pig Latin Work
  * 2021-11-08
@@ -9,7 +9,7 @@
  * - scan.next() checks for the next word in the input.
  *
  * QCC
- * - How do we create a for each loop that goes through every word in the input that we give scanner?
+ * - How do we create a while loop that goes through every word in the input that we give scanner?
  *
  * class Pig
  * a Pig Latin translator
