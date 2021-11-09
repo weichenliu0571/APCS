@@ -1,17 +1,30 @@
 /***
  * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
- * Lab v0 -- Pig Latin Work
- * 2021-11-08
- * time spent: 0.9 hrs
+ * Lab 00 -- Pig Latin Work
+ * 2021-11-09
+ * time spent: 1.0 hrs
  *
  * DISCO
  * - Scanner.next() checks for the next word in the input.
  * - Scanner.nextLine() returns the entire input.
+ * - Scanner.hasNext() returns either true or false depending on if there is another token in the input
  *
  * QCC
  * - What is the most efficient loop that goes through every word in the input that we give Scanner?
+ * 
+ * HOW WE UTILIZED SCANNER DEMO (v2)
  *
+ *
+ * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+ *
+ *
+ * NEW IN v3
+ *
+ *
+HOW WE UTILIZED SCANNER DEMO (v<version num in which you incorporated Scanner functionality>)
+WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+NEW IN v<this version>
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
@@ -152,13 +165,6 @@ public class Pig {
     return VOWELS.indexOf( w.substring(0,1) ) != -1;
   }
 
-  // public static String toCapitalize(String w){
-  //   lowercaseW = w.toLowerCase();
-  //   String pigifed;
-  //     pigified = engToPig(lowercaseW);
-  //     pigified = (w.substring(0, 1)).toUpperCase{} +
-  // }
-
   /*=====================================
       boolean isPunc(String) -- tells whether a character is punctuation
       pre:  symbol.length() == 1
@@ -262,29 +268,13 @@ public class Pig {
     public static void main( String[] args ) {
       String input = "";
       Scanner scan = new Scanner(System.in);
-      System.out.println("Please give an input in English that you want to translate to Pig Latin.");
-      input = scan.nextLine();
-      System.out.println(pigifyScan(input));
-
-      // input = scan.next();
-      // System.out.println("Output: " + newEngToPig(input));
-      // input = scan.next();
-      //
-      // while ( !(scan.next()).equals("") ){
-      //   System.out.print(" " + newEngToPig(input));
-      //   input = scan.next();
-      // }
-      //
-      // System.out.println();
-
-      //
-      // for( String word : args ) {
-      //   System.out.println( "allVowels \t" + allVowels(word) );
-      //   System.out.println( "firstVowels \t" + firstVowel(word) );
-      //   System.out.println( "countVowels \t" + countVowels(word) );
-      //   System.out.println( "engToPig \t" + engToPig(word) );
-      //   System.out.println( "---------------------" );
-      // }
+      // System.out.println("Please give an input in English that you want to translate to Pig Latin.");
+      // input = scan.nextLine();
+      // System.out.println(pigifyScan(input));
+      while (scan.hasNext()){
+        input = scan.nextLine();
+        System.out.println(pigifyScan(input));
+      }
 
   }//end main()
 
