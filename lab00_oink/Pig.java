@@ -17,7 +17,7 @@
  * - We used the while loop with the .hasNext(), but instead of using .next(), we used .nextLine() to check the entirety of the input on the line. We did this to consider inputs that have more than one word. 
  *
  * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
- * - The scanner runs .next() twice on an input that only has one word. The second print command with the .next() causes the problem because it tries to act on a word that does not exist. 
+ * - The scanner runs .next() twice on an input that only has one word on one line.
  *
  * NEW IN v3 
  * - We considered words with multiple capitals. 
