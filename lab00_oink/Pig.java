@@ -273,7 +273,7 @@ public class Pig {
       // System.out.println(pigifyScan(input));
       while (scan.hasNext()){
         input = scan.nextLine();
-        System.out.println(input + " ----- " + pigifyScan(input));
+        System.out.println(input + "\n....should be " + pigifyScan(input));
       }
 
   }//end main()
