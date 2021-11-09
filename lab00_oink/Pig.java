@@ -17,10 +17,10 @@
  *
  *
  * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+ * - The scanner runs .next() twice on an input that only has one word. The second .next() causes the problem. 
  *
- *
- * NEW IN v3
- *
+ * NEW IN v3 
+ * - 
  *
 HOW WE UTILIZED SCANNER DEMO (v<version num in which you incorporated Scanner functionality>)
 WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
@@ -273,7 +273,7 @@ public class Pig {
       // System.out.println(pigifyScan(input));
       while (scan.hasNext()){
         input = scan.nextLine();
-        System.out.println(pigifyScan(input));
+        System.out.println(input + "-----" + pigifyScan(input));
       }
 
   }//end main()
