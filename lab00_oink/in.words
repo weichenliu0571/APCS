@@ -1,1 +1,10 @@
+Aliens ( Weichen Liu + Blueface, Brian Li + Robert, )
+APCS
+Lab v0 -- Pig Latin Work
+2021-11-08
+time spent: .5hrs
 
+v0
+For version 0, we added new rules to our Pig Latin Translater. 
+- It considers if a word has a punctation
+- It considers if the first letter of a word is capitalized
