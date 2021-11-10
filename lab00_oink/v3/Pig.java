@@ -1,7 +1,7 @@
 /***
  * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
- * Lab v3 -- Pig Latin Work
+ * Lab 00 -- Pig Latin Work
  * 2021-11-09
  * time spent: 2.3 hrs
  *
@@ -22,6 +22,7 @@
  * NEW IN v3
  * - Fixed error caused when an input had an accidental space character at the end
  * - We considered words with multiple capitals.
+ * - Added descriptions to additional methods.
  *
  * class Pig
  * a Pig Latin translator
