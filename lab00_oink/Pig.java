@@ -22,6 +22,7 @@
  * NEW IN v3
  * - Fixed error caused when an input had an accidental space character at the end
  * - We considered words with multiple capitals.
+ * - Added descriptions to additional methods.
  *
  * class Pig
  * a Pig Latin translator
