@@ -1,17 +1,14 @@
 /*
-Big Apples (Weichen Liu + Blueface, Jeffrey Tang + , Lior + )
+Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
 APCS
 HW34 -- Looping to find the index and frequency of a string
 2021-11-13
 time spent: .8 hours
-
-
 DISCO
-- 
-
+-For the recursive methods, we used helper methods that each include an int counter as an input in order to count the index or the frequency.
+-The helper methods helped us avoid the counter being re-initialized when the method is called recursively.
 QCC
--
-
+-Is there a way to use a counter in a recursive method without a counter input while also avoiding the variable being re-initialized?
 */
 
   import java.lang.Math;
