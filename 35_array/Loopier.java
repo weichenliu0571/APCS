@@ -9,7 +9,7 @@ DISCO
 - We don't need to import the math class because Math.random is in the standard java library. 
 
 QCC
-- 
+- Is using iteration always better than using recursion when dealing with arrays? 
 */
 
   public class Loopier {
