@@ -2,12 +2,14 @@
 Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
 APCS
 HW35 -- Refactoring Loopier
-2021-11-13
-time spent: .8 hours
+2021-11-15
+time spent: .6 hours
+
 DISCO
--
+- We don't need to import the math class because Math.random is in the standard java library. 
+
 QCC
--
+- 
 */
 
   public class Loopier {
@@ -59,12 +61,10 @@ QCC
 
     public static int freq( int[] a, int target ) {
       int answer = 0;
-      int counter = 0;
-      while (counter < a.length - 1) {
-        if (a[counter] == target) {
-          answer ++;
+      for (int element : a) {
+        if (element == target) {
+          answer ++; 
         }
-        counter ++;
       }
       return answer;
     }
