@@ -28,7 +28,7 @@ public class Array1 {
     System.out.println(sameFirstLast(new int[]{1, 2, 3, 1})); // true
     System.out.println(sameFirstLast(new int[]{1, 2, 1})); // true
     
-    System.out.println(makePi(new int[]{3, 1, 4})); // [3, 1, 4]
+    System.out.println(makePi()); // [3, 1, 4]
     
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3})); // true
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2})); // false
