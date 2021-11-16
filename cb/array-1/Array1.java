@@ -19,7 +19,7 @@ public class Array1 {
     }
     return local;
   }
-  public static main (String[] args) {
+  public static void main (String[] args) {
     int[] array1 = indexofMax(new int[]{1, 2, 6});
     System.out.println(firstLast6(array1));
     int[] array2 = indexofMax(new int[]{6, 1, 2, 3});
