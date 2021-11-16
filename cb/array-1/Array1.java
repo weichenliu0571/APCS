@@ -25,7 +25,7 @@ public class Array1 {
     System.out.println(firstLast6(new int[]{13, 6, 1, 2, 3})); // false
     
     System.out.println(sameFirstLast(new int[]{1, 2, 3})); // false
-    System.out.println(sameFirstLast(new int[]{1, 2, 3, 1]})); // true
+    System.out.println(sameFirstLast(new int[]{1, 2, 3, 1})); // true
     System.out.println(sameFirstLast(new int[]{1, 2, 1})); // true
     
     System.out.println(makePi(new int[]{3, 1, 4})); // [3, 1, 4]
