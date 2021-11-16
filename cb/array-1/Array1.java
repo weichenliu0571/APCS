@@ -1,3 +1,6 @@
+import java.util;
+
+
 public class Array1 {
   public static boolean firstLast6(int[] nums) {
     return (nums[0]==6 || nums[nums.length - 1]==6);
@@ -28,7 +31,7 @@ public class Array1 {
     System.out.println(sameFirstLast(new int[]{1, 2, 3, 1})); // true
     System.out.println(sameFirstLast(new int[]{1, 2, 1})); // true
     
-    System.out.println(makePi()); // [3, 1, 4]
+    System.out.println(Arrays.toString(makePi())); // [3, 1, 4]
     
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3})); // true
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2})); // false
