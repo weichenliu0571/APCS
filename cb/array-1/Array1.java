@@ -20,8 +20,23 @@ public class Array1 {
     return local;
   }
   public static void main (String[] args) {
-    System.out.println(firstLast6(new int[]{1, 2, 6}));
-    System.out.println(firstLast6(new int[]{6, 1, 2, 3}));
-    System.out.println(firstLast6(new int[]{13, 6, 1, 2, 3}));
+    System.out.println(firstLast6(new int[]{1, 2, 6})); // true
+    System.out.println(firstLast6(new int[]{6, 1, 2, 3})); // true
+    System.out.println(firstLast6(new int[]{13, 6, 1, 2, 3})); // false
+    
+    System.out.println(sameFirstLast(new int[]{1, 2, 3})); // false
+    System.out.println(sameFirstLast(new int[]{1, 2, 3, 1]})); // true
+    System.out.println(sameFirstLast(new int[]{1, 2, 1})); // true
+    
+    System.out.println(makePi(new int[]{3, 1, 4})); // [3, 1, 4]
+    
+    System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3})); // true
+    System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2})); // false
+    System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{1, 3})); // true
+    
+    System.out.println(sum3(new int[]{1, 2, 3})); // 6
+    System.out.println(sum3(new int[]{5, 11, 2})); // 18
+    System.out.println(sum3(new int[]{7, 0, 0})); // 7
+    
   }
 }
