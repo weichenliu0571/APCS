@@ -20,11 +20,8 @@ public class Array1 {
     return local;
   }
   public static void main (String[] args) {
-    int[] array1 = indexofMax(new int[]{1, 2, 6});
-    System.out.println(firstLast6(array1));
-    int[] array2 = indexofMax(new int[]{6, 1, 2, 3});
-    System.out.println(firstLast6(array2));
-    int[] array3 = indexofMax(new int[]{13, 6, 1, 2, 3});
-    System.out.println(firstLast6(array3));
+    System.out.println(firstLast6(new int[]{1, 2, 6}));
+    System.out.println(firstLast6(new int[]{6, 1, 2, 3}));
+    System.out.println(firstLast6(new int[]{13, 6, 1, 2, 3}));
   }
 }
