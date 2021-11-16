@@ -2,19 +2,33 @@ import java.util;
 
 
 public class Array1 {
+  
   public static boolean firstLast6(int[] nums) {
     return (nums[0]==6 || nums[nums.length - 1]==6);
   }
+  
   public static boolean sameFirstLast(int[] nums) {
     return (nums.length > 0 && nums[0]==nums[nums.length - 1]);
   }
+  
   public static int[] makePi() {
     int [] pi = {3, 1, 4};
     return pi;
   }
+  
   public static boolean commonEnd(int[] a, int[] b) {
     return (a[0]==b[0] || a[a.length - 1]==b[b.length - 1]);
   }
+  
+  public static String strArrayInts(int[] intArray) {
+    String out = ("{" + intArray[0]);
+    for (int x = 1 ; x < intArray.length ; x += 1) {
+      out += ", " + intArray[x];
+    }
+    out += "}";
+    return out;
+  }
+  
   public static int sum3(int[] nums) {
     int local = 0;
     for (int element : nums) {
@@ -31,7 +45,7 @@ public class Array1 {
     System.out.println(sameFirstLast(new int[]{1, 2, 3, 1})); // true
     System.out.println(sameFirstLast(new int[]{1, 2, 1})); // true
     
-    System.out.println(Arrays.toString(makePi())); // [3, 1, 4]
+    System.out.println(strArrayInts(makePi())); // [3, 1, 4]
     
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3})); // true
     System.out.println(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2})); // false
