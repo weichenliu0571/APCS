@@ -102,7 +102,7 @@ public class Slots {
   public boolean jackpot()
   {
     boolean retBoo = false;
-    if ((_fruit[0].equals(_fruits[1])) && (_fruits[0].equals(_fruits[2]))) {
+    if ((_fruits[0].equals(_fruits[1])) && (_fruits[0].equals(_fruits[2]))) {
       retBoo = true;
     }
 
