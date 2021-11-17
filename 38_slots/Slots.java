@@ -57,7 +57,7 @@ public class Slots {
   {
     String newstring = "";
     for (int i = 0; i < 3; i++) {
-      newstring = newstring + _fruits[i] + "/t";
+      newstring = newstring + _fruits[i] + "\t";
     }
     return newstring;
   }
