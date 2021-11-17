@@ -5,7 +5,7 @@ HW36 -- PPMP[]
 2021-11-16
 time spent: .5 hours
 DISCO
-- 
+- You can parameter pass an array by typing new int[]{array} as an arguement and placing the array inside the brackets. 
 QCC
 - What is the fastest way to print an array?
 */
