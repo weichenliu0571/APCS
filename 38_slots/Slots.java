@@ -1,11 +1,17 @@
 /*****************************************************
- * Clyde "Thluffy" Sinclair
- * APCS pd00
- * HW38 -- Shmoney
- * 2021-11-18
- *
- * class Slots
- * skeleton
+Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
+APCS
+HW38 -- Stimulating a slots machine
+2021-11-17
+time spent:  0.5 hours
+
+DISCO
+- Using extra parenthesis around boolean expressions allows you to manage them more cleanly. 
+- A storage of one of the elements is needed when you want to swap two elements of an array. 
+
+QCC
+- What is the best way to cut out part of an array?
+
  *****************************************************/
 
 public class Slots {
@@ -23,6 +29,8 @@ public class Slots {
     "tangerine", "tangerine", "tangerine",
     "ugli", "ugli", "ugli",
     */
+    "grapefruit", "grapefruit", "grapefruit",
+    "dragonfruit", "dragonfruit", "dragonfruit",
     "peach", "peach", "peach"
   };
 
