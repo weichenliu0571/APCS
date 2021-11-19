@@ -5,6 +5,7 @@ HW36 — All Quacked Up
 time spent: 0.8 hours
 
 Compile-time error means that there is an error in the syntax and that there is an error while compiling
+- Check for correct nesting and placement of semicolons.
 - When tons of errors are spewed out by the machine, we should read the errors from the top and fix them one by one from top to bottom.
 - The error message usually tells you where the error is.
 - BISECTION: a useful debugging technique where you delete half the code and see if the code that is not deleted works. It it works, the error lies in the code that is deleted. 
