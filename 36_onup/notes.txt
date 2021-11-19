@@ -1,1 +1,30 @@
+Weichen Liu + Blueface
+APCS
+HW36 — All Quacked Up
+2021-11-18
+time spent: 0.8 hours
 
+Compile-time error means that there is an error in the syntax and that there is an error while compiling
+- When tons of errors are spewed out by the machine, we should read the errors from the top and fix them one by one from top to bottom.
+- The error message usually tells you where the error is.
+- BISECTION: a useful debugging technique where you delete half the code and see if the code that is not deleted works. It it works, the error lies in the code that is deleted. 
+- We should always implement incremental development. 
+- Check if your code and the code the computer is looking at is the same. 
+
+Run-time error means that the program has encountered an error while running
+- This error is usually caused by loops.
+- NullPointerException: trying to access or invoke an instance variable/method that is null.
+- ArrayIndexOutOfBoundsException: the index you are trying to access in an array is negative or > array.length - 1.
+- FileNotFoundException: file cannot be located.
+- ArithmeticException: usually when there is an error in the arithmetic process.
+- Using print statements before and after the loop also helps you identify what is going wrong.
+- StackOverflowError is caused by an infinite recursion. Always make sure that there is a base case. 
+
+Other errors / Logic Errors / What we should do
+- Think about the logic of the program. Is it functioning the way it should?
+- Try to reduce the amount of print statements if there are too many of them.
+- Floating points are only approximates, and int division round towards zero. 
+- Use a ducky, drink some water, and get away the computer.
+- Get help if it is necessary.
+- Println prints immediatly, but print does not until the next line. 
+- Try to think about what caused the problem and think of a way to cause the same problem.
