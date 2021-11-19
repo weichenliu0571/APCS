@@ -18,6 +18,9 @@ public class Protagonist {
     name = setName;
   }
   
+  
+  // methods
+  
   public boolean isAlive(){
     if (hp > 0) {
       return true;
@@ -25,6 +28,11 @@ public class Protagonist {
     return false;
   }
   
+  public void attack(Monster smaug) {
+    int newHP = smaug.getHP() - 
+    smaug.setHP(newHP);
+
+  }
   
   //accessing instance variable
   
