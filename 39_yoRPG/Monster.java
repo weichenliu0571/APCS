@@ -5,8 +5,8 @@ public class Monster {
 
   public Monster() {
     hp = 200;
-    defense = 50;
-    atk = 60;
+    defense = 10;
+    atk = int (Math.random() * 22);
   }
 
   public void bleed(int dmg) {
@@ -18,7 +18,7 @@ public class Monster {
     if (damage > 0) {
       protagonist.bleed(damage);
     } else {
-      damage = 0; 
+      damage = 0;
     }
     return damage;
   }
