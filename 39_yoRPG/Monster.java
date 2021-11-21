@@ -10,7 +10,7 @@ public class Monster {
   }
 
   public void bleed(int dmg) {
-    hp -= dmg; 
+    hp -= dmg;
   }
 
   public int attack(Protagonist protagonist) {
@@ -47,15 +47,15 @@ public class Monster {
 
   // changing instance variables
 
-  public int setHP(int newHP) {
+  public void setHP(int newHP) {
     hp = newHP;
   }
 
-  public int setDefense(int newDefense) {
+  public void setDefense(int newDefense) {
     defense = newDefense;
   }
 
-  public int setATK(int newATK) {
+  public void setATK(int newATK) {
     atk = newATK;
   }
 }
