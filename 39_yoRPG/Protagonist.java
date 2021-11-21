@@ -73,7 +73,7 @@ public class Protagonist {
 
   //Changing instance variables
 
-  public void setName (int newName) {
+  public void setName (String newName) {
     name = newName;
   }
 
