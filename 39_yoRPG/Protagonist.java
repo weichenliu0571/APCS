@@ -13,7 +13,7 @@ public class Protagonist {
     hp = 200;
     defense = 10;
     atk = 20;
-    specialpower = Math.random() * 15;
+    specialpower = (int) Math.random() * 15;
   }
 
   public Protagonist( String setName) {
@@ -40,7 +40,7 @@ public class Protagonist {
   }
 
   public void normalize() {
-    def += specialpower;
+    defense += specialpower;
   }
 
   public int attack(Monster monster) {
