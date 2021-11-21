@@ -73,19 +73,19 @@ public class Protagonist {
 
   //Changing instance variables
 
-  public setName (int newName) {
+  public void setName (int newName) {
     name = newName;
   }
 
-  public setHP (int newHP) {
+  public void setHP (int newHP) {
     hp = newHP;
   }
 
-  public setDefense (int newDefense) {
+  public void setDefense (int newDefense) {
     defense = newDefense;
   }
 
-  public setStrength (int newATK) {
+  public void setStrength (int newATK) {
     atk = newATK;
   }
 
