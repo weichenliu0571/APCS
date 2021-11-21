@@ -74,7 +74,7 @@ public class Protagonist {
   //Changing instance variables
 
   public setName (int newName) {
-    name = Newname;
+    name = newName;
   }
 
   public setHP (int newHP) {
@@ -82,11 +82,11 @@ public class Protagonist {
   }
 
   public setDefense (int newDefense) {
-    return defense;
+    defense = newDefense;
   }
 
   public setStrength (int newATK) {
-    return atk;
+    atk = newATK;
   }
 
 
