@@ -17,7 +17,7 @@ public class Protagonist {
   }
 
   public Protagonist( String setName) {
-    this()
+    this();
     name = setName;
   }
 
@@ -40,7 +40,7 @@ public class Protagonist {
   }
 
   public void normalize() {
-    def += specialpower; 
+    def += specialpower;
   }
 
   public int attack(Monster monster) {
