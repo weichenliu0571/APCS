@@ -12,7 +12,7 @@ public class Protagonist {
     name = "Pat";
     hp = 200;
     defense = 10;
-    atk = 20;
+    atk = 40;
     specialpower = (int) Math.random() * 15;
   }
 

@@ -6,7 +6,7 @@ public class Monster {
   public Monster() {
     hp = 200;
     defense = 10;
-    atk = (int) (Math.random() * 22);
+    atk = (int) (Math.random() * 30 + 11);
   }
 
   public void bleed(int dmg) {
