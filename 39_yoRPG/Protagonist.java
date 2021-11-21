@@ -25,10 +25,7 @@ public class Protagonist {
   // methods
 
   public boolean isAlive(){
-    if (hp > 0) {
-      return true;
-  }
-    return false;
+    return hp > 0;
   }
 
   public void bleed(int dmg) {
@@ -44,9 +41,11 @@ public class Protagonist {
   }
 
   public int attack(Monster monster) {
-    int damage = atk - defense;
+    int damage = (int)(getATK() - monster.getDefense());
     if (damage > 0) {
       monster.bleed(damage);
+    } else {
+      damage = 0;
     }
     return damage;
   }

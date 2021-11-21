@@ -14,18 +14,17 @@ public class Monster {
   }
 
   public int attack(Protagonist protagonist) {
-    int damage = atk - defense;
+    int damage = (int)(getATK() - protagonist.getDefense());
     if (damage > 0) {
       protagonist.bleed(damage);
+    } else {
+      damage = 0; 
     }
     return damage;
   }
 
   public boolean isAlive(){
-    if (hp > 0) {
-      return true;
-  }
-    return false;
+    return hp > 0;
   }
 
   // accessing instance variables
