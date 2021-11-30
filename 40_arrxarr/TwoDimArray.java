@@ -25,7 +25,12 @@ public class TwoDimArray
   //          uses a FOR loop
   public static void print1( int[][] a )
   {
-    // YOUR IMPLEMENTATION HERE
+    for (int i = 0; i < a.length; i++) {
+      for (int j = 0; j < a[i].length; j++) {
+        System.out.print(a[i][j] + " ");
+      }
+      System.out.println("");
+    }
   }
 
 
