@@ -34,12 +34,17 @@ public class TwoDimArray
   }
 
 
-//   //postcond: prints each row of 2D int array a on its own line
-//   //          uses a FOREACH loop
-//   public static void print2( int[][] a )
-//   {
-//     // YOUR IMPLEMENTATION HERE
-//   }
+  //postcond: prints each row of 2D int array a on its own line
+  //          uses a FOREACH loop
+  public static void print2( int[][] a )
+  {
+    for ( int[] k : a) {
+      for (int i : k) {
+        System.out.print(i + " "); 
+      }
+      System.out.println(""); 
+    }
+  }
 
 
 //   //postcond: returns sum of all items in 2D int array a
@@ -84,10 +89,10 @@ public class TwoDimArray
       print1(m1);
       print1(m2);
       print1(m3);
-        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       print2(m1);
       print2(m2);
       print2(m3);
+   /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       System.out.print("testing sum1...\n");
       System.out.println("sum m1 : " + sum1(m1));
       System.out.println("sum m2 : " + sum1(m2));
