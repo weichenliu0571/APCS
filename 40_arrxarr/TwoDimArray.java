@@ -34,45 +34,45 @@ public class TwoDimArray
   }
 
 
-  //postcond: prints each row of 2D int array a on its own line
-  //          uses a FOREACH loop
-  public static void print2( int[][] a )
-  {
-    // YOUR IMPLEMENTATION HERE
-  }
+//   //postcond: prints each row of 2D int array a on its own line
+//   //          uses a FOREACH loop
+//   public static void print2( int[][] a )
+//   {
+//     // YOUR IMPLEMENTATION HERE
+//   }
 
 
-  //postcond: returns sum of all items in 2D int array a
-  public static int sum1( int[][] a )
-  {
-    // YOUR IMPLEMENTATION HERE
-  }
+//   //postcond: returns sum of all items in 2D int array a
+//   public static int sum1( int[][] a )
+//   {
+//     // YOUR IMPLEMENTATION HERE
+//   }
 
 
-  //postcond: returns sum of all items in 2D int array a
-  //          * uses helper fxn sumRow
-  public static int sum2( int [][] m )
-  {
-    // YOUR IMPLEMENTATION HERE
-  }
+//   //postcond: returns sum of all items in 2D int array a
+//   //          * uses helper fxn sumRow
+//   public static int sum2( int [][] m )
+//   {
+//     // YOUR IMPLEMENTATION HERE
+//   }
 
 
-  //postcond: returns sum of all items on row r of 2D int array a
-  //          uses a FOR loop
-  public static int sumRow( int r, int[][] a )
-  {
-    // YOUR IMPLEMENTATION HERE
-  }
+//   //postcond: returns sum of all items on row r of 2D int array a
+//   //          uses a FOR loop
+//   public static int sumRow( int r, int[][] a )
+//   {
+//     // YOUR IMPLEMENTATION HERE
+//   }
 
 
-  //postcond: returns sum of all items on row r of 2D int array a
-  //          uses a FOREACH loop
-  public static int sumRow2(int r, int[][] m)
-  {
-    // *** YOUR IMPLEMENTATION HERE ***
-    int summer = 0;
-    return summer;
-  }
+//   //postcond: returns sum of all items on row r of 2D int array a
+//   //          uses a FOREACH loop
+//   public static int sumRow2(int r, int[][] m)
+//   {
+//     // *** YOUR IMPLEMENTATION HERE ***
+//     int summer = 0;
+//     return summer;
+//   }
 
 
   public static void main( String [] args )
