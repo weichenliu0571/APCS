@@ -6,9 +6,11 @@ HW41 -- Rational
 time spent: 0.5 hours
 
 DISCO
--
+- To divide a rational number a by a rational number b, you set the numerator of a to be the numerator of a * the denominator of b. Then you set the denominator of a to be the denominator of a * the numerator of b. 
+
 QCC
--
+- Is there a more efficient way to divide rational numbers?
+
  *****************************************************/
 
  public class Rational {
