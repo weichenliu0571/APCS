@@ -23,11 +23,12 @@ QCC
    }
    public Rational(int p, int q) {
      if (q == 0) {
-       this();
+       numerator = 0;
+       denominator = 1;
        System.out.println("0 IS NOT A VALID DENOMINATOR FOR A RATIONAL NUMBER!!!");
      } else {
-     numerator = p;
-     denominator = q;
+       numerator = p;
+       denominator = q;
      }
    }
 
