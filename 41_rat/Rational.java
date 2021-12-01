@@ -34,15 +34,38 @@ QCC
    public float floatValue() {
      return (float) numerator / (float) denominator;
    }
+  
    public String toString() {
      return "" + numerator + "/" + denominator;
    }
+  
    public void multiply(Rational a) {
      numerator = numerator * a.numerator;
      denominator = denominator * a.denominator; 
    }
+  
    public void divide(Rational a) {
      numerator = numerator * a.denominator;
      denominator = denominator * a.numerator; 
+   }
+  
+   public static void main(String[] args) {
+    Rational r1 = new Rational();
+    Rational r2 = new Rational(1,2);
+    Rational r3 = new Rational(1,3);
+    
+    System.out.println(r1.toString());
+    System.out.println(r2.toString());
+    System.out.println(r3.toString());
+    
+    System.out.println(r1.floatValue());
+    System.out.println(r2.floatValue());
+    System.out.println(r3.floatValue());
+    
+    r2.multiply(r3);
+    System.out.println(r2.toString());
+    
+    r2.divide(r3);
+    System.out.println(r2.toString());
    }
  }
