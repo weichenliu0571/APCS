@@ -106,7 +106,7 @@ public class Rational
     
   }
   
-  public int gcd(int a, int b) {
+  public int gcd() {
      while (a > 0 && b > 0){
         if (a < b){
            b = b - a;
