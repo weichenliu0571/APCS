@@ -166,7 +166,8 @@ public class Rational
     
       u.subtract(v);
       System.out.println(u); // should be 4/12
-      System.out.println(u.reduce()); // should be 1/3
+      u.reduce()
+      System.out.println(u); // should be 1/3
       
     
   }
