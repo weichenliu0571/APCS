@@ -131,8 +131,8 @@ public class Rational
   
   public int compareTo(Rational r) {
     Rational s = (Rational) r;
-    this.reduce;
-    s.reduce;
+    this.reduce();
+    s.reduce();
     
     if (this._numerator * s._denominator > s._numerator * this._denominator) {
       return 1;
