@@ -158,19 +158,22 @@ public class Rational
       Rational v = new Rational( 1, 6 );
       Rational w = new Rational( 8, 12 );
     
-      System.out.println(w.compareTo(v)); // should be 0
+      System.out.println("TESTING compareTo:");
+      System.out.println(w.compareTo(v)); // should be 1
+      System.out.println(v.compareTo(w)); // should be -1
       
+      System.out.println("TESTING ADD:");
       r.add(t);
       System.out.println(r); // should be 71/35 
       System.out.println(r.gcd()); // Should still be 71/35
     
+      System.out.println("TESTING SUBTRACT:");
       u.subtract(v);
       System.out.println(u); // should be 4/12
-      u.reduce();
-      System.out.println(u); // should be 1/3
-      
     
+      System.out.println("TESTING REDUCE:");
+      u.reduce();
+      System.out.println(u); // should be 1/3  
   }
-
 }//end class
  
