@@ -155,10 +155,19 @@ public class Rational
       Rational t = new Rational( 8, 5 );
 
       Rational u = new Rational( 1, 2 );
-      Rational v = new Rational( 2, 3 );
+      Rational v = new Rational( 1, 6 );
       Rational w = new Rational( 8, 12 );
     
-      w.compareTo(v); 
+      System.out.println(w.compareTo(v)); // should be 0
+      
+      r.add(t);
+      System.out.println(r); // should be 71/35 
+      System.out.println(r.gcd()); // Should still be 71/35
+    
+      u.subtract(v);
+      System.out.println(u); // should be 4/12
+      System.out.println(u.reduce()); // should be 1/3
+      
     
   }
 
