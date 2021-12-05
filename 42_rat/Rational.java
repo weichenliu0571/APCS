@@ -1,15 +1,17 @@
-// Clyde "Thluffy" Sinclair
-// APCS p0
-// HW41 -- sensible class design
-// 2021-12-02r
+/*****************************************************
+Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
+APCS pd6
+HW42 -- Add/Subtract Rational
+2021-12-04
+time spent:  0.5 hours
 
-/**
- * class Rational (v1)
- * stores a rational number (p/q s.t. p,q ints && q!=0)
- * facilitates
- * multiplication
- * division
- **/
+DISCO
+- It is good to have both a static and non-static gcd so that we use it in both cases. 
+
+QCC
+- What does the error "int cannot be dereferenced" mean?
+- Will we improvise add() and subtract() to return reduced sum and differences?
+ *****************************************************/
 
 public class Rational
 {
