@@ -107,6 +107,8 @@ public class Rational
   }
   
   public int gcd() {
+    int a = this._numerator;
+    int b = this._denominator; 
      while (a > 0 && b > 0){
         if (a < b){
            b = b - a;
