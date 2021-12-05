@@ -88,7 +88,7 @@ public class Rational
   
   public void add(Rational r) 
   { 
-    int n = this._numerator; 
+    int n = this._denominator; 
     this._numerator = this._numerator * r._denominator + r._numerator * this._denominator; 
     this._denominator = this._denominator * n;   
   }
