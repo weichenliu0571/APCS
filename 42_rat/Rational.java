@@ -90,14 +90,14 @@ public class Rational
   { 
     int n = this._numerator; 
     this._numerator = this._numerator * r._denominator + r._numerator * this._denominator; 
-    this._denominator = this._denominator * n._denominator;   
+    this._denominator = this._denominator * n;   
   }
   
   public void subtract(Rational r) 
   { 
-    int n = this._numerator; 
+    int n = this._denominator; 
     this._numerator = this._numerator * r._denominator - r._numerator * this._denominator; 
-    this._denominator = this._denominator * n._denominator;   
+    this._denominator = this._denominator * n;   
   }
   
   public static int gcd(int a, int b) {
