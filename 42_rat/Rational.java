@@ -169,7 +169,10 @@ public class Rational
       System.out.println("\nTESTING ADD:");
       r.add(t);
       System.out.println(r); // should be 71/35 
-      System.out.println(r.gcd()); // Should still be 71/35
+      System.out.println(r.gcd()); // Should be 1
+      w.add(u);
+      System.out.println(w); // should be 14/12
+      System.out.println(w.gcd()); // should be 2
     
       System.out.println("\nTESTING SUBTRACT:");
       u.subtract(v);
