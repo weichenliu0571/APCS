@@ -1,7 +1,17 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW43 -- encapsulation (basic SuperArray functionality)
-// 2021-12-07t
+/*****************************************************
+Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
+APCS pd6
+HW43 -- Creating Wrapper Class for Arrays
+2021-12-06
+time spent:  0.5 hours
+
+DISCO
+- You can set _data to be another array.  
+- 
+
+QCC
+- Will we have to deal with "left-justify" next?
+ *****************************************************/
 
 /***************************
  * class SuperArray
@@ -84,6 +94,9 @@ public class SuperArray
       System.out.println("Printing expanded SuperArray curtis...");
       System.out.println(curtis);
       }
+
+      System.out.println("TESTING get()");
+      System.out.println(curtis.get(5)); // should be 8
         /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
