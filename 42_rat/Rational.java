@@ -109,24 +109,20 @@ public class Rational
   public int gcd() {
     int a = this._numerator;
     int b = this._denominator; 
-	  int lower = a;
-	  int higher = b;
-	  int difference = 0;
-	  if (b < a) {
-		  lower = b;
-		  higher = a;
-	  } 
-	  while ( higher != lower) {
-		  if ((higher - lower) < lower) {
-			  difference = higher - lower;
-			  higher = lower;
-			  lower = difference;
-		  } else {
-			  difference = higher - lower;
-			  higher = difference;
-		  }
-	  }
-	  return lower;	  
+     while (a > 0 && b > 0){
+        if (a < b){
+           b = b - a;
+        }else if (a > b){
+           a = a - b;
+        }else{
+           return a;
+        }
+     }
+     if (a == 0){
+        return b;
+     } else {
+        return a;
+     }  
   }
   
   public void reduce() {
@@ -171,8 +167,8 @@ public class Rational
       System.out.println(r); // should be 71/35 
       System.out.println(r.gcd()); // Should be 1
       w.add(u);
-      System.out.println(w); // should be 14/12
-      System.out.println(w.gcd()); // should be 2
+      System.out.println(w); // should be 7/6 since w was reduced before
+      System.out.println(w.gcd()); // should be 1
     
       System.out.println("\nTESTING SUBTRACT:");
       u.subtract(v);
