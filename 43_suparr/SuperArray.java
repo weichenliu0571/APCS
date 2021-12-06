@@ -7,10 +7,11 @@ time spent:  0.5 hours
 
 DISCO
 - You can set _data to be another array.  
-- 
+- It is always good to have an accessor method. 
 
 QCC
 - Will we have to deal with "left-justify" next?
+- What happens to the original array when it is assigned to be another array? 
  *****************************************************/
 
 /***************************
