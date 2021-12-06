@@ -161,22 +161,30 @@ public class Rational
       System.out.println("\nTESTING compareTo:");
       System.out.println(w.compareTo(v)); // should be 1
       System.out.println(v.compareTo(w)); // should be -1
+      System.out.println(u.compareTo(u)); // should be 0
       
       System.out.println("\nTESTING ADD:");
       r.add(t);
       System.out.println(r); // should be 71/35 
       System.out.println(r.gcd()); // Should be 1
       w.add(u);
-      System.out.println(w); // should be 7/6 since w was reduced before
-      System.out.println(w.gcd()); // should be 1
+      System.out.println(w); // should be 7/6
+      System.out.println(w.gcd()); // Should be 1
+      s.add(v);
+      System.out.println(s); // should be 1/6
+      System.out.println(s.gcd()); // should be 1
     
       System.out.println("\nTESTING SUBTRACT:");
       u.subtract(v);
       System.out.println(u); // should be 4/12
+      w.subtract(s);
+      System.out.println(w); // should be 36/36
     
       System.out.println("\nTESTING REDUCE:");
       u.reduce();
       System.out.println(u); // should be 1/3  
+      w.reduce();
+      System.out.println(w); // should be 1/1
   }
 }//end class
  
