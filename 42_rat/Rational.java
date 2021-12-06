@@ -109,20 +109,24 @@ public class Rational
   public int gcd() {
     int a = this._numerator;
     int b = this._denominator; 
-     while (a > 0 && b > 0){
-        if (a < b){
-           b = b - a;
-        }else if (a > b){
-           a = a - b;
-        }else{
-           return a;
-        }
-     }
-     if (a == 0){
-        return b;
-     } else {
-        return a;
-     }
+	  int lower = a;
+	  int higher = b;
+	  int difference = 0;
+	  if (b < a) {
+		  lower = b;
+		  higher = a;
+	  } 
+	  while ( higher != lower) {
+		  if ((higher - lower) < lower) {
+			  difference = higher - lower;
+			  higher = lower;
+			  lower = difference;
+		  } else {
+			  difference = higher - lower;
+			  higher = difference;
+		  }
+	  }
+	  return lower;	  
   }
   
   public void reduce() {
