@@ -96,7 +96,7 @@ public class SuperArray
       }
 
       System.out.println("TESTING get()");
-      System.out.println(curtis.get(5)); // should be 8
+      System.out.println(curtis.get(5)); // should be 10
         /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
