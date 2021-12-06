@@ -44,7 +44,7 @@ public class SuperArray
       a[i] = _data[i];
     }
     _data = a;
-    _size = data.length; 
+    _size = _data.length; 
   }
 
 
