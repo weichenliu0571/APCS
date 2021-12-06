@@ -19,28 +19,39 @@ public class SuperArray
   //default constructor – initializes 10-item array
   public SuperArray()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    _data = new int[10];
+    _size = 10; 
   }
 
 
   //output SuperArray in [a,b,c] format
   public String toString()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    	String ans = "[ ";
+	    for( int i = 0; i < _size - 1; i++ )
+	        ans += _data[i] + ",";
+	    ans += _data[_size - 1];
+	    ans += " ]";
+	    return ans;
   }
 
 
   //double capacity of SuperArray
   private void expand()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int[] a = new int[_size * 2];
+    for (int i = 0; i < _data.length; i++) {
+      a[i] = _data[i];
+    }
+    _data = a;
+    _size = data.length; 
   }
 
 
   //accessor -- return value at specified index
   public int get( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return _data[index]; 
   }
 
 
@@ -48,14 +59,15 @@ public class SuperArray
   //           return old value at index
   public int set( int index, int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int store = _data[index];
+    _data[index] = newVal; 
+    return store; 
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -72,6 +84,7 @@ public class SuperArray
       System.out.println("Printing expanded SuperArray curtis...");
       System.out.println(curtis);
       }
+        /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
