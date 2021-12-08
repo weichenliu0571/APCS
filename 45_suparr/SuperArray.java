@@ -1,29 +1,15 @@
 /*****************************************************
 Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
 APCS pd6
-HW44 -- add, add-at-index, remove for SuperArray
-2021-12-07
+HW45 -- interface for SuperArray
+2021-12-08
 time spent:  0.5 hours
-
 DISCO
-- For curtis, we had to use an if statement to change _size so that the populated ints in the array showed.
-
+- There should be no body for the methods in the interface. 
+- The syntax for the class that implements the interface is [accessibility] [class] [className] implements [interfaceName] 
 QCC
-- Is there a more efficient way to slice strings? 
-- Is there a more efficient way to add to strings?
+- Is there a situation where the methods in the interface should be private? 
  *****************************************************/
-
-/***************************
- * class SuperArray version 2.0
- * (SKELETON)
- * Wrapper class for array. Facilitates
- * resizing
- * expansion
- * read/write capability on elements
- * adding an element to end of array
- * adding an element at specified index
- * removing an element at specified index
- ***************************/
 
 public class SuperArray implements ListInt
 {
