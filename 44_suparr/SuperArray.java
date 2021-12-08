@@ -79,7 +79,7 @@ public class SuperArray
     int temp = _data[index];
     _data[index] = newVal;
     
-    if (index + 1 > _size) { // If we want to set a number with an index greater than the current _size, change the _size accordingly
+    if (index + 1 > _size) { // If we want to assign an index that is greater than the current _size, change the _size accordingly
       _size = index +1; 
     }
     return temp;
