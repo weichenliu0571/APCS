@@ -4,10 +4,13 @@ APCS pd6
 HW44 -- add, add-at-index, remove for SuperArray
 2021-12-07
 time spent:  0.5 hours
+
 DISCO
--
+- For curtis, we had to use an if statement to change _size so that the populated ints in the array showed.
+
 QCC
--
+- Is there a more efficient way to slice strings? 
+- Is there a more efficient way to add to strings?
  *****************************************************/
 
 /***************************
@@ -27,7 +30,6 @@ public class SuperArray
 
   private int[] _data;  //underlying ("encapsulated") container
   private int _size;    //number of elements in this SuperArray
-  private int _lastpos; 
 
 
   //default constructor – initializes 10-item array
@@ -76,7 +78,8 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
-    if (index + 1 > _size) {
+    
+    if (index + 1 > _size) { // If we want to set a number with an index greater than the current _size, change the _size accordingly
       _size = index +1; 
     }
     return temp;
