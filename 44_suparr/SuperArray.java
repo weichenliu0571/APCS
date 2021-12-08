@@ -82,8 +82,8 @@ public class SuperArray
   //adds an item after the last item
   public void add( int newVal )
   {
-    if (_size == _data.length - 1){ // checks if the size of the array is approaching its actual limit
-      expand(); // if so, expand!
+    if (_size == _data.length - 1){ 
+      expand(); // expand if we are close to needing more indexes
     }
     set(_size, newVal);
     _size += 1;
@@ -103,6 +103,7 @@ public class SuperArray
     }
     _size += 1;
     _data = tempData;
+    }
   }
 
 
@@ -110,14 +111,25 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int[] tempData = int[_size - 1];
+    
+    for (int x = 0 ; x < index ; x++) {
+      tempData[x] = _data[x];
+    }
+    
+    for (int x = index ; x < _size - 1; x++) {
+      tempData[x] = _data[x + 1];
+    }
+    _size -= 1;
+    _data = tempData;
+    }
   }
 
 
   //return number of meaningful items in _data
   public int size()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return _size; 
   }
 
 
@@ -125,7 +137,6 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -166,6 +177,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+        /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
