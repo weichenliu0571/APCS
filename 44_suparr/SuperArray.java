@@ -103,7 +103,6 @@ public class SuperArray
     }
     _size += 1;
     _data = tempData;
-    }
   }
 
 
