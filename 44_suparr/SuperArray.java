@@ -90,7 +90,6 @@ public class SuperArray
       expand(); // expand if we are close to needing more indexes
     }
     set(_size, newVal);
-    _size += 1;
   }
 
 
