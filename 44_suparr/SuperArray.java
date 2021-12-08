@@ -93,7 +93,7 @@ public class SuperArray
   //inserts an item at index
   public void add( int index, int newVal )
   {
-    int[] tempData = int[_size + 1];
+    int[] tempData = new int[_size + 1];
     for (int x = 0 ; x < index ; x++) {
       tempData[x] = _data[x];
     }
@@ -111,7 +111,7 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    int[] tempData = int[_size - 1];
+    int[] tempData = new int[_size - 1];
     
     for (int x = 0 ; x < index ; x++) {
       tempData[x] = _data[x];
