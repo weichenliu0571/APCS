@@ -27,6 +27,7 @@ public class SuperArray
 
   private int[] _data;  //underlying ("encapsulated") container
   private int _size;    //number of elements in this SuperArray
+  private int _lastpos; 
 
 
   //default constructor – initializes 10-item array
@@ -75,6 +76,9 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
+    if (index + 1 > _size) {
+      _size = index +1; 
+    }
     return temp;
   }
 
