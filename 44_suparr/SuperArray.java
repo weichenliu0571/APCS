@@ -98,8 +98,9 @@ public class SuperArray
       tempData[x] = _data[x];
     }
     tempData[index] = newVal;
-    for (int x = index + 1 ; x < _size ; x++) {
-      tempData[x] = _data[x];
+    
+    for (int x = index + 1 ; x < _size + 1; x++) {
+      tempData[x] = _data[x - 1];
     }
     _size += 1;
     _data = tempData;
