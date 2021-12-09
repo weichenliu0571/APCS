@@ -171,6 +171,4 @@ public class SuperArray implements ListInt
         /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
-
-
 }//end class
