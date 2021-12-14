@@ -53,7 +53,7 @@ public class GuessNumber
     _hi = Math.max(a,b);
     _guessCtr = 1;
     //pick random number in range [a,b]
-    _target = (int) ((Math.random()*(_hi+1) + a);
+    _target = (int) (Math.random()*(_hi+1) + a);
   }
 
 
