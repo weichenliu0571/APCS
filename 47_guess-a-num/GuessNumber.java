@@ -5,9 +5,10 @@ HW47 -- Guess Number Game
 2021-12-14
 time spent:  0.5 hours
 DISCO
--
+- You can return nothing in a method of type void. 
+- If a guess was too low, the _lo is replaced by guess +1 and if the guess was too high, the _hi was replaced by guess - 1. 
 QCC
--
+- When would using break be better than returning nothing?
  *****************************************************/
 
 /***
@@ -51,12 +52,8 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-    _target = (int) (Math.random()*_hi)+1;
-
-
     //pick random number in range [a,b]
-
-    /* YOUR CODE HERE */
+    _target = (int) ((Math.random()*(_hi+1) + a);
   }
 
 
@@ -85,7 +82,6 @@ public class GuessNumber
       _guessCtr += 1;
       playRec();
     }
-    /* YOUR CODE HERE */
   }
 
 
