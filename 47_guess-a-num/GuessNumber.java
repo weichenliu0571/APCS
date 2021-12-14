@@ -110,11 +110,11 @@ public class GuessNumber
       else {
         if (guess > _target) {
           System.out.println("Too high");
-          _hi = _target - 1;
+          _hi = _guess - 1;
         }
         else {
           System.out.println("Too low");
-          _lo = _target + 1;
+          _lo = _guess + 1;
         }
         _guessCtr++;
     }
