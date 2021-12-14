@@ -37,7 +37,6 @@ public class GuessNumber
 
   //instance vars
   private int _lo, _hi, _guessCtr, _target;
-  private String success = "Correct! It took " + _guessCtr + "guesses";
   Scanner sc = new Scanner( System.in );
 
 
