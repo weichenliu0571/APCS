@@ -72,11 +72,19 @@ public class GuessNumber
     else {
       if (guess > _target) {
         System.out.println("Too high");
-        _hi = guess - 1;
+        if ( guess > _hi) {
+            System.out.println("YOUR GUESS IS OUTSIDE OF RANGE. PLEASE GUESS AGAIN!");
+        } else {
+            _hi = guess - 1; 
+        }
       }
       else {
         System.out.println("Too low");
-        _lo = guess + 1;
+        if ( guess < _lo) {
+            System.out.println("YOUR GUESS IS OUTSIDE OF RANGE. PLEASE GUESS AGAIN!");
+        } else {
+            _lo = guess + 1; 
+        }
       }
       _guessCtr += 1;
       playRec();
@@ -104,12 +112,19 @@ public class GuessNumber
       }
       else {
         if (guess > _target) {
-          System.out.println("Too high");
-          _hi = guess - 1;
+          if ( guess > _hi) {
+              System.out.println("YOUR GUESS IS OUTSIDE OF RANGE. PLEASE GUESS AGAIN!");
+          } else {
+                _hi = guess - 1; 
+          }
         }
         else {
           System.out.println("Too low");
-          _lo = guess + 1;
+          if ( guess < _lo) {
+              System.out.println("YOUR GUESS IS OUTSIDE OF RANGE. PLEASE GUESS AGAIN!");
+          } else {
+              _lo = guess + 1; 
+          }
         }
         _guessCtr++;
     }
