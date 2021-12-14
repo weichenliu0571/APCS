@@ -104,7 +104,8 @@ public class GuessNumber
 
       //3 cases: we either found it, too hi, too lo
       if (guess == _target) {
-        break;
+        System.out.println("Correct! It took " + _guessCtr + " guesses");
+        return;
       }
       else {
         if (guess > _target) {
@@ -117,7 +118,6 @@ public class GuessNumber
         }
         _guessCtr++;
     }
-    System.out.println("Correct! It took " + _guessCtr + " guesses");
   }
 }
 
