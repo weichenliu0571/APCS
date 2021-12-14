@@ -126,8 +126,8 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
-    playIter();
+    playRec();
+    //playIter();
   }
 
 
