@@ -33,7 +33,6 @@ public class BinSearch
   }
 
 
-  /*
   public static int binSearchRec( Comparable[] a,
                                   Comparable target,
                                   int lo, int hi )
@@ -43,11 +42,25 @@ public class BinSearch
 
     int m = (lo + hi) / 2; //init mid pos var
 
+    if (lo > hi){ // checks if value not found
+      return tPos;
+    }
 
+    if (a[m].equals(target)){
+      tPos = m;
+    }
+    else if (a[m].compareTo(target) > 0){
+      hi = m - 1;
+      tPos = binSearchRec(a, target, lo, hi);
+    }
+    else{
+      lo = m + 1;
+      tPos = binSearchRec(a, target, lo, hi);
+    }
 
     return tPos;
   }//end binSearchRec
-*/
+
 
   public static int binSearchIter( Comparable[] a,
                                    Comparable target,
@@ -57,25 +70,24 @@ public class BinSearch
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
 
-    while( lo != hi ) { // run until lo & hi cross
-
-      if (a[m] == target) {
-        tPos = m; 
-        break;
-      } else if (a[m] < target) {
-        lo = m + 1;
-        m = (lo + hi) / 2;
-      } else {
-        hi = m - 1;
-        m = (lo + hi) / 2;
-      }
+    while( lo <= hi ) { // run until lo & hi cross
+	    
       //update mid pos var
-
-      // target found
-
+      m = (lo + hi) / 2;
+	    
+      // target found	    
+      if (a[m].equals(target)){
+          tPos = m;
+          break;
+      }
       // value at mid index higher than target
-
+      else if (a[m].compareTo(target) > 0){
+        hi = m - 1;
+      }
       // value at mid index lower than target
+      else{
+        lo = m + 1;
+      }
 
     }
     return tPos;
