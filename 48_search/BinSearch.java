@@ -28,8 +28,8 @@ public class BinSearch
   {
     //uncomment exactly 1 of the 2 stmts below:
 
-    return binSearchIter( a, target, 0, a.length-1 );
-    // return binSearchRec( a, target, 0, a.length-1 );
+    //return binSearchIter( a, target, 0, a.length-1 );
+    return binSearchRec( a, target, 0, a.length-1 );
   }
 
 
