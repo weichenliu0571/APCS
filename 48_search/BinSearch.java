@@ -48,6 +48,7 @@ public class BinSearch
 
     if (a[m].equals(target)){
       tPos = m;
+      return tPos;
     }
     else if (a[m].compareTo(target) > 0){
       hi = m - 1;
@@ -58,7 +59,6 @@ public class BinSearch
       tPos = binSearchRec(a, target, lo, hi);
     }
 
-    return tPos;
   }//end binSearchRec
 
 
