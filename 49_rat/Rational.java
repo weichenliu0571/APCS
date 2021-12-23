@@ -135,7 +135,7 @@ public class Rational implements Comparable
 
     if(other instanceof Rational){
       Rational holder = (Rational)other;
-      return _numerator * holder._denominator - holder._numerator * _denominator;
+      return this._numerator * holder._denominator - holder._numerator * this._denominator;
     }
     throw new ClassCastException("\ncompareTo() input not a Rational");
 
@@ -145,7 +145,7 @@ public class Rational implements Comparable
 
     if(other instanceof Rational){
       Rational holder = (Rational) other;
-      return _numerator * holder._denominator == holder._numerator * _denominator;
+      return this._numerator * holder._denominator == holder._numerator * this._denominator;
     }
     return false;
   }
