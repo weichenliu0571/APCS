@@ -1,4 +1,3 @@
-
 /*****************************************************
 Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
 APCS pd6
