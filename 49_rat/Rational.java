@@ -134,7 +134,7 @@ public class Rational implements Comparable
   public int compareTo(Object other){
 
     if(other instanceof Rational){
-      Rational holder = (Rational)other;
+      Rational holder = (Rational) other;
       return this._numerator * holder._denominator - holder._numerator * this._denominator;
     }
     throw new ClassCastException("\ncompareTo() input not a Rational");
