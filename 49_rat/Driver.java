@@ -4,10 +4,10 @@ public class Driver {
     Rational b = new Rational(6,10);
     Integer c = new Integer(5); 
     
-    // These should run
+    // This should run
     System.out.println(a.compareTo(b)); 
     
-    // These should return error
+    // This should return error
     System.out.println(b.compareTo(c)); 
     
   }
