@@ -8,7 +8,7 @@ public class Driver {
     System.out.println(a.compareTo(b)); 
     
     // These should return error
-    System.out.println(c.compareTo(b)); 
+    System.out.println(b.compareTo(c)); 
     
   }
   
