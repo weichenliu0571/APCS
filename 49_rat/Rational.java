@@ -7,13 +7,13 @@ HW49 -- Java Conventions
 time spent:  0.5 hours
 
 DISCO
-- We can use throw new ClassCastException() to throw and error. 
+- We can use throw new ClassCastException() to throw an error. 
 
 QCC
--
+- 
  *****************************************************/
 
-public class Rational implements Comparable
+public class Rational 
 {
   private int _numerator;
   private int _denominator;
