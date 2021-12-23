@@ -20,7 +20,7 @@ public class Driver {
     
     // This should run
     System.out.println(a.compareTo(b)); 
-    System.out.println(a.compareTo(c));
+    System.out.println(a.compareTo(a));
     System.out.println(a.compareTo(d)); 
     
     // This should return error
