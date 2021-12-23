@@ -151,5 +151,4 @@ public class Rational implements Comparable
   }
 
 
-  }
 }//end class
