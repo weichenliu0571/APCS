@@ -10,10 +10,10 @@ DISCO
 - We can use throw new ClassCastException() to throw an error. 
 
 QCC
-- 
+- Do we have to implement Comparable?
  *****************************************************/
 
-public class Rational 
+public class Rational implements Comparable
 {
   private int _numerator;
   private int _denominator;
