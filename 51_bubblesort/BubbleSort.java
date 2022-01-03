@@ -61,11 +61,13 @@ public class BubbleSort
   public static void bubbleSortV( ArrayList<Comparable> data )
   {
     for ( int i = 0 ; i < data.length - 1 ; i++) {
+      // Amount of times we pass through the entire arraylist
       for ( int x = data.length - 1 ; x > 0 ; x--) {
-        if (data[x].equals(data[x-1] < 0) {
+        // Allows us to compare consecutive values of elements on the array list
+        if (data[x].compareTo(data[x-1] < 0) { 
           Comparable n = data[x - 1];
-          data[x-1] = data[x];
-          data[x] = n;
+          data.set(x, data.get(x-1));
+          data.set(x-1, n);
         }
       }
     }
@@ -77,14 +79,19 @@ public class BubbleSort
   //                Returns sorted copy of input ArrayList.
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    ArrayList copy = new ArrayList<Comparable>(); 
+    
+    for (Comparable i : input) {
+      copy.add(i); 
+    }
+    bubbleSortV(copy);
+    return copy; 
   }
 
 
   public static void main( String [] args )
   {
 
-    /*===============for VOID methods=============
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -98,6 +105,7 @@ public class BubbleSort
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       bubbleSortV(coco);
       System.out.println( "ArrayList coco after sorting:\n" + coco );
+      /*===============for VOID methods=============
       ============================================*/
 
     /*==========for AL-returning methods==========
