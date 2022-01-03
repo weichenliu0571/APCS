@@ -119,14 +119,13 @@ public class BubbleSort
       ArrayList glenSorted = bubbleSort( glen );
       System.out.println( "sorted version of ArrayList glen:\n"
       + glenSorted );
-      System.out.println( "ArrayList glen after sorting:\n" + glen );
+      System.out.println( "ArrayList glen after sorting:\n" + glenSorted );
       ArrayList coco = populate( 10, 1, 1000 );
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       ArrayList cocoSorted = bubbleSort( coco );
       System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      System.out.println( coco );
         /*==========for AL-returning methods==========
       ============================================*/
 
