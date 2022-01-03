@@ -1,15 +1,19 @@
 /*
 Big Apples (Weichen Liu + Blueface, Jeffery Tang + Mathias, Lior + Toothless)
 APCS pd6
-HW49 -- Java Conventions
-2021-12-22
+HW51 -- Working on BubbleSorting
+2021-01-03
 time spent:  0.5 hours
 
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
  *
  * ALGO:
+ * In each pass of the arraylist, we use an if statement inside a for loop to compare consecutive elements on the arraylist. 
+ * If index x is less than the index x - 1, they swap places.
+ * We keep passing through the arraylist until we reach the amount of passes that occured. 
  *
  * DISCO
+ * The input is a class ArrayList, so we have to use the get() to access the elements of the arraylist. 
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
@@ -62,7 +66,7 @@ public class BubbleSort
   {
     for ( int i = 0 ; i < data.size() - 1 ; i++) {
       // Amount of times we pass through the entire arraylist
-      for ( int x = data.size() - 1 ; x > 0 ; x--) {
+      for ( int x = data.size() - 1 ; x > i ; x--) {
         // Allows us to compare consecutive values of elements on the array list
         if ((data.get(x).compareTo(data.get(x-1)) < 0)) { 
           Comparable n = data.get(x-1);
