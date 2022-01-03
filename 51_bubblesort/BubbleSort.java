@@ -108,7 +108,7 @@ public class BubbleSort
       /*===============for VOID methods=============
       ============================================*/
 
-    /*==========for AL-returning methods==========
+
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -127,6 +127,7 @@ public class BubbleSort
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+        /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
