@@ -60,9 +60,9 @@ public class BubbleSort
   // postcondition: data's elements sorted in ascending order
   public static void bubbleSortV( ArrayList<Comparable> data )
   {
-    for ( int i = 0 ; i < data.length - 1 ; i++) {
+    for ( int i = 0 ; i < data.size() - 1 ; i++) {
       // Amount of times we pass through the entire arraylist
-      for ( int x = data.length - 1 ; x > 0 ; x--) {
+      for ( int x = data.size() - 1 ; x > 0 ; x--) {
         // Allows us to compare consecutive values of elements on the array list
         if (data[x].compareTo(data[x-1] < 0)) { 
           Comparable n = data[x - 1];
