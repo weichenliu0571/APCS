@@ -65,7 +65,7 @@ public class BubbleSort
       for ( int x = data.size() - 1 ; x > 0 ; x--) {
         // Allows us to compare consecutive values of elements on the array list
         if ((data.get(x).compareTo(data.get(x-1)) < 0)) { 
-          Comparable n = data[x - 1];
+          Comparable n = data.get(x-1);
           data.set(x, data.get(x-1));
           data.set(x-1, n);
         }
