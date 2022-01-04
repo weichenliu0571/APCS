@@ -67,7 +67,7 @@ public class SelectionSort
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos;
 
-    for( int pass = data.size()-1; -1 < pass; pass-- ) {
+    for( int pass = data.size()-1; 0 < pass; pass-- ) {
       maxPos = 0; 
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
 
