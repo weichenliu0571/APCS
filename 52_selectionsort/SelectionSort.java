@@ -80,8 +80,9 @@ public class SelectionSort
 
 
       }
-
-      data.set( pass, data.set( maxPos, data.get(pass) ) );
+      Comparable newBig = data.get(maxPos); 
+      data.set( maxPos, data.get(pass) );
+      data.set( pass, newBig); 
       System.out.println( "after swap: " +  data );//diag
     }
   }//end selectionSort
