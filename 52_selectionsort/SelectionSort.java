@@ -8,8 +8,13 @@
  *   class SelectionSort -- implements SelectionSort algorithm
  *
  * ALGO:
+ * First we determine the greatest element in the array by looping through the entire array.
+ * Then we swap that element with the element with index pass.
+ * We loop through the array of n elements n - 1 times. 
+ * Each time we loop through the array, the search window is cut to be from the 0th index to the pass index. 
  *
  * DISCO
+ * We can nest a set method inside another set method when we want to swap elements. It is more efficient. 
  *
  * QCC
  * q0: How many passes to sort n elements?
