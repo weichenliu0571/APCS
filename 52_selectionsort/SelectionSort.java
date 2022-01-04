@@ -93,7 +93,7 @@ public class SelectionSort
     }
   }//end selectionSort
 
-/*
+
   // ArrayList-returning selectionSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
@@ -111,11 +111,11 @@ public class SelectionSort
 
     return data;
   }//end selectionSort
-*/
+  
 
   public static void main( String [] args )
   {
-
+        /*===============for VOID methods=============
     ArrayList glen = new ArrayList<Integer>();
     glen.add(7);
     glen.add(1);
@@ -131,10 +131,9 @@ public class SelectionSort
     selectionSortV(coco);
     System.out.println( "ArrayList coco after sorting:\n" + coco );
 
-        /*===============for VOID methods=============
       ============================================*/
 
-    /*==========for AL-returning methods==========
+
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -154,6 +153,7 @@ public class SelectionSort
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+        /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
