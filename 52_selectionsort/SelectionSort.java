@@ -1,4 +1,4 @@
-// ONE (Weichen Liu, Josiah Moltz)  
+// Feast (Weichen Liu, Josiah Moltz)  
 // APCS pd6
 // HW52 -- implementing selection sort
 // 2022-01-04t
@@ -67,12 +67,12 @@ public class SelectionSort
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos;
 
-    for( int pass = data.size()-1; 0 <= pass; pass-- ) {
+    for( int pass = data.size()-1; 0 < pass; pass-- ) {
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
 
 
       for( int i = pass; 0 <= i; i-- ) {
-        if ( data.get(maxPos).compareTo(data.get(i)) = -1 ) {
+        if ( data.get(maxPos).compareTo(data.get(i)) < 0 ) {
           maxPos = i;
         }
         System.out.println( "maxPos: " + maxPos );//diag
