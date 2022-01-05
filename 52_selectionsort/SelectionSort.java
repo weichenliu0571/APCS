@@ -1,4 +1,4 @@
-// Balloons (Weichen Liu, Josiah Moltz)
+// Balloons (Weichen Liu, Josiah Moltz, Sophia Eiden)
 // APCS pd6
 // HW52 -- implementing selection sort
 // 2022-01-04
@@ -140,14 +140,14 @@ public class SelectionSort
     ArrayList glenSorted = selectionSort( glen );
     System.out.println( "sorted version of ArrayList glen:\n"
     + glenSorted );
-    System.out.println( "ArrayList glen after sorting:\n" + glenSorted );
+    System.out.println( "ArrayList glen after sorting:\n" + glen );
 
     coco = populate( 10, 1, 1000 );
     System.out.println( "ArrayList coco before sorting:\n" + coco );
     ArrayList cocoSorted = selectionSort( coco );
     System.out.println( "sorted version of ArrayList coco:\n"
     + cocoSorted );
-    System.out.println( "ArrayList coco after sorting:\n" + cocoSorted );
+    System.out.println( "ArrayList coco after sorting:\n" + coco );
 
   }//end main
 
