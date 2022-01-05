@@ -61,20 +61,21 @@ public class InsertionSort
   // postcondition: data's elements sorted in ascending order
   public static void insertionSortV( ArrayList<Comparable> data )
   {
-    for(  ) {
+    for(int partition = 1; partition < data.size(); partition ++) {
       //partition marks first item in unsorted region
 
       System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
       System.out.println( data );
 
       //traverse sorted region from right to left
-      for(  ) {
+      for(int i = partition; i > 0; i --) {
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
-        if (  ) {
-
+        if (data.get(i).compareTo(data.get(i-1)) < 0 ) {
+          
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
+          data.set(i , data.set(i - 1, data.get(i)); 
           
         }
         else
@@ -125,7 +126,6 @@ public class InsertionSort
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       ============================================*/
 
-    /*==========for AL-returning methods==========
       System.out.println( "*** Testing non-void version... *** " );
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -146,6 +146,8 @@ public class InsertionSort
       + cocoSorted );
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+    
+    /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
