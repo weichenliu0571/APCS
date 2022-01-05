@@ -28,7 +28,7 @@
  * q3: What constitues a pass?
  * a3: A pass finishes when we finish comparing and swapping the element with index p with the elements of indices less than p.
  * q4: What must you track?
- * a4: We must track which parts of the array list is sorted and not sorted.
+ * a4: We must track which parts of the array list are sorted and not sorted.
  ******************************/
 
 
