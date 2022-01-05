@@ -75,7 +75,7 @@ public class InsertionSort
         if (data.get(i).compareTo(data.get(i-1)) < 0 ) {
           
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
-          data.set(i , data.set(i - 1, data.get(i)); 
+          data.set(i , data.set(i - 1, data.get(i))); 
           
         }
         else
