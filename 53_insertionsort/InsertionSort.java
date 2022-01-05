@@ -143,7 +143,7 @@ public class InsertionSort
       ArrayList glenSorted = insertionSort( glen );
       System.out.println( "\nsorted version of ArrayList glen:\n"
       + glenSorted );
-      System.out.println( "\nArrayList glen after sorting:\n" + glen );
+      System.out.println( "\nArrayList glen after sorting:\n" + glenSorted );
 
       ArrayList coco = populate( 10, 1, 1000 );
       System.out.println( "\nArrayList coco before sorting:\n" + coco );
