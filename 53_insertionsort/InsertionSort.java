@@ -1,27 +1,33 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW53 -- implementing insertion sort
-// 2022-01-06r
-// time spent:  hrs
+// Balloons (Weichen Liu, Josiah Moltz, Sophia Eiden)
+// APCS pd6
+// HW52 -- implementing insertion sort
+// 2022-01-05
+// time spent:  0.5 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- * 
+ * We start looking at the element with index 1.
+ * We compare that element with the elements with indices less than it.
+ * Swap the elements if the element with a greater index is less than the element with the lesser index. We only swap adjacent/consecutive elements. 
+ * We keep passing through the ArrayList of n elements n - 2 times. 
+ * Repeat steps 2 and 3 with each pass.
+ *
  * DISCO
+ * KTS is very necessary when coming up with an algorithm. 
  *
  * QCC
  * q0: How many passes to sort n elements?
- * a0: 
+ * a0: n - 1 passes
  * q1: What do you know after pass p?
- * a1: 
+ * a1: Elements that have indices p and less are in the sorted section of the array list. 
  * q2: How will you know when sorted?
- * a2:
+ * a2: When the sorted section of the array list takes up the entire array list, we know that the array list is sorted. 
  * q3: What constitues a pass?
- * a3:
+ * a3: A pass finishes when we finish comparing and swapping the element with index p with the elements of indices less than p. 
  * q4: What must you track?
- * a4: 
+ * a4: We must track which parts of the array list is sorted and not sorted. 
  ******************************/
 
 
@@ -144,8 +150,8 @@ public class InsertionSort
       ArrayList cocoSorted = insertionSort( coco );
       System.out.println( "\nsorted version of ArrayList coco:\n"
       + cocoSorted );
-      System.out.println( "\nArrayList coco after sorting:\n" + coco );
-      System.out.println( coco );
+      System.out.println( "\nArrayList coco after sorting:\n" + cocoSorted );
+      System.out.println( cocoSorted );
     
     /*==========for AL-returning methods==========
       ============================================*/
