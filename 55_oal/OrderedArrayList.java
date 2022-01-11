@@ -4,6 +4,13 @@
 // 2022-01-11
 
 /**********************************************
+QCC
+- 
+
+DISCO
+- 
+
+
  * class OrderedArrayList
  * wrapper class for ArrayList
  * maintains invariant that elements are ordered (ascending)
@@ -20,8 +27,9 @@ public class OrderedArrayList
   // (i.e., objects of a class that implements interface Integer)
   private ArrayList<Integer> _data;
 
-  // default constructor
-  // initializes instance variables
+
+  // Best and Worst Case runtime complexity: O(1)
+  // Method does not depend on size of something. 
   public OrderedArrayList() {
     _data = new ArrayList<Integer>();
   }
