@@ -38,6 +38,23 @@ public class Magpie3
 		{
 			response = "Why so negative?";
 		}
+		else if (findKeyword(statement, "dog") >= 0
+			|| findKeyword(statement, "cat") >= 0) 
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement, "Mr. Mykolyk") >= 0)
+		{
+			response = "Wow! Sure sounds like a teacher!";
+		}
+		else if (findKeyword(statement, "airplanes") >= 0)
+		{
+			response = "The Wright brothers invented and flew the first airplane in 1903, recognized as \"the first sustained and controlled heavier-than-air powered flight\".[4] They built on the works of George Cayley dating from 1799, when he set forth the concept of the modern airplane (and later built and flew models and successful passenger-carrying gliders).[5] Between 1867 and 1896, the German pioneer of human aviation Otto Lilienthal also studied heavier-than-air flight. Following its limited use in World War I, aircraft technology continued to develop. Airplanes had a presence in all the major battles of World War II. The first jet aircraft was the German Heinkel He 178 in 1939. The first jet airliner, the de Havilland Comet, was introduced in 1952. The Boeing 707, the first widely successful commercial jet, was in commercial service for more than 50 years, from 1958 to at least 2013. \n Watch out for the geese!";
+		}
+		else if (findKeyword(statement, "food") >= 0)
+		{
+			response = "Here's a sandwich!";
+		}
 		else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
@@ -51,6 +68,8 @@ public class Magpie3
 		}
 		return response;
 	}
+	
+	
 
 	/**
 	 * Search for one word in phrase. The search is not case
