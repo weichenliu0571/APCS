@@ -1,4 +1,7 @@
 /**
+When more than one keyword appears in the input, the priority goes from the top to bottom of the if, else if, else statement. In this case "no dog" would return "Why so negative?" because the statement for no comes first. 
+
+1. When a keyword is in one of the words of the input, the computer recognizes that the keyword is there. Therefore, you may get a reponse directed for the input "no" when you typed "know" in the terminal. 
  * A program to carry on conversations with a human user.
  * This is the initial version that:
  * <ul><li>
