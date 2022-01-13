@@ -71,7 +71,7 @@ public class Magpie4
 				response = transformYouMeStatement(statement);
 			}
 			else if (psn >= 0
-			    && findKeyword(statement, "I", psn) >= 0)
+			    && findKeyword(statement, "I", 0) >= 0)
 			{
 				response = transformIYouStatement(statement);
 			}
