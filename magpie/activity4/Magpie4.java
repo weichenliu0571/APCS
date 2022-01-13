@@ -61,7 +61,7 @@ public class Magpie4
 
 		else
 		{
-			// Look for a two word (you <something> me)
+			// Look for a two word (you <something> me) and (I <something> you)
 			// pattern
 			int psn = findKeyword(statement, "you", 0);
 
