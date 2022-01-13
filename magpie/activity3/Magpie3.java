@@ -182,6 +182,14 @@ public class Magpie3
 		{
 			response = "You don't say.";
 		}
+		else if (whichResponse == 4)
+		{
+			response = "Sounds good.";
+		}
+		else if (whichResponse == 5)
+		{
+			response = "Are you asking me?";
+		}
 
 		return response;
 	}
