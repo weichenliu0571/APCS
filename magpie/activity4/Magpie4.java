@@ -31,6 +31,11 @@ public class Magpie4
 	public String getResponse(String statement)
 	{
 		String response = "";
+		
+		// Look for a two word (you <something> me) pattern
+		int youCheck = findKeyword(statement, "you", 0);
+		int iCheck = findKeyword(statement, "I", 0);
+		
 		if (statement.length() == 0)
 		{
 			response = "Say something, please.";
@@ -52,6 +57,10 @@ public class Magpie4
 		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
+		}
+		else if (findKeyword(statement, "I want", 0) >= 0)
+		{
+			response = transformIWantStatement(statement);
 		}
 
 		else
