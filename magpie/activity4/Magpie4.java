@@ -1,4 +1,7 @@
 /**
+This structure would not work well when you want a response that is not a question. We can just change the reponse to fix that.
+
+
  * A program to carry on conversations with a human user.
  * This version:
  *<ul><li>
@@ -61,7 +64,7 @@ public class Magpie4
 
 		else
 		{
-			// Look for a two word (you <something> me) and (I <something> you)
+			// Look for a two word (you <something> me)
 			// pattern
 			int psn = findKeyword(statement, "you", 0);
 
