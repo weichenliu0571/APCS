@@ -103,7 +103,7 @@ public class StatPrinter
     {
       return true;
     } else {
-    return false;
+      return false;
     }
   }
 
@@ -114,9 +114,9 @@ public class StatPrinter
   {
     ArrayList modes = new ArrayList<Integer>(0);
 
-    for (int i = 0; i < _frequency.size(); i++) {
-      if(isLocalMode(i)) {
-        modes.add(_frequency.get(i));
+    for (int i = 0; i < _frequency.size() - 1; i++) {
+      if( isLocalMode(i) ) {
+        modes.add( _frequency.get(i) );
       }
     }
     return modes;
