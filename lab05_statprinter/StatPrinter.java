@@ -128,7 +128,14 @@ public class StatPrinter
   //precond:  longestBar > 0
   public void printHistogram( int longestBar ) 
   {
-    /* YOUR IMPLEMENTATION HERE */ 
+    stars = longestBar / max(_frequency);
+    for (int i = 0; i < _frequency.size(); i++) {
+      System.out.println(i + " : " );
+        for (int j = 0; j < stars * _frequency.get(i) + 1; j ++) {
+          System.out.print("*");
+        }
+      System.out.print("\n");
+    }
   }
  
 }//end class StatPrinter
