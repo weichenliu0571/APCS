@@ -67,6 +67,9 @@ public class StatPrinter
   public StatPrinter( ArrayList <Integer> data ) 
   { 
     _frequency = new ArrayList <Integer>(max(data) + 1);
+    for (int i = 0; i < _frequency.size(); i ++) {
+      _frequency.set(data.get(i), _frequency.get(data.get(i)) + 1); 
+    }
   }
 
 
@@ -128,7 +131,7 @@ public class StatPrinter
   //precond:  longestBar > 0
   public void printHistogram( int longestBar ) 
   {
-    stars = longestBar / max(_frequency);
+    Integer stars = longestBar / max(_frequency);
     for (int i = 0; i < _frequency.size(); i++) {
       System.out.println(i + " : " );
         for (int j = 0; j < stars * _frequency.get(i) + 1; j ++) {
