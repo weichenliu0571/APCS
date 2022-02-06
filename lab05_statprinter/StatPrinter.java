@@ -1,8 +1,9 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Suspicious Oranges : Kevin Li, Weichen Liu, Hamim Seam 
+// APCS pd8
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 0.5 hrs
+
 
 
 /**
