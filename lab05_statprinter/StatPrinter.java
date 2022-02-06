@@ -1,8 +1,8 @@
-// Suspicious Oranges : Kevin Li, Weichen Liu, Hamim Seam 
-// APCS pd8
+// Clyde "Thluffy" Sinclair
+// APCS pd0
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent: 0.5 hrs
+// time spent:  hrs
 
 
 /**
@@ -64,11 +64,12 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
- public StatPrinter( ArrayList <Integer> data ) 
+  //	O(n)
+  public StatPrinter( ArrayList <Integer> data ) 
   { 
-    _frequency = new ArrayList<Integer>(max(data) + 1);
+    _frequency = new ArrayList<Integer>(max(data));
 
-    for (int x = 0; x < data.size() + 1; x++) {
+    for (int x = 0; x < max(data) + 1; x++) {
         _frequency.add(0);
     }
 
@@ -76,17 +77,21 @@ public class StatPrinter
         _frequency.set(i, _frequency.get(i) + 1); 
     }
 
+    System.out.println("size of _frequency: " + _frequency.size());
+    System.out.println("max of data: " + max(data));
+
   }
 
 
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
-  public Integer max( ArrayList<Integer> data ) 
+  //	O(n)
+  public Integer max( ArrayList <Integer> data ) 
   { 
     Integer max = -1;
     for (Integer i : data) {
-      if (i.compareTo(max) > 0) {
+      if (i > max) {
         max = i;
       }
     }
@@ -104,28 +109,31 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
+  //	O(1)
   public boolean isLocalMode( int i ) 
   { 
-    if ((i > 0) && (i < _frequency.size() - 1) && 
-    (_frequency.get(i - 1)) < (_frequency .get( i )) &&
-    (_frequency.get(i + 1)) < (_frequency .get( i ))) 
-    {
+    if (
+        ( i > 0 ) && 
+        ( i < _frequency.size() - 1 ) && 
+        ( _frequency.get(i - 1) < _frequency .get( i ) ) &&
+        ( _frequency.get(i + 1) < _frequency .get( i ) )
+        ) {
       return true;
-    } else {
-      return false;
-    }
+    } else 
+    return false;
   }
 
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
+  //	O(n)
   public ArrayList<Integer> getLocalModes() 
   {
     ArrayList modes = new ArrayList<Integer>(0);
 
-    for (int i = 0; i < _frequency.size() - 1; i++) {
-      if( isLocalMode(i) ) {
-        modes.add( _frequency.get(i) );
+    for (int i = 0; i < _frequency.size(); i++) {
+      if(isLocalMode(i)) {
+        modes.add(_frequency.get(i));
       }
     }
     return modes;
@@ -135,16 +143,27 @@ public class StatPrinter
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
+  //	O(n^2) possibly amortized?
   public void printHistogram( int longestBar ) 
   {
     int stars = longestBar / max(_frequency);
     for (int i = 0; i < _frequency.size(); i++) {
-      System.out.println(i + " : " );
+      System.out.print(i + " : " );
         for (int j = 0; j < stars * _frequency.get(i) + 1; j ++) {
           System.out.print("*");
         }
       System.out.print("\n");
     }
   }
- 
+
+  public String getFrequency() {
+      String output = "[";
+      for (Integer i : _frequency) {
+          output = output + i + ", ";
+      }
+      output = output.substring(0, output.length() - 2);
+      output = output + "]";
+
+      return output;
+  }
 }//end class StatPrinter
