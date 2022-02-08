@@ -1,5 +1,5 @@
 Suspicious Oranges: Keven Li, Weichen Liu, Samim 
-APCS pd07
+APCS pd08
 HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle
 2022-02-07
 time spent: 0.5 hrs
