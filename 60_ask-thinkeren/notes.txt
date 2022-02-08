@@ -9,6 +9,7 @@ DISCO:
 
 QCC:
 - Is there a sort method faster than merge sort?
+- If it's true that the last person to receive the cards does some kind of sorting, then what is it that they do? Is it different from what everyone else is doing?
 
 THINKER FIRMWARE:
 - Only thinkeren with cards are allowed to speak. 
