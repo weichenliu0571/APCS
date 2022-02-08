@@ -1,8 +1,21 @@
-/***
+	/***
+  Pencils: Salaj Rijal, Weichen Liu
+  APCS
+  HW 61 -- Instructions so Simple... -- Implement Merge Sort
+  time: .3 hours
+  
+  DISCO:
+  - An effective base case for the sort method would just be checking if the deck only has one element. 
+  QCC:
+  - What sorting method is faster than merge sort?
+  
   class MergeSort
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
+	Our algo first checks if there is only 1 item in the array, if so then it returns the list of that item.
+  If not, our algo splits the list into 2 approx equal array. The algo calls the sort method on these arrays, and then 
+  merges the two arrays. The resultant array is then returned.
   ***/
 
 public class MergeSort
@@ -121,13 +134,13 @@ public class MergeSort
       System.out.println("\nMerging arr4 and arr6: ");
       printArray( merge(arr4,arr6) );
 
-    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       System.out.println("\nSorting arr4-7...");
       printArray( sort( arr4 ) );
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    	/*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
+    	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class MergeSort
