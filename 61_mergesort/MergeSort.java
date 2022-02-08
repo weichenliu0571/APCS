@@ -3,7 +3,6 @@
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
-
   ***/
 
 public class MergeSort
@@ -18,10 +17,8 @@ public class MergeSort
   private static int[] merge( int[] a, int[] b )
   {
 	  int[] result = new int[ a.length + b.length ];
-	  
 	  int aCount = 0;
 	  int bCount = 0;
-
 	  for( int i = 0; i < result.length; i++){
 	  	if ( aCount == a.length ){
 			result[i] = b[bCount];
@@ -39,10 +36,8 @@ public class MergeSort
 			result[i] = b[bCount];
 			bCount++;
 		}
-	  
 	  }
 	  return result;
- 
   }//end merge()
 
 
@@ -53,10 +48,36 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr )
   {
-    return new int[0];
-
+    //check if base case (1 card)
+    if (arr.length < 2) {
+      return arr; 
+    }
+		//if not base case
+    //split the deck
+		
+    int splitPoint = arr.length/2;
+    int[] deck1 = new int[splitPoint];
+    int[] deck2 = new int[arr.length - splitPoint];
+    
+    //deck 1
+    for( int i = 0; i < splitPoint; i++ ) {
+      deck1[i] = arr[i]; 
+    }
+    
+    //deck 2
+    for( int i = splitPoint; i < arr.length; i++){
+    	deck2[i-splitPoint] = arr[i];  
+    }
+    
+    deck1 = sort(deck1);
+    deck2 = sort(deck2);
+    
+    //merge deck
+    int[] result = merge( deck1, deck2 );
+    
+    //return merged deck
+    return result;
   }//end sort()
-
 
 
   //-------------------HELPERS-------------------------
@@ -110,6 +131,7 @@ public class MergeSort
   }//end main()
 
 }//end class MergeSort
+
 
 
 
