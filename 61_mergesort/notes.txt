@@ -18,5 +18,5 @@ THINKER FIRMWARE:
 - When you receive 2 decks of cards, look at the first card of each deck and sort them accordingly into one new deck. 
 
 how to clean-up:
--solidify rules on who to give the cards to (preferably the people next to you, not across the room)
--dont focus on what the group is doing, only focus on your task at hand
+- solidify rules on who to give the cards to (preferably the people next to you, not across the room)
+- dont focus on what the group is doing, only focus on your task at hand
