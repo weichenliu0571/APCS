@@ -1,16 +1,22 @@
-  Pencils: Salaj Rijal, Weichen Liu
-  APCS
-  HW 61 -- Instructions so Simple... -- Implement Merge Sort
-  time: .3 hours
-  
-  DISCO:
-  - An effective base case for the sort method would just be checking if the deck only has one element. 
-  QCC:
-  - What sorting method is faster than merge sort?
-  
-  class MergeSort
-  Implements mergesort on array of ints.
-  Summary of Algorithm:
-	Our algo first checks if there is only 1 item in the array, if so then it returns the list of that item.
-  If not, our algo splits the list into 2 approx equal array. The algo calls the sort method on these arrays, and then 
-  merges the two arrays. The resultant array is then returned.
+Suspicious Oranges: Keven Li, Weichen Liu, Samim 
+APCS pd08
+HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.5 hrs
+
+DISCO:
+- An array has to be sorted if there is only one element in the array!
+
+QCC:
+- Is there a sort method faster than merge sort?
+- If it's true that the last person to receive the cards does some kind of sorting, then what is it that they do? Is it different from what everyone else is doing?
+
+THINKER FIRMWARE:
+- When a thinker has >1 card, split the deck in half and give one each to two other thinkeren. Signal that you hands are empty.
+- If a thinker's hands are empty and has not gotten a deck yet, receive a split deck from another thinker.
+- If a thinker has 1 card, it is declared sorted. Return the card to the thinker who originally gave it to you.
+- When you receive 2 decks of cards, look at the first card of each deck and sort them accordingly into one new deck. 
+
+how to clean-up:
+-solidify rules on who to give the cards to (preferably the people next to you, not across the room)
+-dont focus on what the group is doing, only focus on your task at hand
