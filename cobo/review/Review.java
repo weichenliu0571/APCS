@@ -205,7 +205,8 @@ public class Review {
     }
     else if (totalSentiment > 1 {
       return 1;
-    } else {
+    } 
+    else {
       return 0;
     }
     
