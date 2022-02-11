@@ -98,6 +98,19 @@ public class Review {
     }
   }
   
+  public static double totalSentiment( String fileName ) {
+  	String file = textToString(fileName);
+  	int startIndex = 0;
+  	int endIndex = 0;
+  	
+  	while (endIndex < file.length()) {
+  		endIndex = file.indexOf(" ");
+  		sentimentVal(file.substring(startIndex, endIndex));
+  	}
+  	
+  	return 0.0;
+  }
+  
   /**
    * Returns the ending punctuation of a string, or the empty string if there is none 
    */
@@ -161,5 +174,11 @@ public class Review {
     } else {
       return randomNegativeAdj();
     }
+  }
+  
+  public static void main(String[] args) {
+  	System.out.println(sentimentVal("academy"));
+  	System.out.println(sentimentVal("painful"));
+  	System.out.println(sentimentVal("smart"));
   }
 }
