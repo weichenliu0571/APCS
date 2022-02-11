@@ -2,7 +2,9 @@ Activity 1
 1-3 in notebook
 
 Activity 2
-1-5 in notebook 
+1-4
+5 a - the ratings make sense. The higher the number, the better the rating. b - I could change the threshold for better ratings. 
 6 - Student made a logical error where he let everything less than 15 return 4, so the rest of the code wont run unless the totalSentiment was greater than 15.
 
 Activity 3
+
