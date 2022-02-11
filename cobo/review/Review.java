@@ -189,6 +189,28 @@ public class Review {
     }
   }
   
+  public static int starRating( String fileName) {
+    double totalSentiment = totalSentiment ( fileName); 
+    if (totalSentiment > 10) {
+      return 5;
+    }
+    else if (totalSentiment > 8 {
+      return 4;
+    }
+    else if (totalSentiment > 5 {
+      return 3;
+    }
+    else if (totalSentiment > 3 {
+      return 2;
+    }
+    else if (totalSentiment > 1 {
+      return 1;
+    } else {
+      return 0;
+    }
+    
+  }
+  
   public static void main(String[] args) {
   	System.out.println(sentimentVal("academy"));
   	System.out.println(sentimentVal("painful"));
