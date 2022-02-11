@@ -98,17 +98,30 @@ public class Review {
     }
   }
   
+  // totalSentiment iterates through the words in fileName and returns sum of the sentiment value of all the words. 
   public static double totalSentiment( String fileName ) {
   	String file = textToString(fileName);
-  	int startIndex = 0;
   	int endIndex = 0;
+    double total = 0;
+    String word;
   	
-  	while (endIndex < file.length()) {
-  		endIndex = file.indexOf(" ");
-  		sentimentVal(file.substring(startIndex, endIndex));
+  	while (file.length() > 0) {
+        endIndex = file.indexOf(" ");
+
+        if (endIndex == -1) {
+            word = removePunctuation(file);
+            total = total + sentimentVal(word);
+            break;
+        }
+
+        word = file.substring(0, endIndex);
+        word = removePunctuation(word);
+        total = total + sentimentVal(word);
+        file = file.substring(endIndex + 1);
+
   	}
   	
-  	return 0.0;
+  	return total;
   }
   
   /**
