@@ -189,26 +189,28 @@ public class Review {
     }
   }
   
+  // 6 - Student made a logical error where he let everything less than 15 return 4, so the rest of the code wont run unless the totalSentiment was greater than 15.
   public static int starRating( String fileName) {
     double totalSentiment = totalSentiment ( fileName); 
     if (totalSentiment > 10) {
       return 5;
     }
-    else if (totalSentiment > 8 {
+    else if (totalSentiment > 8) {
       return 4;
     }
-    else if (totalSentiment > 5 {
+    else if (totalSentiment > 5) {
       return 3;
     }
-    else if (totalSentiment > 3 {
+    else if (totalSentiment > 3) {
       return 2;
     }
-    else if (totalSentiment > 1 {
+    else if (totalSentiment > 1) {
       return 1;
     } 
     else {
       return 0;
     }
+
     
   }
   
