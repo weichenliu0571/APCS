@@ -37,7 +37,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        //System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -98,7 +98,6 @@ public class Review {
     }
   }
   
-  // totalSentiment iterates through the words in fileName and returns sum of the sentiment value of all the words. 
   public static double totalSentiment( String fileName ) {
   	String file = textToString(fileName);
   	int endIndex = 0;
@@ -122,6 +121,19 @@ public class Review {
   	}
   	
   	return total;
+  }
+
+  public static int starRating(String filename) {
+      double sentiment = totalSentiment(filename);
+      sentiment = sentiment / 3;
+      
+      if ((int)sentiment <= 0) {
+          return 1;
+      } else
+      if ((int)sentiment > 5) {
+        return 5;
+      } else
+      return (int)sentiment;
   }
   
   /**
@@ -189,34 +201,55 @@ public class Review {
     }
   }
   
-  // 6 - Student made a logical error where he let everything less than 15 return 4, so the rest of the code wont run unless the totalSentiment was greater than 15.
-  public static int starRating( String fileName) {
-    double totalSentiment = totalSentiment ( fileName); 
-    if (totalSentiment > 10) {
-      return 5;
-    }
-    else if (totalSentiment > 8) {
-      return 4;
-    }
-    else if (totalSentiment > 5) {
-      return 3;
-    }
-    else if (totalSentiment > 3) {
-      return 2;
-    }
-    else if (totalSentiment > 1) {
-      return 1;
-    } 
-    else {
-      return 0;
+  public static String fakeReview(String input) {
+  	String file = textToString(input);
+    String output = "";
+    double sentiment = totalSentiment(input);
+    
+    //find asterick
+  	int startIndex = file.indexOf("*");
+
+    while (startIndex != -1) {
+        //add all text up to asterick
+        output = output + file.substring(0, startIndex);
+
+        //add a random adjective
+        if (sentiment > 0) {
+            output = output + randomPositiveAdj();
+        } else 
+        if (sentiment < 0) {
+            output = output + randomNegativeAdj();
+        } else 
+
+        output = output + randomAdjective();
+        
+
+        //cut the string up to and including the asterick
+  	    file = file.substring(startIndex + 1);
+        startIndex = file.indexOf(" ");
+
+        //adds existing punctuation
+        if (startIndex != -1) {
+            if (!Character.isAlphabetic(file.charAt(startIndex - 1))) {
+                output = output + file.charAt(startIndex - 1);
+            }
+            output = output + " ";
+        }
+
+        //cut the word after the asterick
+        file = file.substring(startIndex + 1);
+        startIndex = file.indexOf("*");
     }
 
-    
+    return output;
   }
   
   public static void main(String[] args) {
   	System.out.println(sentimentVal("academy"));
   	System.out.println(sentimentVal("painful"));
   	System.out.println(sentimentVal("smart"));
+    System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(starRating("SimpleReview.txt"));
+    System.out.println(fakeReview("SimpleReview.txt"));
   }
 }
