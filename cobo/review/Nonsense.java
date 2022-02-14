@@ -1,3 +1,11 @@
+/*
+Team Suspicious Oranges: Kevin Li, Hamim Seam, Weichen Liu
+APCS
+Lab 6 -- College Board Consumer Review Lab
+2022-02-13
+time spent: 2 hours
+*/
+
 public class Nonsense {
   
     /**
