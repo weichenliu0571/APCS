@@ -5,7 +5,7 @@ HW65 -- Placing Queen on board
 time spent: 0.8 hrs
 
 QCC
-What is the cleanest way to exhaustively test where the queens can be placed? 
+What is the cleanest way to exhaustively test where the queens can be placed in solve() using the solveH()? 
 
 DISCO: 
 Setting the base case to be when we have placed a queen in every col is smart. 
