@@ -1,4 +1,10 @@
 /***
+Suspicious Oranges :: Kevin Li, Weichen Liu, Hamim 
+APCS
+HW65 -- Placing Queen on board
+2022-02-16
+time spent: 0.8 hrs
+
  * class QueenBoard
  * Generates solutions for N-Queens problem.
  * USAGE:
