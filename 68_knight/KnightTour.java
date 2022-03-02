@@ -99,7 +99,7 @@ class TourFinder
     //---------------------------------------------------------
     for (int i = 0; i < _sideLength + 4; i++ ) {
     	for (int j = 0; j < _sideLength + 4; j ++) {
-    		if (j < 2 || j > n + 2 || i < 2 || i > n + 2) {
+    		if (j < 2 || j > n + 6 || i < 2 || i > n + 6) {
     			_board[i][j] = -1;
     		}
     		else {
