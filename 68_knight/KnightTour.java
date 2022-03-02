@@ -97,8 +97,8 @@ class TourFinder
     //SETUP BOARD --  0 for unvisited cell
     //               -1 for cell in moat
     //---------------------------------------------------------
-    for (int i = 0; i < _sideLength; i++ ) {
-    	for (int j = 0; j < _sideLength; j ++) {
+    for (int i = 0; i < _sideLength + 4; i++ ) {
+    	for (int j = 0; j < _sideLength + 4; j ++) {
     		if (j < 2 || j > n + 2 || i < 2 || i > n + 2) {
     			_board[i][j] = -1;
     		}
