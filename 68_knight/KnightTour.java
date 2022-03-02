@@ -2,7 +2,7 @@
 // APCS pd8
 // HW68 -- recursively probing for a closed cycle
 // 2022-02-28m
-// time spent:  hrs
+// time spent:  0.5 hrs
 
 /***
  * SKELETON
@@ -15,16 +15,22 @@
  * $ java KnightTour [N]
  *
  * ALGO
+ * Start with a knight in the upper left hand corner.
+ * Try different moves with the knight to see which one lands in an unoccupied cell.
+ * If we reach a dead end, return and take a different path. 
  *
  * DISCO
+ * Instead of checking if the cell we are trying to move to is out of bound in the array of arrays, we use a moat. 
  *
  * QCC
+ * How many different ways can we get an open knight tour? 
+ *
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
- * n=6   __s    across __ executions
- * n=7   __s    across __ executions
- * n=8   __s    across __ executions
+ * n=5   1.2s    across 8 executions
+ * n=6   32.3s    across 8 executions
+ * n=7   803s    across 3 executions
+ * n=8   1103s    across 3 executions
  *
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
