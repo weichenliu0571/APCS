@@ -168,7 +168,7 @@ class TourFinder
     if ( _solved ) System.exit(0);
 
     //primary base case: tour completed
-    if ( moves == _sideLength * _sideLength ) {
+    if ( moves == _sideLength * _sideLength + 1 ) {
       _solved = true; 
       System.out.println( this ); //refresh screen
       return;
