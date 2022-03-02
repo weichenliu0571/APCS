@@ -18,6 +18,7 @@
  * Start with a knight in the upper left hand corner.
  * Try different moves with the knight to see which one lands in an unoccupied cell.
  * If we reach a dead end, return and take a different path. 
+ * Repeat till moves = n^2 + 1
  *
  * DISCO
  * Instead of checking if the cell we are trying to move to is out of bound in the array of arrays, we use a moat. 
