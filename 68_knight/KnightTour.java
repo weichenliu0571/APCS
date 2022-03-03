@@ -79,6 +79,12 @@ public class KnightTour
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // PUSHING FARTHER...
     // Systematically attempt to solve from every position on the board?
+    //
+    // for(int i = 2; i < n+2; i++){
+    //   for (int j = 2; j < n+2; j++){
+    //     tf.findTour(i, j, 1);
+    //   }
+    // }
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   }//end main()
