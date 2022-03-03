@@ -9,7 +9,7 @@ Mean execution time using random starts:
 Possible Knight’s Tours				      Impossible Knight’s Tours	
 
 n=5	18.635s	  across 4 executions		     122.103s
-n=6	62.926s  	across 4 executions         N/A
+n=6	62.926s  	across 4 executions          N/A
 n=7	656.567s	across 1 execution	     N/A
 n=8	887.002s	across 1 execution 	     N/A
 
