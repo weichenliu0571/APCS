@@ -15,19 +15,15 @@ n=8	887.002s	across 1 execution 		    N/A
 
 
 Q0: From any starting position, can an open tour always be found? Explain.
-
 No, because when we tried running the Knight's Tour on every cell in a 5 by 5 and found that the 2nd last cell on the first row does not work. 
 
 Q1: Same, but for closed tour.
-
 No, we tried the 5 by 5 board and there were some cells that were not able to complete a tour. 
 
 Q2: How do you explain the increase in execution time as n increases?
-
 When we increase n + 1, we have to check (n+1)^2 - n^2 level of depth when we execute. Each level of depth has double as many paths to check as the level before it. This increases the execution time by a lot.  
 
 Q3: Thoughts on optimization?
-
 Remove print statements for faster run time. 
 
 Maze Algorithm: 
