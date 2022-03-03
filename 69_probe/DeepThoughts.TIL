@@ -8,12 +8,12 @@ Mean execution time using random starts:
 
 Possible Knight’s Tours				      Impossible Knight’s Tours	
 
-n=5	18.635s	across 4 executions		     122.103s
-n=6	62.926s  	across 4 executions         	     N/A
-n=7	656.567s	across 1 execution	     	     N/A
-n=8	887.002s	across 1 execution 	     	     N/A
+n=5	18.635s	across 4 executions		      118.54s
+n=6	62.926s  	across 4 executions         	      N/A
+n=7	656.567s	across 1 execution	     	      N/A
+n=8	887.002s	across 1 execution 	     	      N/A
 
-
+Questions:
 Q0: From any starting position, can an open tour always be found? Explain.
 A0: No, because when we tried running the Knight's Tour on every cell in a 5 by 5 and found that the second to last 0 cell on the first row does not work. 
 
@@ -30,5 +30,5 @@ Maze Algorithm:
 From the given position:
 If the hero is at the end, the maze is solved. (primary base case)
 If the cell that the hero is on has been traveled to or is a wall, the move is invalid. (other base case)
-Otherwise, Recursively travel in all directions (up, down, left, right). If a move is invalid, undo the move. 
+Otherwise, Recursively travel in all directions (up, down, left, right). If a move is invalid, undo move and back up. 
 
