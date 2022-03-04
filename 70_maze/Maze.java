@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+// Team Physical :: Weichen Liu, Anjini Katari, Yat long Chan 
+// APCS pd08
+// HW70 – Maze Solve
+// 2022-03-03t
+// time spent: 0.8 hours
 
 /***
  * SKEELTON for
@@ -131,9 +131,9 @@ class MazeSolver
 
     //primary base case
     if ( _maze[x][y] == EXIT ) {
-	_solved = true;
-  System.out.println(this);
-  System.exit(0);
+	      _solved = true;
+        System.out.println(this);
+        System.exit(0);
     }
     //other base cases
     else if ( _maze[x][y] != PATH  ) {
