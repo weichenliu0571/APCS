@@ -6,8 +6,7 @@ Lab 6 -- College Board Consumer Review Lab
 time spent: 2 hours
 */
 
-public class Nonsense {
-  
+public class nonsense {
     /**
      * Returns the ending punctuation of a string, or the empty string if there is none 
      */

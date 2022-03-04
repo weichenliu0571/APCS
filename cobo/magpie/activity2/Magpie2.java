@@ -1,33 +1,45 @@
 /**
-When more than one keyword appears in the input, the priority goes from the top to bottom of the if, else if, else statement. In this case "no dog" would return "Why so negative?" because the statement for no comes first. 
-
-1. When a keyword is in one of the words of the input, the computer recognizes that the keyword is there. Therefore, you may get a reponse directed for the input "no" when you typed "know" in the terminal. 
- 
  * A program to carry on conversations with a human user.
- * This is the initial version that:
+ * This is the initial version that:  
  * <ul><li>
  *       Uses indexOf to find strings
  * </li><li>
- * 		    Handles responding to simple words and phrases
+ * 		    Handles responding to simple words and phrases 
  * </li></ul>
  * This version uses a nested if to handle default responses.
  * @author Laurie White
  * @version April 2012
+ * 
+ * Justin Mohabir, Jonathan SOng, Kevin Li
+ * APCS
+ * HW56 -- Chatbot lab
+ * 2022-1-12
+ * time spent: .2 hours
+ * 
+ * QCC: 
+ * What happens when more than one keyword appears in a string? Consider the string “My mother has a dog but no cat.” 
+ * Explain how to prioritize responses in the reply method.
+ * 	- When more than one keyword is present, the response is prioritized from top to bottom in the code, so the keyword highest up in the if else chain determiens the response
+ * What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” and “I like vegetables smothered in cheese.” 
+ * Explain the problem with the responses to these statements.
+ *	- When the keywords are embedded, the thwy will still be recognized, and the getResponse method would print out the corresponding response, even if it doesn't make sense
+ *	- If the full keyword has lower priority than the embedded one, then the response for the full keyword won't get printed
+ 
  */
 public class Magpie2
 {
 	/**
-	 * Get a default greeting
+	 * Get a default greeting 	
 	 * @return a greeting
 	 */
 	public String getGreeting()
 	{
 		return "Hello, let's talk.";
 	}
-
+	
 	/**
 	 * Gives a response to a user statement
-	 *
+	 * 
 	 * @param statement
 	 *            the user statement
 	 * @return a response based on the rules given
@@ -35,29 +47,9 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.trim().length() <= 0){
-			response = "Please say something.";
-		}
-		else if (statement.indexOf("no") >= 0)
+		if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
-		}
-		else if (statement.indexOf("dog") >= 0
-				|| statement.indexOf("cat") >= 0)
-		{
-			response = "Tell me more about your pets.";
-		}
-		else if (statement.indexOf("Mr. Mykolyk") >= 0){
-			response = "Wow! Sure sounds like a teacher!";
-		}
-		else if (statement.indexOf("airplanes") >= 0){
-			response = "The Wright brothers invented and flew the first airplane in 1903, recognized as \"the first sustained and controlled heavier-than-air powered flight\".[4] They built on the works of George Cayley dating from 1799, when he set forth the concept of the modern airplane (and later built and flew models and successful passenger-carrying gliders).[5] Between 1867 and 1896, the German pioneer of human aviation Otto Lilienthal also studied heavier-than-air flight. Following its limited use in World War I, aircraft technology continued to develop. Airplanes had a presence in all the major battles of World War II. The first jet aircraft was the German Heinkel He 178 in 1939. The first jet airliner, the de Havilland Comet, was introduced in 1952. The Boeing 707, the first widely successful commercial jet, was in commercial service for more than 50 years, from 1958 to at least 2013. \n Watch out for the geese!";
-		}
-		else if (statement.indexOf("shape") >= 0){
-			response = "Do you like squares?";
-		}
-		else if (statement.indexOf("food") >= 0){
-			response = "Here's a sandwich!";
 		}
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
@@ -65,6 +57,31 @@ public class Magpie2
 				|| statement.indexOf("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (statement.indexOf("dog") >= 0
+				|| statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (statement.indexOf("Mykolyk") >= 0)
+		{
+			response = "He sounds like a good teacher.";
+		}
+    else if (statement.indexOf("justin") >= 0)
+		{
+			response = "He sounds like a good justin.";
+		}
+    else if (statement.indexOf("jonathan") >= 0)
+		{
+			response = "He sounds like a good jonathan.";
+		}
+    else if (statement.indexOf("kevin") >= 0)
+		{
+			response = "He sounds like a good kevin.";
+		}
+		else if ((statement.trim()).length() == 0)
+		{
+			response = "Say something, please.";
 		}
 		else
 		{
@@ -83,7 +100,7 @@ public class Magpie2
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
-
+		
 		if (whichResponse == 0)
 		{
 			response = "Interesting, tell me more.";
@@ -102,11 +119,11 @@ public class Magpie2
 		}
 		else if (whichResponse == 4)
 		{
-			response = "Sounds good.";
+			response = "Go on.";
 		}
 		else if (whichResponse == 5)
 		{
-			response = "Are you asking me?";
+			response = "That sounds nice.";
 		}
 
 		return response;
