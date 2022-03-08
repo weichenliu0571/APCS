@@ -29,15 +29,19 @@
  *     swap arr[b], arr[s] 
  * 
  * DISCO
- * 
+ * - The list is not always sorted when we go through this algorithm. However, we do know that values less than the split is to the left of it and vice versa. 
+ *
  * QCC
- * 
+ * - What are the benefits of returning an integer value for mysterion. 
+ *
  * q0: What does it do?
- * a0:
+ * a0: List is partitioned into two smaller arrays.
+ *     Elements less than the element we want to compare the rest of the element to is moved to the left of the array.
+ *     Elements greater than the element we want to compare the rest of the element to is moved to the right of the array.
+ *     That element we were comparing the rest of the list to is moved to where it belongs. 
  * 
  * q1: O(?)
- * a1:
- * 
+ * a1: O(n) (assuming loBound and hiBound are 0 and n?)
  ***/
 
 
