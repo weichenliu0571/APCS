@@ -103,7 +103,7 @@ public class Mysterion
    * @return int 
    *
    */
-  public static int mysterion( int arr[], int lo, int hi, int splitter)
+  public static int relativeSort( int arr[], int lo, int hi, int splitter)
   {
     int split = arr[splitter];
     
@@ -121,7 +121,7 @@ public class Mysterion
     swap(hi, s, arr); // split put back into place
     
     return s; // returns # of elements before splitIndex
-  }//end mysterion
+  }//end relativeSort
 
 
 
@@ -136,37 +136,37 @@ public class Mysterion
     int[] arr5 = {3,0,16,599,1024};
 
 
-    // run mysterion on each array,
+    // run relativeSort on each array,
     // holding a & b fixed, varying c...
     for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr1: ");
     printArr(arr1);
-    mysterion(arr1,0,4,testC);
-    System.out.println("after mysterion w/ a=0,b=4,c=" 
+    relativeSort(arr1,0,4,testC);
+    System.out.println("after relativeSort w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr1);
     System.out.println("-----------------------");
 
     System.out.println("arr3:");
     printArr(arr3);
-    mysterion(arr3,0,4,testC);
-    System.out.println("after mysterion w/ a=0,b=4,c=" 
+    relativeSort(arr3,0,4,testC);
+    System.out.println("after relativeSort w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr3);
     System.out.println("-----------------------");
 
     System.out.println("arr4:");
     printArr(arr4);
-    mysterion(arr4,0,4,testC);
-    System.out.println("after mysterion w/ a=0,b=4,c=" 
+    relativeSort(arr4,0,4,testC);
+    System.out.println("after relativeSort w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr4);
     System.out.println("-----------------------");
 
     System.out.println("arr5:");
     printArr(arr5);
-    mysterion(arr5,0,4,testC);
-    System.out.println("after mysterion w/ a=0,b=4,c=" 
+    relativeSort(arr5,0,4,testC);
+    System.out.println("after relativeSort w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr5);
     System.out.println("-----------------------");
