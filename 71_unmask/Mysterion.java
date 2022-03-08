@@ -88,7 +88,7 @@ public class Mysterion
 
 
   /**
-   * int mysterion(int[],int,int,int)
+   * int relativeSort(int[],int,int,int)
    * DESCRIPTION
    * Array is partitioned into two subarrays with a split(element of index splitter).
    * Elements to the left of split is less than split.
