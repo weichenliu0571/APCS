@@ -90,7 +90,12 @@ public class Mysterion
   /**
    * int mysterion(int[],int,int,int)
    * DESCRIPTION
-   * 
+   * Array is partitioned into two subarrays with a split(element of index splitter).
+   * Elements to the left of split is less than split.
+   * Elements to the right of split is greater than split. 
+   * Split is adjusted to where it should be. 
+   *
+   *
    * @param arr
    * @param a -- lo -- The beginning index we use for partitioning
    * @param b -- hi -- The end index we use for partitioning 
