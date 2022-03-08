@@ -10,7 +10,7 @@
  * tests preliminary hypotheses re: utility of mystery algo
  * 
  * <h1>It's a Bird, It's a Plane! It's.... MYSTERION</h1>
- * The Mysterion method ... partitions array into two subarrays. One array to the left of split who has value is less than split and one array to the right of split whose values is greater than split. 
+ * The Mysterion method ... partitions array into two subarrays. One array to the left of split who has elements of values less than split and one array to the right of split whose elements has values greater than split. 
  * <p>
  * <b>Note:</b> BLAH blah blah, yakkety schmakketty...
  * @author  Trey Parker, Matt Stone
