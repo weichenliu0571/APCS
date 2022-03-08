@@ -41,7 +41,7 @@
  *     That element we were comparing the rest of the list to is moved to where it belongs. 
  * 
  * q1: O(?)
- * a1: O(nlogn)
+ * a1: O(n)
  ***/
 
 
