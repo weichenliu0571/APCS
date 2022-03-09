@@ -1,25 +1,36 @@
 /*
- :: Diana Akhmedova, Ziying Jian, Weichen Liu
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
 HW72 - implementing an algorithm to find the yth smallest element in a list
 2022-03-08t
 time spent : 1.2 hrs
 
 ALGO
+We run relativeSort with middle element of the list as its pivot. 
+If this pivot's index is equal to the (yth smallest element on the list we are looking for) - 1, we return the pivot.
+Else, since we know that the pivot is sorted, and that the elements to the left of the pivot is smaller than the pivot, 
+if the pivot's index is smaller than the (yth smallest element on the list we are looking for) - 1, we call fastSelect() recursively
+with the higher bound being the pivot's index.
+if the pivot's index is greater than the (yth smallest element on the list we are looking for) - 1, we call fastSelect() recursively
+with the lower bound being the pivot's index. 
+
 
 BEST CASE SCENARIO
-When the splitter is the yth smallest element in the list. 
+When the target is at the middle of the list. 
 
 WORST CASE SCENARIO
-When the splitter and the yth smallest element are on opposite ends of the list. 
+When the target is not found.  
 
 DISCO
-When we return s in relativeSort(), we return the number of elements before the splitter. From this, we know that splitter is the (y+1)th smallest element.
+When we return s in relativeSort(), we return the index of the pivot.  
 
 QCC
 How will we use fastSelect() to sort the list?
 
-Include test cases in main() method illustrating each best- and worst-case scenario.
+Big Oh Notation of our Algorithm
+
+O(nlogn) because we break the list into halves with each recursive call, which is O(logn) into fastSelect, 
+and we use relativeSort, which is O(n). n * log n = nlogn
 */
 
 
@@ -103,16 +114,19 @@ public class FastSelect
     return s; // returns # of elements before splitIndex
   }//end relativeSort
 
-  public static int fastSelect(int[] arr, int lo, int hi, int splitter, int y) { // y is the (y + 1)th smallest element in the list
-    if (relativeSort(arr, lo, hi, splitter) == y) {
-      return arr[splitter];
+  public static int fastSelect(int[] arr, int lo, int hi, int y) { 
+
+    int splitterIndex = relativeSort(arr, lo, hi, (lo + hi) / 2 );
+
+    if (splitterIndex == y - 1) {
+      return arr[splitterIndex]; 
+    } 
+    else if (splitterIndex > y - 1) {
+      return fastSelect(arr, lo, splitterIndex, y);
     } else {
-      if (relativeSort(arr, lo, hi, splitter) < y) {
-        return fastSelect(arr, splitter + 1, hi, splitter + 1, y);
-        } else {
-          return fastSelect(arr, lo, splitter - 1, splitter - 1, y);
-        }
-      }
+      return fastSelect(arr, splitterIndex, hi, y);
+    }
+
   }
 
 
@@ -128,11 +142,17 @@ public class FastSelect
 
     // Best Case Scenario 
     // Splitter is on the target
-    System.out.println(fastSelect(arr3, 0, 4, 0, 0));
+    System.out.println(fastSelect(arr3, 0, 4, 1)); // smallest element in arr3
+    System.out.println(fastSelect(arr3, 0, 4, 2));
+    System.out.println(fastSelect(arr3, 0, 4, 3));
+    System.out.println(fastSelect(arr3, 0, 4, 4));
 
     // Worst Case Scenario
     // Splitter is on opposite ends with the target
-    System.out.println(fastSelect(arr5, 0, 4, 0, 0));
+    System.out.println(fastSelect(arr5, 0, 4, 1)); // smallest element in arr5
+    System.out.println(fastSelect(arr5, 0, 4, 2));
+    System.out.println(fastSelect(arr5, 0, 4, 3));
+    System.out.println(fastSelect(arr5, 0, 4, 4));
 
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // run relativeSort on each array,
