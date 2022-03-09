@@ -1,9 +1,9 @@
 /*
 Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
-HW72 - implementing an algorithm to find the yth smallest element in a list
-2022-03-08t
-time spent : 1.2 hrs
+HW73 - QuickSort Implementation
+2022-03-09w
+time spent : 0.8 hrs
 */
 
 public class QuickSelect
