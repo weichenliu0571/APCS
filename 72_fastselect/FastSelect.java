@@ -99,17 +99,16 @@ public class FastSelect
     return s; // returns # of elements before splitIndex
   }//end relativeSort
 
-  public static int fastSelect(int[] arr, int lo, int hi, int splitter, y) {
-    if (relativeSort(arr, lo, hi, splitter) == y)) {
+  public static int fastSelect(int[] arr, int lo, int hi, int splitter, int y) { // y is the (y + 1)th smallest element in the list
+    if (relativeSort(arr, lo, hi, splitter) == y) {
       return arr[splitter];
     } else {
-      if (relativeSort(arr, lo, hi, splitter) > y) {
-        return fastSelect(arr, splitter + 1, hi, splitter + 1, y) 
+      if (relativeSort(arr, lo, hi, splitter) < y) {
+        return fastSelect(arr, splitter + 1, hi, splitter + 1, y);
         } else {
-          return fastSelect(arr, lo, splitter - 1, splitter - 1, y)
+          return fastSelect(arr, lo, splitter - 1, splitter - 1, y);
         }
       }
-    }
   }
 
 
@@ -118,12 +117,14 @@ public class FastSelect
   {
 
     //init test arrays of magic numbers
-    int[] arr1 = {8,21,17,69,343};
+    int[] arr1 = {1,2,3,4,5};
     int[] arr3 = {1,28,33,4982,37};
     int[] arr4 = {5,4,17,9000,6};
     int[] arr5 = {3,0,16,599,1024};
 
+    System.out.println(fastSelect(arr1, 0, 4, 4, 3));
 
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // run relativeSort on each array,
     // holding a & b fixed, varying c...
     for( int testC = 0; testC < 5; testC++ ) {
@@ -159,7 +160,6 @@ public class FastSelect
     printArr(arr5);
     System.out.println("-----------------------");
     }
-        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
