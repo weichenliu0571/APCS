@@ -85,7 +85,7 @@ public class QuickSelect
   }//end partition
 
   public static int quickSelect(int[] arr, int lo, int hi, int y) { 
-    if (lo == hi - 1) {
+    if (lo == arr.length - 2) {
       lo = hi;
     }
 
@@ -121,6 +121,7 @@ public class QuickSelect
     // Worst Case Scenario
     // Splitter is on opposite ends with the target
     System.out.println(quickSelect(arr5, 0, 4, 1)); // smallest element in arr5
+    System.out.println(quickSelect(arr5, 0, 4, 5)); // largest element in arr5
 
 
   }//end main
