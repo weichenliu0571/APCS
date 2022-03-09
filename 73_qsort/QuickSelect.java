@@ -110,7 +110,7 @@ public class QuickSelect
     //init test arrays of magic numbers
     int[] arr1 = {3,2,1,4,5};
     int[] arr3 = {33,28,1,4982,37};
-    int[] arr4 = {5,4,17,9000,6};
+    int[] arr4 = {1,2,3,4};
     int[] arr5 = {5,4,3,2,1};
 
     // Best Case Scenario 
@@ -122,6 +122,9 @@ public class QuickSelect
     // Splitter is on opposite ends with the target
     System.out.println(quickSelect(arr5, 0, 4, 1)); // smallest element in arr5
     System.out.println(quickSelect(arr5, 0, 4, 5)); // largest element in arr5
+    
+    // Testing Even Arrays
+    System.out.println(quickSelect(arr4, 0, 3, 1)); // smallest element in arr5
 
 
   }//end main
