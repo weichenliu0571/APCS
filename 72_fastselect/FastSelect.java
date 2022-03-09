@@ -123,6 +123,7 @@ public class FastSelect
     } 
     else if (splitterIndex > y - 1) {
       return fastSelect(arr, lo, splitterIndex, y);
+      
     } else {
       return fastSelect(arr, splitterIndex, hi, y);
     }
