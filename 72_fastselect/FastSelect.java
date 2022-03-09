@@ -149,7 +149,6 @@ public class FastSelect
     // Worst Case Scenario
     // Splitter is on opposite ends with the target
     System.out.println(fastSelect(arr5, 0, 4, 1)); // smallest element in arr5
-    System.out.println(fastSelect(arr5, 0, 4, 5)); // largest element in arr5
 
 
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
