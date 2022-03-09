@@ -3,17 +3,21 @@
 APCS pd08
 HW72 - implementing an algorithm to find the yth smallest element in a list
 2022-03-08t
-time spent : 
+time spent : 1.2 hrs
 
 ALGO
 
 BEST CASE SCENARIO
+When the splitter is the yth smallest element in the list. 
 
 WORST CASE SCENARIO
+When the splitter and the yth smallest element are on opposite ends of the list. 
 
 DISCO
+When we return s in relativeSort(), we return the number of elements before the splitter. From this, we know that splitter is the (y+1)th smallest element.
 
 QCC
+How will we use fastSelect() to sort the list?
 
 Include test cases in main() method illustrating each best- and worst-case scenario.
 */
@@ -120,9 +124,15 @@ public class FastSelect
     int[] arr1 = {1,2,3,4,5};
     int[] arr3 = {1,28,33,4982,37};
     int[] arr4 = {5,4,17,9000,6};
-    int[] arr5 = {3,0,16,599,1024};
+    int[] arr5 = {5,4,3,2,1};
 
-    System.out.println(fastSelect(arr1, 0, 4, 4, 3));
+    // Best Case Scenario 
+    // Splitter is on the target
+    System.out.println(fastSelect(arr3, 0, 4, 0, 0));
+
+    // Worst Case Scenario
+    // Splitter is on opposite ends with the target
+    System.out.println(fastSelect(arr5, 0, 4, 0, 0));
 
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // run relativeSort on each array,
