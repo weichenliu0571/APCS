@@ -1,3 +1,14 @@
+/*
+ :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW72 - implementing an algorithm to find the yth smallest element in a list
+2022-03-08t
+time spent : 
+*/
+
+
+
+
 public class FastSelect
 {    
   //--------------v  HELPER METHODS  v--------------
@@ -56,7 +67,7 @@ public class FastSelect
    * @return int 
    *
    */
-  public static int relativeSort( int arr[], int lo, int hi, int splitter)
+  public static int relativeSort( int[] arr, int lo, int hi, int splitter)
   {
     int split = arr[splitter];
     
@@ -76,7 +87,17 @@ public class FastSelect
     return s; // returns # of elements before splitIndex
   }//end relativeSort
 
-  public static int fastSelect() {
+  public static int fastSelect(int[] arr, int lo, int hi, int splitter, y) {
+    if (relativeSort(arr, lo, hi, splitter) == y)) {
+      return arr[splitter];
+    } else {
+      if (relativeSort(arr, lo, hi, splitter) > y) {
+        return fastSelect(arr, splitter + 1, hi, splitter + 1, y) 
+        } else {
+          return fastSelect(arr, lo, splitter - 1, splitter - 1, y)
+        }
+      }
+    }
   }
 
 
