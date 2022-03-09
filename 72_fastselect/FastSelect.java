@@ -4,6 +4,18 @@ APCS pd08
 HW72 - implementing an algorithm to find the yth smallest element in a list
 2022-03-08t
 time spent : 
+
+ALGO
+
+BEST CASE SCENARIO
+
+WORST CASE SCENARIO
+
+DISCO
+
+QCC
+
+Include test cases in main() method illustrating each best- and worst-case scenario.
 */
 
 
