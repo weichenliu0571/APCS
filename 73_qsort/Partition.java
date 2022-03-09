@@ -10,7 +10,7 @@ time spent : 0.8 hrs
  * class Parition (née Mysterion)
  * 
  * <h1>MYSTERION is PARTITION</h1>
- * The Mysterion method ... <YOUR TRIO'S DESCRIPTION HERE> 
+ * The Mysterion method -- sorts a pivot and moves the elements less than the pivot to the left of pivot and the values greater than pivot to the right of pivot. 
  * <p>
  * <b>Note:</b> BLAH blah blah, yakkety schmakketty...
  * @author  Trey Parker, Matt Stone
