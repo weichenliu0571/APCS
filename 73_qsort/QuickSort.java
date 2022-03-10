@@ -1,8 +1,10 @@
-//Clyde Sinclair
-//APCS pd0
-//HW72 -- QuickSort
-//2022-03-09w
-//time spent: _h
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW73 - QuickSort Implementation
+2022-03-09w
+time spent : 0.8 hrs
+*/
 
 /***
  * class QuickSort
@@ -69,8 +71,10 @@ public class QuickSort
    */
   public static void qsort( int[] d )
   {
-
+    qsortHelper(d, 0, d.length - 1);
   }
+
+  public static void qsortHelper(int[] d, )
 
   //you may need a helper method...
 
