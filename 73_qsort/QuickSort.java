@@ -87,15 +87,16 @@ public class QuickSort
    */
   public static void qsort( int[] d )
   {
-    qSortHelper(d, 0, d.length - 1);
+    qSortHelper(d, 0, d.length - 1); // allows us to use parameters
   }
 
 
   public static void qSortHelper(int[] d, int loPos, int hiPos) {
     if (loPos < hiPos){
-      int pivotIdx = Partition.partition(d, loPos, hiPos);
 
-      if (hiPos - loPos == 1) {
+      int pivotIdx = Partition.partition(d, loPos, hiPos); // returns index of newly sorted pivot
+
+      if (hiPos - loPos == 1) { // if length of the subarray we are looking at is equal to two, we return, it means that array is sorted
         return;
       }
       else {
