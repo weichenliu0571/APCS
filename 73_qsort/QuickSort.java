@@ -20,7 +20,7 @@ QCC
  *
  * 1. Summary of QuickSort algorithm:
  * QSort(arr): calls quickSortHelper with lo being 0 and hi being arr.length - 1
- * quickSortHelper calls on itself recursively and splits the list into halves each time and runs partition on each halve until the arrays are of length 2. 
+ * quickSortHelper calls on itself recursively and splits the list into halves each time and runs partition on each halve until and up to the arrays are of length 2. 
  * That is when we know all the elements in that array is sorted
  * 
  *
