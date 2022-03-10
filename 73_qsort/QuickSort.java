@@ -87,20 +87,20 @@ public class QuickSort
    */
   public static void qsort( int[] d )
   {
-    qsortHelper(d, 0, d.length - 1);
+    qSortHelper(d, 0, d.length - 1);
   }
 
 
-  public static void qSortHelper(int[] d, int lo, int hi) {
+  public static void qSortHelper(int[] d, int loPos, int hiPos) {
     if (loPos < hiPos){
-      int pivotIdx = Partition.partition(d, lo, hi);
+      int pivotIdx = Partition.partition(d, loPos, hiPos);
 
-      if (hi - lo == 1) {
+      if (hiPos - loPos == 1) {
         return;
       }
       else {
-        qSortHelper(d, lo, pivotIdx - 1); // run partition recursively on left side of initial pivot
-        qSortHelper(d, pivotIdx + 1, hi); // run partition recursively on right side of initial pivot
+        qSortHelper(d, loPos, pivotIdx - 1); // run partition recursively on left side of initial pivot
+        qSortHelper(d, pivotIdx + 1, hiPos); // run partition recursively on right side of initial pivot
       }
 
     }
