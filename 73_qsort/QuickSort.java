@@ -96,7 +96,7 @@ public class QuickSort
 
       int pivotIdx = Partition.partition(d, loPos, hiPos); // returns index of newly sorted pivot
 
-      if (hiPos - loPos == 1) { // if length of the subarray we are looking at is equal to two, we return, it means that array is sorted
+      if (hiPos - loPos <= 1) { // if length of the subarray we are looking at is equal to two, we return, it means that array is sorted
         return;
       }
       else {
