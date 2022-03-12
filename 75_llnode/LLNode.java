@@ -8,7 +8,7 @@ time spent : 0.8 hrs
 
 /*
 DISCO
-- 
+- We recursively contain a node in a node. 
 QCC
 - In what ways can we utilize linked lists so that it is more efficient than an array. 
 */
@@ -29,7 +29,7 @@ public class LLNode
   public LLNode( String value, LLNode nextN )
   {
     this.cargo = value;
-    this.next = null;
+    this.nextN = null;
   }
 
 
