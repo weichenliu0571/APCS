@@ -135,7 +135,7 @@ public class LLNode
     LLNode nextN = first.getNext();
     System.out.println(nextC);
     
-    while(nextNode != null){
+    while(nextN != null){
       nextC = nextN.getCargo();
       nextN = nextN.getNext();
       System.out.println(nextC);
