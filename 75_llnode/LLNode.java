@@ -118,7 +118,7 @@ public class LLNode
     //Create a third node after the second
     first.getNext().setNext( new LLNode( "cow", null ) );
     System.out.println( (first) + " ...should be (cat (dog (cow null)))" );
-    System.out.println( "The size of the list is: " + first.size() + "...should be 3");
+    //  System.out.println( "The size of the list is: " + first.size() + "...should be 3");
     
 
     // //A naive list traversal, has side effects.... ??
