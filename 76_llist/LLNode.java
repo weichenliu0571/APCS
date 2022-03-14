@@ -1,8 +1,8 @@
 /*
 Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
-HW75 - Nodal Recall
-2022-03-11f
+HW76 - implementing LList
+2022-03-14m
 time spent : 0.8 hrs
 */
 
