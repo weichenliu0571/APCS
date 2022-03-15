@@ -10,7 +10,7 @@ time spent : 0.8 hrs
 DISCO
 - We should check if the list already has an element while adding elements to the linked list. 
 QCC
-- Why do we keep getting IndexOurOfBoundsException for our size()? 
+- How should we print the linked list?
 */
 
 /***
