@@ -122,14 +122,10 @@ public class LLNode
     //A: Original node is no longer assigned as first. 
 
     //...so better: ?
-    String nextC = first.getCargo();
-    LLNode nextN = first.getNext();
-    System.out.println(nextC);
-    
-    while(nextN != null){
-      nextC = nextN.getCargo();
-      nextN = nextN.getNext();
-      System.out.println(nextC);
+    LLNode temp = first; 
+    while(temp.getNext() != null){
+      System.out.println(temp.getCargo());
+      temp = nextN.getNext();
     }
     //
     //
