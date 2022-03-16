@@ -1,3 +1,9 @@
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW78 - Double up
+// 2022-03-16w
+// time spent : 0.8 hrs
+
 public class DLLNode
 {
   //instance vars
