@@ -1,7 +1,7 @@
 /*
 Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
-HW77 - implementing remove-at-index and add-at-index function to LList
+HW77 - implementing remove-at-index and add-at-index functions to LList
 2022-03-15t
 time spent : 0.8 hrs
 */
