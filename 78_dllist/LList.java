@@ -1,17 +1,9 @@
 /*
 Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
-HW77 - implementing remove-at-index and add-at-index functions to LList
-2022-03-15t
+HW78 - Double up
+2022-03-16w
 time spent : 0.8 hrs
-*/
-
-/*
-DISCO
-- We can make another LLNode that contains the part of the list that is modified and use setNext() the list back together. 
-
-QCC
-- Is it possible to achieve O(1) with the new ADD and REM algorithms? 
 
 ALGO ADD
 - Create an alias for _head called tmp.
