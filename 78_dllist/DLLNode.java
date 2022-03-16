@@ -1,4 +1,4 @@
-public class LLNode
+public class DLLNode
 {
   //instance vars
   private String _cargo;
