@@ -92,6 +92,7 @@ public class LList implements List //interface def must be in this dir
     if (index == 0){
 	    removedNode = _head.getCargo();
 	    _head = _head.getNext();
+	    _head.setPrev(null);
 	    _size--;
 	    return removedNode;
     }
