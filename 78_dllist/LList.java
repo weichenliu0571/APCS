@@ -5,6 +5,13 @@ HW78 - Double up
 2022-03-16w
 time spent : 0.8 hrs
 
+DISCO
+- We need more instance variables for a doubly linked list: _prevNode.
+- We need more accessor methods for a doubly linked list: getPrev(), setPrev().
+
+QCC
+- In what conditions is a doubly linked list most efficient?
+
 ALGO ADD
 - Special case: We add at index 0, so we just run normal add().
 - Create prevNode, which is a the node to the left of the index we are adding.
