@@ -6,20 +6,24 @@ HW78 - Double up
 time spent : 0.8 hrs
 
 ALGO ADD
-- Create an alias for _head called tmp.
-- If we want to add to beginning of list, we can just use our old add().
-- Traverse to index that we want to add the newVal at in tmp.
-- Create an LLNODE called restOfList that contains the current Node of tmp + the rest of the tmp's nodes.
-- Set the current node to be newVal.
-- Lastly, set the next node of tmp to be restOfList. 
+- Special case: We add at index 0, so we just run normal add().
+- Create prevNode, which is a the node to the left of the index we are adding.
+- Create nextNode, which is the node to the right of the index we are adding.
+- Create a newNode with _prevNode = prevNode and _nextNode = nextNode. 
+- Set the _nextNode of prevNode to be newNode and set the _prevNode of nextNode to be newNode. 
+- Increment _size. 
+- Return true if operations completed. 
 
 ALGO REM
-- Create an alias for _head called tmp.
-- Traverse to the index of the node that we are trying to remove. 
-- Store that node.
-- Set current cargo to be the cargo of the next node
-- Set the next node of the current cargo to be the second node after the current cargo.
-- Return the node we removed. 
+- Special case: We remove at index 0, so we just _head to be _head.getNext().
+- Create prevNode, which is the node to the left of the index we are removing.
+- Create nextNode, which is currently the node we are removing.
+- Store the cargo of that node in a String variable.
+- Move nextNode to the nextNode.
+- Set the _nextNode of prevNode to be nextNode. 
+- Set the _prevNode of nextNode to be prevNode. 
+- Decrement size.
+- Return removed value. 
 */
 
 
@@ -27,14 +31,15 @@ public class LList implements List //interface def must be in this dir
 {
 
   //instance vars
-  private LLNode _head;
+  private DLLNode _head;
   private int _size;
 
   // constructor -- initializes instance vars
   public LList( )
   {
     _head = null; //at birth, a list has no elements
-    _size = 0;
+    _size = 0; 
+
   }
 
 
@@ -42,103 +47,96 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    LLNode tmp = new LLNode( newVal, _head );
-    _head = tmp;
+    DLLNode temp = new DLLNode(newVal, null, _head);
+    _head = temp;
     _size++;
+
     return true;
   }
 
-   public void add( int index, String newVal)
-  {
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
-    LLNode temp = _head;
-
-    if (_size == 0){ // special case if _size = 0
-        add(newVal); 
+  public void add (int index, String newVal) {
+      
+    if ( index < 0 || index > size() ) {
+        throw new IndexOutOfBoundsException();
+    }
+    
+    if (index == 0) {
+        add(newVal);
+        return;
     }
 
-    else {
-      for (int i = 0; i < index; i++)
-      {
-        temp = temp.getNext(); 
-      }
-      LLNode restOfList = new LLNode(temp.getCargo(),temp.getNext());
+    DLLNode prevNode = getNode(index - 1);
+    DLLNode nextNode = prevNode.getNext();
+    DLLNode newNode = new DLLNode(newVal, prevNode, nextNode );
 
-      temp.setCargo(newVal);
-      temp.setNext(restOfList);
-    }
+    prevNode.setNext(newNode);
+    nextNode.setPrev(newNode);
     _size++;
+
   }
 
-
-  public String remove( int index )
-  {
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
-
-    LLNode tmp = _head;
-    String rV;
-
-    //Traverse to Node
-    for( int i=0; i < index; i++ ){
-      tmp = tmp.getNext();
+  public String remove (int index) {
+    if ( index < 0 || index >= size() ) {
+        throw new IndexOutOfBoundsException();
     }
-    //Store the Cargo we are removing
-    rV = tmp.getCargo();
 
-    //Set current cargo to be the cargo of the next node
-    //Set the next node of the current cargo to be the second node after the current cargo
-    tmp.setCargo(tmp.getNext().getCargo());
-    tmp.setNext(tmp.getNext().getNext());
+    String removedNode;
+    if (index == 0){
+	    removedNode = _head.getCargo();
+	    _head = _head.getNext();
+      _head.setPrev(null);
+	    _size--;
+	    return removedNode;
+    }
+
+    DLLNode prevNode = getNode(index - 1);
+    DLLNode nextNode = prevNode.getNext();
+    removedNode = nextNode.getCargo();
+
+    nextNode = nextNode.getNext();
+    prevNode.setNext(nextNode);
+
+    if (index != size() - 1) {
+        nextNode.setPrev(prevNode);
+    }
+
     _size--;
-    return rV;
+    return removedNode;
   }
-
-
-
-
-
 
   public String get( int index )
   {
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
+    if ( index < 0 || index >= size() ) {
+        throw new IndexOutOfBoundsException();
+    }
 
-    String retVal;
-    LLNode tmp = _head; //create alias to head
+    DLLNode temp = getNode(index);
 
-    //walk to desired node
-    for( int i=0; i < index; i++ )
-      tmp = tmp.getNext();
-
-    //check target node's cargo hold
-    retVal = tmp.getCargo();
-    return retVal;
+    return temp.getCargo();
   }
 
 
   public String set( int index, String newVal )
   {
 
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
+    if ( index < 0 || index >= size() ) {
+        throw new IndexOutOfBoundsException();
+    }
 
-    LLNode tmp = _head; //create alias to head
-
-    //walk to desired node
-    for( int i=0; i < index; i++ )
-      tmp = tmp.getNext();
-
-    //store target node's cargo
-    String oldVal = tmp.getCargo();
-
-    //modify target node's cargo
-    tmp.setCargo( newVal );
-
-    return oldVal;
+    DLLNode temp = getNode(index);
+  
+    return temp.setCargo(newVal);
   }
 
+  public DLLNode getNode( int index ) {
+
+    DLLNode temp = _head;
+    for (int i = 0; i < index; i++) {
+        temp = temp.getNext();
+    }
+
+    return temp;
+  }
 
   //return number of nodes in list
   public int size() { return _size; }
@@ -150,56 +148,13 @@ public class LList implements List //interface def must be in this dir
   public String toString()
   {
     String retStr = "HEAD->";
-    LLNode tmp = _head; //init tr
+    DLLNode tmp = _head; //init tr
     while( tmp != null ) {
 	    retStr += tmp.getCargo() + "->";
 	    tmp = tmp.getNext();
     }
     retStr += "NULL";
     return retStr;
-  }
-
-
-  //main method for testing
-  public static void main( String[] args )
-  {
-    LList james = new LList();
-
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    james.add("beat");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    james.add("a");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    james.add("need");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    james.add("I");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    System.out.println( "2nd item is: " + james.get(1) );
-
-    james.set( 1, "got" );
-    System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
-
-    System.out.println( james );
-
-    // Testing add at index
-
-    james.add(2, "i");
-    System.out.println( james );
-
-    // Testing remove at index
-
-    james.remove(2);
-    System.out.println( james );
   }
 
 }//end class LList

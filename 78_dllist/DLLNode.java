@@ -8,12 +8,14 @@ public class DLLNode
 {
   //instance vars
   private String _cargo;
-  private LLNode _nextNode;
+  private DLLNode _nextNode;
+  private DLLNode _prevNode; 
 
   // constructor
-  public LLNode( String value, LLNode next )
+  public DLLNode( String value, DLLNode prev, DLLNode next )
   {
     _cargo = value;
+    _prevNode = prev; 
     _nextNode = next;
   }
 
@@ -24,9 +26,14 @@ public class DLLNode
     return _cargo;
   }
 
-  public LLNode getNext()
+  public DLLNode getNext()
   {
     return _nextNode;
+  }
+
+  public DLLNode getPrev()
+  {
+    return _prevNode; 
   }
   //--------------^  ACCESSORS  ^--------------
 
@@ -39,11 +46,18 @@ public class DLLNode
     return foo;
   }
 
-  public LLNode setNext( LLNode newNext )
+  public DLLNode setNext( DLLNode newNext )
   {
-    LLNode foo = getNext();
+    DLLNode foo = getNext();
     _nextNode = newNext;
     return foo;
+  }
+
+  public DLLNode setPrev( DLLNode newPrev)
+  {
+    DLLNode foo = getPrev();
+    _prevNode = newPrev; 
+    return foo; 
   }
   //--------------^  MUTATORS  ^--------------
 
@@ -55,40 +69,4 @@ public class DLLNode
   }
 
 
-  //main method for testing
-  public static void main( String[] args )
-  {
-
-    //Below is an exercise in creating a linked list...
-
-    //Create a node
-    LLNode first = new LLNode( "cat", null );
-
-    //Create a new node after the first
-    first.setNext( new LLNode( "dog", null ) );
-
-    //Create a third node after the second
-    first.getNext().setNext( new LLNode( "cow", null ) );
-
-    /* A naive list traversal, has side effects.... ??
-       while( first != null ) {
-       System.out.println( first );
-       first = first.getNext();
-       }
-    */
-
-    //Q: when head ptr moves to next node in list, what happens to the node it just left?
-    //A: garbage collector reclaims that memory
-
-    //  so, better: (w/o moving first)
-    /*
-    LLNode temp = first;
-    while( temp != null ) {
-      System.out.println( temp );
-      temp = temp.getNext();
-    }
-    */
-
-  }//end main
-
-}//end class LLNode
+}//end class DLLNode
