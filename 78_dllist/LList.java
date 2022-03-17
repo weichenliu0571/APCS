@@ -11,15 +11,16 @@ DISCO
 
 QCC
 - In what conditions is a doubly linked list most efficient?
+- How do we best avoid NullPointException errors? How do they arise?
 
 ALGO ADD
 - Special case: We add at index 0, so we just run normal add().
 - Create prevNode, which is a the node to the left of the index we are adding.
 - Create nextNode, which is the node to the right of the index we are adding.
-- Create a newNode with _prevNode = prevNode and _nextNode = nextNode. 
-- Set the _nextNode of prevNode to be newNode and set the _prevNode of nextNode to be newNode. 
-- Increment _size. 
-- Return true if operations completed. 
+- Create a newNode with _prevNode = prevNode and _nextNode = nextNode.
+- Set the _nextNode of prevNode to be newNode and set the _prevNode of nextNode to be newNode.
+- Increment _size.
+- Return true if operations completed.
 
 ALGO REM
 - Special case: We remove at index 0, so we just _head to be _head.getNext().
@@ -27,10 +28,10 @@ ALGO REM
 - Create nextNode, which is currently the node we are removing.
 - Store the cargo of that node in a String variable.
 - Move nextNode to the nextNode.
-- Set the _nextNode of prevNode to be nextNode. 
-- Set the _prevNode of nextNode to be prevNode. 
+- Set the _nextNode of prevNode to be nextNode.
+- Set the _prevNode of nextNode to be prevNode.
 - Decrement size.
-- Return removed value. 
+- Return removed value.
 */
 
 
