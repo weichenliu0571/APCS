@@ -6,3 +6,7 @@ lab07 -- But These Go Up To Eleven
 time spent: 1 hr
 ```
 
+### Hardest Part of Assignment
+* Reading the instructions took the longest time
+
+
