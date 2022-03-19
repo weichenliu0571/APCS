@@ -9,4 +9,7 @@ time spent: 1 hr
 ### Hardest Part of Assignment
 * Reading the instructions took the longest time
 
+### Easiest Part of Assignment
+* Writing code after understanding instructions
+
 
