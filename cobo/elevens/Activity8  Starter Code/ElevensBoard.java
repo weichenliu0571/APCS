@@ -1,9 +1,9 @@
-//<TNPG> -- Yat Long Chan, Weichen Liu, Hamim Seam
+//Lobsters -- Yat Long Chan, Weichen Liu, Hamim Seam
 /*
-1) size is only an integer that is passed to the constructor
-2) Selection of cards are done by the user
-3) Yes, the interface will allow Elevens GUI to call the two meethods.
-   The alternate design would not work as well because you would need to init shared instance vars in every implementation of Board.
+1) All three are based on finding pairs that add to a sum and specific group of faces.
+   The sums differ and the specific groups change.
+2) ElvensBoard inherits Board by with 'extends'
+3) No. The methods will have to be implemented differently for each game.
 */
 
 import java.util.List;
@@ -61,9 +61,7 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean isLegal(List<Integer> selectedCards) {
-		if (selectedCards.size() == 2) return containsPairSum11(selectedCards);
-		if (selectedCards.size() == 3) return containsJQK(selectedCards);
-		return false;
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 
 	/**
@@ -76,8 +74,7 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean anotherPlayIsPossible() {
-		List<Integer> indexes = cardIndexes();
-		return containsPairSum11(indexes) || containsJQK(indexes);
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 
 	/**
@@ -89,14 +86,7 @@ public class ElevensBoard extends Board {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		for (int i = 0; i < selectedCards.size(); i++) {
-			int c1 = selectedCards.get(i);
-			for (int j = i + 1; j < selectedCards.size(); j++) {
-				int c2 = selectedCards.get(j);
-				if(cardAt(c1).pointValue() + cardAt(c2).pointValue() == 11) return true;
-			}
-		}
-		return false;
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 
 	/**
@@ -108,14 +98,6 @@ public class ElevensBoard extends Board {
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
-		boolean J = false;
-		boolean Q = false;
-		boolean K = false;
-		for (Integer i : selectedCards) {
-			if (cardAt(i).rank().equals("jack")) J = true;
-			if (cardAt(i).rank().equals("queen")) Q = true;
-			if (cardAt(i).rank().equals("king")) K = true;
-		}
-		return J && Q && K;
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 }

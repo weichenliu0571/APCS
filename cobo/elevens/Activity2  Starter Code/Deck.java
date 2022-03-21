@@ -1,4 +1,13 @@
-//<TNPG> -- Yat Long Chan, Weichen Liu, Hamim Seam
+//Lobsters -- Yat Long Chan, Weichen Liu, Hamim Seam
+
+/*
+1) a deck is a collection of cards
+2) 6 cards
+3) String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10",  "jack", "queen", "king", "ace"}; 
+   String[] suits = {"spades", "hearts", "diamonds", "clubs"}; 
+   int[] pointValues = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
+4) Order doesn't matter but ranks and pointValues should be ordered in the same way.
+*/
 
 import java.util.List;
 import java.util.ArrayList;
@@ -32,14 +41,13 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		cards = new ArrayList<Card>();
-		for (int j = 0; j < ranks.length; j++) {
-			for (String suitString : suits) {
-				cards.add(new Card(ranks[j], suitString, values[j]));
+		cards =  new ArrayList<Card>();
+		for (String suit : suits) {
+			for (int i = 0; i < ranks.length; i ++) {
+				cards.add(new Card(ranks[i], suit, values[i]));
+				size++;
 			}
 		}
-		size = cards.size();
-		shuffle();
 	}
 
 
@@ -64,15 +72,7 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		for (int k = cards.size() - 1; k > 0; k--) {
-			int howMany = k + 1;
-			int start = 0;
-			int randPos = (int) (Math.random() * howMany) + start;
-			Card temp = cards.get(k);
-			cards.set(k, cards.get(randPos));
-			cards.set(randPos, temp);
-		}
-		size = cards.size();
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
 	}
 
 	/**
@@ -81,12 +81,10 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		if (isEmpty()) {
-			return null;
-		}
+		if (isEmpty()) return null;
+		
 		size--;
-		Card c = cards.get(size);
-		return c;
+		return cards.get(size);
 	}
 
 	/**
