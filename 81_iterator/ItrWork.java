@@ -22,7 +22,20 @@ type of ArrayList?
 * What are the advantages of using a Iterator versus a for-each loop? Disadvantages?
 * What is iterator()? Why isn't it listed on the subset?
 
+SUMMARY THE FIRST:
+Iterator allows us to iterate through lists, sets, or maps. 
+hasNext() checks if there is another element.
+next() returns the next element
+remove() removes the element that we are currently on.
+
+SUMMARY THE SECOND:
+Iterator allows us to iterate through lists, sets, or maps. 
+hasNext() checks if there is another element.
+next() returns the next element
+remove() removes the element that was most recently called on. 
+
 **/
+
 
 /***
  * class ItrWork
