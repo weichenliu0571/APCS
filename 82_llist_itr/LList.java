@@ -154,7 +154,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //return an Iterator over this list
   public /* YOUR CODE HERE */
   {
-    /* YOUR CODE HERE */
+    return MyIterator();
   }
 
   //--------------------------------------------------------
@@ -262,14 +262,18 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext() 
     {
-      /* YOUR CODE HERE */
+      if (_dummy.getNext() != null) {
+          return true;
+      }
+
+      return false;
     }
 
 
     //return next element in this iteration
     public T next() 
     {
-      /* YOUR CODE HERE */
+      return _dummy.getNext(); 
     }
 
 
