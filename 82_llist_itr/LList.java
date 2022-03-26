@@ -287,25 +287,14 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public void remove()
     {
       if (_okToRemove) {
-        if (_tail.equals(_head)) { // remove single node
-          removeFirst();
-          _dummy = new DLLNode(null, null, null);
-          _head = new DLLNode(null, null, null;
-          _tail = new DLLNode(null, null, null);
-        }
-        else if (_dummy = _tail) { // remove last node
-          removeLast();
-          _dummy = _tail;
-        }
-        else if (_dummy = _head) { // remove first node
-         removeFirst();
-         _dummy = _head;
-        } else { // remove if node is between other nodes
-        _dummy.getNext().setPrev(_dummy.getPrev());
+        DLLNode<T> _dummyNext = _dummy.getNext();
         _dummy = _dummy.getPrev();
-        _dummy.setNext(_dummy.getNext().getNext());
+        _dummy.setNext(_dummyNext);
+      } else {
+        throw new IllegalStateException();
       }
-
+      _okToRemove = false;
+      _size --;
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
