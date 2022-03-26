@@ -298,9 +298,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
           _dummy = _tail;
         }
         else if (_dummy = _head) { // remove first node
-        removeFirst();
-        _dummy = _head;
-      } else { // remove if node is between other nodes
+         removeFirst();
+         _dummy = _head;
+        } else { // remove if node is between other nodes
         _dummy.getNext().setPrev(_dummy.getPrev());
         _dummy = _dummy.getPrev();
         _dummy.setNext(_dummy.getNext().getNext());
