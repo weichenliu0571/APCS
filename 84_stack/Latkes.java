@@ -47,7 +47,11 @@ public class Latkes
 
   public String peek()
   {
-    return _stack[_stackSize - 1];
+    if (!isEmpty()) {
+      return _stack[_stackSize - 1];
+    } else {
+      return _stack[_stackSize]; 
+    }
   }
 
   //chk for emptiness
