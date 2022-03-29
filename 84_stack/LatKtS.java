@@ -1,7 +1,7 @@
 // Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 // APCS pd08
-// HW83 -- Stacks on Stacks
-// 2022-03-29t
+// HW83 -- Stack: What Is It Good For?
+// 2022-03-30w
 // time spent : 0.5 hrs
 
 /*
