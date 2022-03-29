@@ -1,3 +1,10 @@
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW83 -- Stacks on Stacks
+// 2022-03-29t
+// time spent : 0.5 hrs
+
+
 /***
  * class Latkes
  * v1
@@ -7,8 +14,11 @@
 
 /***
     DISCO
+    - We only care about what is on top of the stack. 
+    - We push onto the top of the stack and we pull from the top of the stack. 
 
     QCC
+    - What are the benefits of using an encapsulated array?
 
  **/
 
@@ -22,67 +32,53 @@ public class Latkes
   //constructor
   public Latkes( int initCapacity )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    _stackSize = 0;
+    _stack = new String[initCapacity];
+
+  }// O(1)
 
 
   //means of insertion
   public void push( String s )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    if (!isFull()) {
+      _stack[_stackSize] = s;
+      _stackSize ++; 
+    }
+  }// O(1)
 
 
   //means of removal
   public String pop( )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    if (!isEmpty()) {
+      String ret = _stack[_stackSize - 1];
+      _stack[_stackSize - 1] = null; 
+      _stackSize --; 
+      return ret;
+    }
+    return null; 
+  }// O(1)
 
 
   //chk for emptiness
   public boolean isEmpty()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    return _stackSize == 0; 
+  }// O(1)
 
 
   //chk for fullness
   public boolean isFull()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    return _stackSize == _stack.length; 
+  }// O(1)
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+
 
     Latkes tastyStack = new Latkes(10);
 
@@ -126,6 +122,7 @@ public class Latkes
 
     //stack empty by now; SOP(null)
     System.out.println( tastyStack.pop() );
+        /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main()
