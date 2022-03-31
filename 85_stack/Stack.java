@@ -4,15 +4,16 @@
 // 2022-03-31t
 // time spent : 0.5 hrs
 
-/*
-DISCO
+/**
+DISCO:
 - Z needs to be changed to Comparable.
 - We do not need to keep track of size() as ArrayList and LinkedList do that for us already.
+- We can use the various methods built in the different types of Collections to implement stacks more easily.
 
 QCC
 - Why does Z need to be changed to Comparable?
 - What other methods will we be implementing for stacks?
-*/
+**/
 
 /***
  * interface Stack
