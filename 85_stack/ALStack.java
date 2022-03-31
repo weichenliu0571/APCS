@@ -4,64 +4,52 @@
 // 2022-03-31t
 // time spent : 0.5 hrs
 
-/*
-DISCO
+/**
+DISCO:
 - Z needs to be changed to Comparable.
 - We do not need to keep track of size() as ArrayList and LinkedList do that for us already.
+- We can use the various methods built in the different types of Collections to implement stacks more easily.
 
 QCC
 - Why does Z need to be changed to Comparable?
 - What other methods will we be implementing for stacks?
-*/
-
-/***
- * class ALStack
- * v1
- * Implements a stack of PANCAKES using an encapsulated ArrayList
- **/
+**/
 
 import java.util.ArrayList;
 
-public class ALStack<PANCAKE> implements Stack<PANCAKE>
-{
-  private ArrayList<PANCAKE> _stack;
+public class ALStack<PANCAKE> implements Stack<PANCAKE>{
 
+private ArrayList<PANCAKE> _arr;
 
-
-  public ALStack(  )
-  {
-    _stack = new ArrayList();
+  //constructor
+  public ALStack(){
+    _arr = new ArrayList<>();
   }
 
-
-  public void push( PANCAKE s )
-  {
-    _stack.add(s);
+  //Return true if this stack is empty, otherwise false.
+  public boolean isEmpty() {
+    return (_arr.size() == 0);
   }
 
-
-  public PANCAKE pop()
-  {
-    if ( isEmpty() )  {
-        return null;
+  //Return top element of stack without popping it.
+  public PANCAKE peekTop() {
+    if (!isEmpty()){
+      return (_arr.get(_arr.size()-1));
     }
-
-    return _stack.remove(_stack.size() - 1);
+    return null;
   }
 
-
-  public PANCAKE peekTop()
-  {
-    if ( isEmpty() )  {
-        return null;
+  //Pop and return top element of stack.
+  public PANCAKE pop() {
+    if (!isEmpty()){
+      return (_arr.remove(_arr.size() - 1));
     }
-    return _stack.get(_stack.size() - 1);
+    return null;
   }
 
-
-  public boolean isEmpty()
-  {
-    return (_stack.size() == 0);
+  //Push an element onto top of this stack.
+  public void push( PANCAKE x ) {
+    _arr.add(x);
   }
 
 }
