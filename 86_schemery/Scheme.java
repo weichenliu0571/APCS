@@ -24,6 +24,36 @@ public class Scheme
    **/
   public static String evaluate( String expr )
   {
+    ALStack parenNums = new ALStack();
+    ALStack operators = new ALStack();
+
+    String[] arr = expr.split("\\s+"); 
+
+    for (String element : arr) {
+      if (element.equals("+") || element.equals("-") || element.equals("*") || element.equals("/")) {
+        operators.push(element); 
+      } else if (isNumber(element) || element.equals("(")) {
+        parenNums.push(element); 
+      } else {
+          if (operators.peekTop().equals("+")) {
+            parenNums.push(unload(1, parenNums));
+            operators.pop(); 
+
+          } else if (operators.peekTop().equals("-")) {
+            parenNums.push(unload(2, parenNums));
+            operators.pop(); 
+
+          } else if (operators.peekTop().equals("*")) {
+            parenNums.push(unload(3, parenNums));
+            operators.pop();           
+
+          } else {
+            parenNums.push(unload(4, parenNums));
+            operators.pop(); 
+
+          }
+      }
+    }
 
   }//end evaluate()
 
@@ -34,35 +64,67 @@ public class Scheme
    *           Returns the result of operating on sequence of operands.
    *           Ops: + is 1, - is 2, * is 3
    **/
-  public static String unload( int op, Stack<String> numbers )
+  public static String unload( int op, ALStack<String> numbers )
   {
+        while (!(parenNums.peekTop().equals("("))) {
+          int temp = (int) parenNums.peekTop();
+          parenNums.pop();
+
+          if (op == 1) {
+
+            int tempAdd = (int) parenNums.peekTop();
+            temp = temp + tempAdd;
+            parenNums.pop();
+
+          } else if (op == 2) {
+
+            int tempSubtract = (int) parenNums.peekTop();
+            temp = temp - tempSubtract;
+            parenNums.pop();
+
+          } else if (op == 3) {
+
+            int tempMultiply = (int) parenNums.peekTop();
+            temp = temp * tempMultiply;
+            parenNums.pop();
+
+          } else {
+            int tempDivide = (int) parenNums.peekTop();
+            temp = temp / tempDivide;
+            parenNums.pop();
+          }
+        }
+
+        parenNums.pop(); // to remove open parenthesis
+
+        return "" + temp; 
 
   }//end unload()
 
 
-  /*
-  //optional check-to-see-if-its-a-number helper fxn:
+
   public static boolean isNumber( String s ) {
-  try {
-  Integer.parseInt(s);
-  return true;
+    try {
+      Integer.parseInt(s);
+      return true;
+    }
+    catch( NumberFormatException e ) {
+    return false;
+    }
   }
-  catch( NumberFormatException e ) {
-  return false;
-  }
-  }
-  */
+
 
 
   //main method for testing
   public static void main( String[] args )
   {
 
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+
       String zoo1 = "( + 4 3 )";
       System.out.println(zoo1);
       System.out.println("zoo1 eval'd: " + evaluate(zoo1) );
       //...7
+          /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
 
       String zoo2 = "( + 4 ( * 2 5 ) 3 )";
       System.out.println(zoo2);

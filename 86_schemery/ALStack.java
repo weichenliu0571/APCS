@@ -1,7 +1,7 @@
 // Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 // APCS pd08
-// HW85 -- Leon Leonwood Stack
-// 2022-03-31t
+// HW85 -- What a Racket // Scheme stuff
+// 2022-04-01f
 // time spent : 0.5 hrs
 
 /**
