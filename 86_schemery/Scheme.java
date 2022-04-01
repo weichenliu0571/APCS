@@ -3,12 +3,15 @@
  * Simulates a rudimentary Scheme interpreter
  *
  * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
- *   1. Steal underpants.
- *   2. ...
- *   5. Profit!
+ *   1. Convert the String into a list of Strings.
+ *   2. Push the String into parenNums if the String is a number or open parenthesis.
+ *   3. Push the String into operators if the String is a operator
+ *   4. If we run into a closed parenthesis, we run unload() on parenNums.
+ *   5. Keep unloading until no more open parenthesis in parenNums. 
  *
- * STACK OF CHOICE: ____ by ____
- * b/c ...
+ * STACK OF CHOICE: ALStack by Mister George
+ * b/c 
+ * we chose it by random. 
  **/
 
 public class Scheme
@@ -30,30 +33,51 @@ public class Scheme
     String[] arr = expr.split("\\s+"); 
 
     for (String element : arr) {
+
       if (element.equals("+") || element.equals("-") || element.equals("*") || element.equals("/")) {
         operators.push(element); 
-      } else if (isNumber(element) || element.equals("(")) {
+      } 
+      else if (isNumber(element) || element.equals("(")) {
         parenNums.push(element); 
-      } else {
+      } 
+      else {
+        ALStack numbers = new ALStack(); 
           if (operators.peekTop().equals("+")) {
-            parenNums.push(unload(1, parenNums));
+            while (!(parenNums.peekTop().equals("("))) {
+              numbers.push(parenNums.pop());
+            }
+            parenNums.pop();
+            parenNums.push(unload(1, numbers));
             operators.pop(); 
 
           } else if (operators.peekTop().equals("-")) {
-            parenNums.push(unload(2, parenNums));
+            while (!(parenNums.peekTop().equals("("))) {
+              numbers.push(parenNums.pop());
+            }
+            parenNums.pop();
+            parenNums.push(unload(2, numbers));
             operators.pop(); 
 
           } else if (operators.peekTop().equals("*")) {
-            parenNums.push(unload(3, parenNums));
-            operators.pop();           
+            while (!(parenNums.peekTop().equals("("))) {
+              numbers.push(parenNums.pop());
+            }
+            parenNums.pop();
+            parenNums.push(unload(3, numbers));
+            operators.pop();         
 
           } else {
-            parenNums.push(unload(4, parenNums));
+            while (!(parenNums.peekTop().equals("("))) {
+              numbers.push(parenNums.pop());
+            }
+            parenNums.pop();
+            parenNums.push(unload(4, numbers));
             operators.pop(); 
-
           }
       }
     }
+
+    return "" + parenNums.pop();
 
   }//end evaluate()
 
@@ -66,36 +90,34 @@ public class Scheme
    **/
   public static String unload( int op, ALStack<String> numbers )
   {
-        while (!(parenNums.peekTop().equals("("))) {
-          int temp = (int) parenNums.peekTop();
-          parenNums.pop();
+        int temp = Integer.parseInt(numbers.peekTop());
+        numbers.pop();
+        while (!(numbers.isEmpty())) {
 
           if (op == 1) {
 
-            int tempAdd = (int) parenNums.peekTop();
+            int tempAdd = Integer.parseInt(numbers.peekTop());
             temp = temp + tempAdd;
-            parenNums.pop();
+            numbers.pop();
 
           } else if (op == 2) {
 
-            int tempSubtract = (int) parenNums.peekTop();
+            int tempSubtract = Integer.parseInt(numbers.peekTop());
             temp = temp - tempSubtract;
-            parenNums.pop();
+            numbers.pop();
 
           } else if (op == 3) {
 
-            int tempMultiply = (int) parenNums.peekTop();
+            int tempMultiply = Integer.parseInt(numbers.peekTop());
             temp = temp * tempMultiply;
-            parenNums.pop();
+            numbers.pop();
 
           } else {
-            int tempDivide = (int) parenNums.peekTop();
+            int tempDivide = Integer.parseInt(numbers.peekTop());
             temp = temp / tempDivide;
-            parenNums.pop();
+            numbers.pop();
           }
         }
-
-        parenNums.pop(); // to remove open parenthesis
 
         return "" + temp; 
 
@@ -124,7 +146,6 @@ public class Scheme
       System.out.println(zoo1);
       System.out.println("zoo1 eval'd: " + evaluate(zoo1) );
       //...7
-          /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
 
       String zoo2 = "( + 4 ( * 2 5 ) 3 )";
       System.out.println(zoo2);
@@ -140,6 +161,7 @@ public class Scheme
       System.out.println(zoo4);
       System.out.println("zoo4 eval'd: " + evaluate(zoo4) );
       //...-4
+                /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
   }//main()
 
