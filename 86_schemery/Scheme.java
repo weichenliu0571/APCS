@@ -1,13 +1,31 @@
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW86 -- What a Racket // Scheme stuff
+// 2022-04-01f
+// time spent : 0.5 hrs
+
+/**
+DISCO:
+- We might need another stack to unload the operation in the parenthesis.
+
+QCC
+- Why did we need to typecast the return of evaluate? Shouldn't the element popped from parenNum be a string?
+**/
+
 /***
  * class Scheme
  * Simulates a rudimentary Scheme interpreter
  *
  * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
  *   1. Convert the String into a list of Strings.
- *   2. Push the String into parenNums if the String is a number or open parenthesis.
- *   3. Push the String into operators if the String is a operator
- *   4. If we run into a closed parenthesis, we run unload() on parenNums.
- *   5. Keep unloading until no more open parenthesis in parenNums. 
+ *   2. Have a for loop that keeps running until we iterate through the entire list. 
+ *   3. In each repetition of the for loop : 
+ *   4. Push the String into parenNums if the String is a number or open parenthesis.
+ *   5. Push the String into operators if the String is a operator
+ *   6. If we run into a closed parenthesis, we check whatever operator is on the top of the operators. 
+ *   7. Then we create a new stack called numbers.
+ *   8. We keep pushing the top element of parenNums into numbers until we hit a open parenthesis.
+ *   9. We then run unload() with checked operator and numbers.
  *
  * STACK OF CHOICE: ALStack by Mister George
  * b/c 
