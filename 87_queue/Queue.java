@@ -1,3 +1,17 @@
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW87 -- The English Do Not Wait In Line for Soup
+// 2022-04-04m
+// time spent : 0.5 hrs
+
+/**
+DISCO:
+- First one that goes in leaves the queue first.
+- Last one that goes in leaves the queue last. 
+QCC
+- In what situations should we use queues. 
+**/
+
 /***
  * interface Queue
  * Includes only methods listed in AP subset of Java
