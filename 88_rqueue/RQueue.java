@@ -76,7 +76,7 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     } else 
     {
       LLNode<SWASHBUCKLE> _tmp = _front;
-      int random = (int) (Math.random() * _size) - 1; 
+      int random = (int) ((Math.random() * _size) - 1); 
 
       for (int i = 0; i < random; i ++) {
         _tmp = _tmp.getNext();
