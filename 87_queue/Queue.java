@@ -7,9 +7,12 @@
 /**
 DISCO:
 - First one that goes in leaves the queue first.
-- Last one that goes in leaves the queue last. 
-QCC
-- In what situations should we use queues. 
+- Last one that goes in leaves the queue last.
+- The points to the first node.
+
+QCC:
+- In what situations should we use queues?
+- How do we utilize a tail?
 **/
 
 /***
