@@ -14,7 +14,27 @@ Why does compiling Welcome03_List not work from upper level of tree?
 
 
 Activity 1
+1. Youtube.com / Classroom.stuy.edu
 
+2. Both take age and name
+
+3. It means having fixed boundaries or limits. Data files have fixed boundaries on the information they collect.
+
+4. Look at the data in the column and determine which data type is best for it.
+
+5. health / sports
+
+6. Who is the best basketball player? How can I lose more weight?
+
+7. done
+
+8. None / Larger data sets would not be impacted as much by outliers. 
+
+9. I guess collecting age on youtube helps youtube provide the right content for the viewers. 
+
+10. No, maybe it's when we fill out surveys for them. 
+
+11. No, because there is never enough privacy.
 
 Activity 2
 1. Cereal
