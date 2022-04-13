@@ -6,7 +6,7 @@
 
 /**
 DISCO:
-- 
+- Deque has a front and a back
 QCC:
-- 
+- Why do we have addFirst if offerFirst is better? 
 **/
