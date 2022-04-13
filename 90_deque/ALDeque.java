@@ -24,7 +24,10 @@ public class QQKachoo<D> implements Deque<D>{
   public D removeFirst();
   public D removeLast();
 
-  public D peekFirst();
-  public D peekLast();
+  public D offerFirst(D d);
+  public D offerLast(D d);
+    
+  public D pollFirst();    
+  public D pollLast(); 
 
 }
