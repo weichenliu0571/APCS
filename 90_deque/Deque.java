@@ -1,37 +1,58 @@
-// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
-// APCS pd08
-// HW90 -- Swabbing the Deque
-// 2022-04-06w
-// time spent : 0.5 hrs
+import java.util.*;
+import java.lang.*;
 
-/**
-DISCO:
-- Deque has a front and a back
-QCC:
-- Why do we have addFirst if offerFirst is better? 
-**/
+public class ListDeque<Card> implements Deque<Card>{
 
-public class QQKachoo<D> implements Deque<D>{
-    private ArrayList<D> al; 
-    
-    public D peekFirst(){
-        return al.get(0);
+private LinkedList<Card> _arr;
+
+public ListDeque(){
+    _arr = new LinkedList<Card>();
+}
+
+public void addFirst(Card e){
+    if (e == null){
+        throw new NullPointerException();
     }
+    _arr.add(_arr.size()-1, e);
+}
 
-    public D peekLast(){
-        if (al.size() < 1) {
-            return null;
-        } else {
-        return al.get(al.size() - 1);
-        }
+public void addLast(Card e){
+    if (e == null){
+        throw new NullPointerException();
     }
+    _arr.add(e);
+}
 
-    public void addFirst(D d) {
-        al.add(0, d);
+public Card removeFirst(){
+    if (_arr.size() < 1){
+        throw new NoSuchElementException();
     }
+    return _arr.remove(0);
+}
 
-    public void addLast(D d) {
-        al.add(d);
+public Card removeLast(){
+    if (_arr.size() < 1){
+        throw new NoSuchElementException();
     }
+    return _arr.remove(_arr.size()-1);
+}
+
+public Card peekFirst(){
+    if (_arr.size() < 1){
+        return null;
+    }
+    return _arr.get(0);
+}
+
+public Card peekLast() {
+    if (_arr.size() < 1){
+        return null; 
+    }
+    return _arr.get(_arr.size()-1);
+}
+
+public String toString(){
+    return _arr.toString();
+}
 
 }
