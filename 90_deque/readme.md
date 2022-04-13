@@ -1,4 +1,4 @@
-Mister George, Ziying, Diana, Weichen
+# Mister George, Ziying, Diana, Weichen
 
 To-Do (in order):
 
@@ -16,3 +16,6 @@ To-Do (in order):
 * pollFirst(): return and remove the first element of the deque unless it is empty, which it will return null. 
 * offerLast(e): return and insert element to the back of the deque unless it viotes capacity limit 
 * pollLast(): return and remove the last element of the deque unless it is empty, which it will return null. 
+
+## PLAN:
+* We plan to work on the interface/ourImplementationOfDeque by starting with the accessors then moving on to the mutators. 
