@@ -1,5 +1,3 @@
-YGW :: Yatlong, Gabriel, Weichen
-
 ACTIVITY 1
 
 1. We would include a "Game" class, which will store the current game information,
@@ -68,3 +66,16 @@ ACTIVITY 3
 2. private ArrayList<Celebrity> celebGameList;
 
 3. It's visibility should also be private, because it will be accessed via accessor methods
+
+12. celebrityGame
+
+13. nothing
+
+
+
+ACTIVITY 4 
+
+1. 
+   Class Name: sportsCeleb
+
+   Atributes: String name, 
