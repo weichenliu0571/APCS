@@ -5,20 +5,17 @@
  * @author cody.henrichsen
  * @version 1.4 17/09/2018
  */
-
-package caleb;
-
 public class Celebrity
 {
 	/**
 	 * The clue to determine the celebrity
 	 */
-	 private String _clue;
+	String _clue;
 
 	/**
 	 * The answer or name of the celebrity.
 	 */
-	 private String _name;
+	String _answer;
 
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
@@ -27,8 +24,14 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
-		_clue = clue;
-		_name = answer;
+            _answer = answer;
+            _clue   = clue;
+	}
+
+	public Celebrity()
+	{
+            _answer = "Mr. Brooks";
+	    _clue = "Stuy CS teacher who i really hope will be back next semester but is currently on medical leave";
 	}
 
 	/**
@@ -46,7 +49,7 @@ public class Celebrity
 	 */
 	public String getAnswer()
 	{
-		return _name;
+		return _answer;
 	}
 
 	/**
@@ -64,20 +67,26 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		_name = answer;
+		_answer = answer;
 	}
-
+	
 	/**
 	 * Provides a String representation of the Celebrity.
 	 */
-	// @Override
+	@Override
 	public String toString()
 	{
-		return "The celebrity is " + _name + ". The clue is " + _clue + ".";
+		return _answer;
 	}
-
+	
 	public static void main(String[] args) {
-		
+		Celebrity harrisonFord = new Celebrity("Harrison Ford", "Played Indiana Jones and Han Solo");
+		System.out.println("Name: " + harrisonFord);
+		System.out.println("Answer: " + harrisonFord.getAnswer() + "\nClue: " + harrisonFord.getClue());
+		harrisonFord.setAnswer("Will Smith");
+		harrisonFord.setClue("Played the Fresh Prince of Bel Air, and punched Chris Rock on stage");
+                System.out.println("Name: " + harrisonFord);
+                System.out.println("Answer: " + harrisonFord.getAnswer() + "\nClue: " + harrisonFord.getClue());
 	}
 
 }
