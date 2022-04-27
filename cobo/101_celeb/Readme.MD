@@ -1,4 +1,4 @@
-# // Yatlongstan :: Yat Long, Gabriel, Weichen 
+#  Yatlongstan :: Yat Long, Gabriel, Weichen 
 
 ## TO DO
 * ~Plan how we will approach the Celebrity and CelebrityGame class~
