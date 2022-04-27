@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+package caleb;
+
 /**
  * The framework for the Celebrity Game project
  * 
@@ -11,20 +13,25 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
+	 private Celebrity newCelebrity;
 
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
+	 private CelebrityFrame newWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
+	 private ArrayList<Celebrity> list;
 
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
+		list = new ArrayList<Celebrity>();
+		newWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -32,6 +39,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
+		list = new ArrayList<Celebrity>();
+		newWindow.replaceScreen("START");
 	}
 
 	/**
