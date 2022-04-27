@@ -1,6 +1,3 @@
-// YGW :: Yatlong, Gabriel, Weichen
-
-package celeb;
 
 import java.util.ArrayList;
 
@@ -20,6 +17,7 @@ public class CelebrityGame
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
+	CelebrityFrame gameWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
@@ -31,7 +29,8 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
-          celebGameList = new ArrayList<Celebrity>();
+	   celebGameList = new ArrayList<Celebrity>();
+		gameWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -53,6 +52,11 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
+		guess = guess.trim();
+		if (guess.equalsIgnoreCase(gameCelebrity.getAnswer())) {
+			celebGameList.remove(0);
+			return true;
+		}
 		return false;
 	}
 
@@ -63,7 +67,8 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		
+		gameCelebrity = celebGameList.get(0);
+		gameWindow.replaceScreen("GAME");
 	}
 
 	/**
@@ -78,7 +83,9 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
+		if (validateCelebrity(name) && validateClue(guess, type)) {
 		celebGameList.add(new Celebrity(name, guess));
+		}
 	}
 
 	/**
@@ -88,6 +95,7 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
+		name = name.trim();
 		return name.length() >= 4;
 	}
 
@@ -100,6 +108,7 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
+		clue = clue.trim();
 		return clue.length() >= 10;
 	}
 
@@ -110,7 +119,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**
@@ -121,7 +130,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -132,6 +141,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }
