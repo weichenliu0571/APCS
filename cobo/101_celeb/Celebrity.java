@@ -77,14 +77,7 @@ public class Celebrity
 	}
 
 	public static void main(String[] args) {
-		Celebrity elon_musk = new Celebrity("Elon Musk", "SpaceX, Tesla");
-		System.out.println(elon_musk.getClue());
-		System.out.println(elon_musk.getAnswer());
-		elon_musk.setClue("Twitter");
-		elon_musk.setAnswer("Elon");
-		System.out.println(elon_musk.getClue());
-		System.out.println(elon_musk.getAnswer());
-		System.out.println(elon_musk);
+		
 	}
 
 }
