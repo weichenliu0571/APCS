@@ -1,3 +1,5 @@
+YGW :: Yatlong, Gabriel, Weichen
+
 ACTIVITY 1
 
 1. We would include a "Game" class, which will store the current game information,
