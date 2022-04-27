@@ -1,3 +1,5 @@
+// Yatlongstan :: Yat Long, Gabriel, Weichen 
+
 import javax.swing.JFrame;
 
 public class SimpleGUIRunner
