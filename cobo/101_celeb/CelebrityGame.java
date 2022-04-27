@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+package celeb;
 
-package caleb;
+import java.util.ArrayList;
 
 /**
  * The framework for the Celebrity Game project
- * 
+ *
  * @author cody.henrichsen
  * @version 2.3 25/09/2018 refactored the prepareGame and play methods
  */
@@ -13,25 +13,25 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
-	 private Celebrity newCelebrity;
+	 private Celebrity gameCelebrity;
 
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-	 private CelebrityFrame newWindow;
+	 private CelebrityFrame gameWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-	 private ArrayList<Celebrity> list;
+	 private ArrayList<Celebrity> celebGameList;
 
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
-		list = new ArrayList<Celebrity>();
-		newWindow = new CelebrityFrame(this);
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -39,8 +39,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		list = new ArrayList<Celebrity>();
-		newWindow.replaceScreen("START");
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow.replaceScreen("START");
 	}
 
 	/**
