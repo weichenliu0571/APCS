@@ -1,8 +1,10 @@
-# YGW :: Yatlong, Gabriel, Weichen
+# // Yatlongstan :: Yat Long, Gabriel, Weichen 
 
 ## TO DO
 * ~Plan how we will approach the Celebrity and CelebrityGame class~
 * ~Work on questions in Act 2~
 * ~Implement the Celebrity class~
-* Implement the CelebrityGame class
-* Work on GUIs
+* ~Wokr on questions in Act 3~
+* ~Implement the CelebrityGame class~
+* ~Work on GUIs~
+* Extend Celebrity class
