@@ -7,4 +7,4 @@
 * ~Wokr on questions in Act 3~
 * ~Implement the CelebrityGame class~
 * ~Work on GUIs~
-* Extend Celebrity class
+* ~Extend Celebrity class~
