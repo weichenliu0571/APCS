@@ -29,7 +29,7 @@ Why is a balanced tree allowed a difference of 1 in height between right and lef
 - It is to allow for maximum efficiency when using depth-first processing. 
 
 Alternate (equivalent, but more succinct?) definitions of "balanced" tree?
-- The left and right subtree's height differ by at most one. 
+- The heights of the left and right subtrees for any node differ by one at most. 
 
 Is a perfect tree complete? 
 - Yes since all the levels are filled, including the last level. However, in a complete tree, the last level does not have to be filled. 
@@ -49,4 +49,3 @@ C'EST POSSIBLE?
 ------------------------------------------------
 It is possible, but we should be given more specifications(like if it is balanced, perfect, or complete) because there could be multiple trees that could satisfy the reconstruction. 
 ================================================
-
