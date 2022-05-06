@@ -35,7 +35,7 @@ Is a perfect tree complete?
 - Yes since all the levels are filled, including the last level. However, in a complete tree, the last level does not have to be filled. 
 
 Is a complete tree balanced? 
-- A complete tree is not always balanced. 
+- A complete tree are always balanced. 
 
 Is the Man Who Is Tall Happy?
 - Yes if the Man Who is Tall is the root, then he is happy because he has many generations under him. 
