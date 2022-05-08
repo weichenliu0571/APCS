@@ -77,8 +77,7 @@ givens: the traversals of both on same tree
 procedure: 
 1. Find root node using the first node of PRE-ORDER
 2. Find that corresponding node in the POST-ORDER and look at the node to the left of it. That is the first node of the right subtree of the root. Partition it to left and right subtree. 
-3. Find the next node of the pre-order traversal in the post-order traversal left subtree, which will be the root node. 
-4. Partition again into a left and right subtree until the left partition contains 1 node. This is the leftmost node. 
+3. Use that information to plug in the children of that node. 
 5. Repeat for left subtree. Instead of looking for the second-to-last node in POST-ORDER look for the second node in PRE-ORDER. 
 ================================================
 
