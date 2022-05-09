@@ -29,7 +29,7 @@ Q: For a given binary tree, how many unique post-order traversals are there?
 A: One
 
 Q: For a given traversal, how many unique trees could have produced it?
-A: Infinite
+A: 2^(n-1). Other than the root, there are 2 ways to arrange each node  
 
 Q: Given a pre-order traversal, what can you infer about its tree?
 A: First node is root
@@ -38,10 +38,10 @@ Q: Given a post-order traversal, what can you infer about its tree?
 A: Last node is root
 
 Q: What does "1-to-1" mean?
-A: direct relationship between two things
+A: Elements in one set are paired with ONLY one element in another.
 
 Q: What does "onto" mean?
-A: "onto" describes the situation when one item links to another. 
+A: Every element in 2 different sets are used. 
 
 ================================================
 
@@ -51,10 +51,11 @@ ALGO for POST-ORDER + In-ORDER
 givens: the traversals of both on same tree
 
 procedure: 
-1. Find root node using the last node of POST-ORDER
-2. Find that corresponding node in the IN-ORDER and partition the right and left subtree of it
-3. Use that information to plug in the children of that node.
-4. Repeat 2 and 3 until done
+1. Find last node of POST-ORDER traversal. This is the root node.
+2. Find that corresponding node in the IN-ORDER and partition the right and left subtrees.
+3. pick the next node in POST-ORDER traversal. This is the root node of current subtree.
+4. Repeat 2 and 3 with right subtree until node can't be partitioned.
+5. Repeat 4 with left subtree.
 
 ================================================
 
@@ -63,10 +64,11 @@ ALGO for PRE-ORDER + IN-ORDER
 givens: the traversals of both on same tree
 
 procedure: 
-1. Find root node using the first node of PRE-ORDER
-2. Find that corresponding node in the IN-ORDER and partition the right and left subtree of it
-3. Use that information to plug in the children of that node.
-4. Repeat 2 and 3 until done
+1. Find first node of PRE-ORDER traversal. This is the root node.
+2. Find that corresponding node in the IN-ORDER and partition the right and left subtrees.
+3. pick the next node in PRE-ORDER traversal. This is the root node of current subtree.
+4. Repeat 2 and 3 with left subtree until node can't be partitioned.
+5. Repeat 4 with right subtree.
 
 ================================================
 
@@ -75,9 +77,9 @@ ALGO for PRE-ORDER + POST-ORDER
 givens: the traversals of both on same tree
 
 procedure: 
-1. Find root node using the first node of PRE-ORDER
-2. Find that corresponding node in the POST-ORDER and look at the node to the left of it. That is the first node of the right subtree of the root. Partition it to left and right subtree. 
-3. Use that information to plug in the children of that node. 
-5. Repeat for left subtree. Instead of looking for the second-to-last node in POST-ORDER look for the second node in PRE-ORDER. 
+1. Find root node using the last node of POST-ORDER
+2. Find that corresponding node in the PRE-ORDER and look at the node to the left of it. That is the left child of the root.
+3. Partition left and right of that node. Every element to the right is the right subtree of the root. Every element to the left is in a subtree of current node.  
+5. Repeat for left subtree.
+6. Repeat for right subtree.
 ================================================
-
