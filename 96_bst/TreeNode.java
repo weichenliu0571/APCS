@@ -1,8 +1,8 @@
 //Yatlongstan :: Gabriel, Yat Long, Weichen 
 //APCS 
-//HW95 -- Algorithm as Data Structure 
-//2022-05-09m 
-//time spent: 0.8 hrs
+//HW96 -- BSTs is the Perfect Place for Shade
+//2022-05-10t
+//time spent: 
 
 /**
  * class TreeNode
