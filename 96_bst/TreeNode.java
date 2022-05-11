@@ -1,8 +1,8 @@
-//Yatlongstan :: Gabriel, Yat Long, Weichen 
-//APCS 
-//HW96 -- BSTs is the Perfect Place for Shade
-//2022-05-10t
-//time spent: 
+// Team Yatlongstan (Yat Long Chan, Weichen Liu, Gabriel Thompson)
+// APCS
+// HW96 -- BSTs is the Perfect Place for Shade
+// 2022-05-10
+// time spent: 0.8 hrs
 
 /**
  * class TreeNode
@@ -71,9 +71,7 @@ public class TreeNode
   }
 
 
-  /**
-   * Sets the value of the left subtree of this node.
-   */
+  /** * Sets the value of the left subtree of this node. */
   void setLeft( TreeNode theNewLeft )
   {
     _lt = theNewLeft;
