@@ -233,86 +233,75 @@ public class BST
 
 
   //main method for testing
-  public static void main( String[] args )
-  {
-    BST arbol = new BST();
+  public static void main( String[] args ) {
 
-    //PROTIP: sketch state of tree after each insertion
-    //        ...BEFORE executing these.
-    arbol.insert( 4 );
-    arbol.insert( 2 );
-    arbol.insert( 5 );
-    arbol.insert( 6 );
-    arbol.insert( 1 );
-    arbol.insert( 3 );
+	BST arbol = new BST();
 
-    System.out.println( "\n-----------------------------");
-    System.out.println( "pre-order traversal:" );
-    arbol.preOrderTrav();
+	System.out.println( "tree init'd: " + arbol );
 
-    System.out.println( "\n-----------------------------");
-    System.out.println( "in-order traversal:" );
-    arbol.inOrderTrav();
+	//inserting in this order will build a perfect tree
+	arbol.insert( 3 );
+	arbol.insert( 1 );
+	arbol.insert( 0 );
+	arbol.insert( 2 );
+	arbol.insert( 5 );
+	arbol.insert( 4 );
+	arbol.insert( 6 );
+	/*
+	*/
 
-    System.out.println( "\n-----------------------------");
-    System.out.println( "post-order traversal:" );
-    arbol.postOrderTrav();
+	//insering in this order will build a linked list to left
+	/*
+	arbol.insert( 6 );
+	arbol.insert( 5 );
+	arbol.insert( 3 );
+	arbol.insert( 4 );
+	arbol.insert( 2 );
+	arbol.insert( 1 );
+	arbol.insert( 0 );
+	*/
 
-    System.out.println( "\n-----------------------------");
+	System.out.println( "tree after insertions:\n" + arbol );
+	System.out.println();
 
-    /**
-       EXPECTED OUTPUT for traversals:
-       -----------------------------
-       pre-order traversal:
-       4 2 1 3 5 6 
-       -----------------------------
-       in-order traversal:
-       1 2 3 4 5 6 
-       -----------------------------
-       post-order traversal:
-       1 3 2 6 5 4 
-       -----------------------------
-    */
+	System.out.println();
+	for( int i=-1; i<8; i++ ) {
+	    System.out.println(" searching for "+i+": " + arbol.search(i) );    
+	}
 
+	System.out.println();
+	System.out.println( arbol );
+    
+  /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
 
-    System.out.println("h:\t" + arbol.height());
-    System.out.println("nL:\t" + arbol.numLeaves());
+	arbol.remove(6);
+	System.out.println();
+	System.out.println( arbol );
 
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
-      System.out.println("s(1):\t" + arbol.search(1).getValue());
-      System.out.println("s(2):\t" + arbol.search(2).getValue());
-      System.out.println("s(3):\t" + arbol.search(3).getValue());
-      System.out.println("s(4):\t" + arbol.search(4).getValue());
-      System.out.println("s(5):\t" + arbol.search(5).getValue());
-      System.out.println("s(6):\t" + arbol.search(6).getValue());
-      //System.out.println("s(7):\t" + arbol.search(7).getValue());
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	arbol.remove(5);
+	System.out.println();
+	System.out.println( arbol );
 
+	arbol.remove(4);
+	System.out.println();
+	System.out.println( arbol );
 
+	arbol.remove(3);
+	System.out.println();
+	System.out.println( arbol );
 
-    //insering in this order will build a linked list to left
-    /*
-      arbol.insert( 6 );
-      arbol.insert( 5 );
-      arbol.insert( 3 );
-      arbol.insert( 4 );
-      arbol.insert( 2 );
-      arbol.insert( 1 );
-      arbol.insert( 0 );
-    */
+	arbol.remove(2);
+	System.out.println();
+	System.out.println( arbol );
 
-    System.out.println( "tree after insertions:\n" + arbol );
-    System.out.println();
+	arbol.remove(1);
+	System.out.println();
+	System.out.println( arbol );
 
-    System.out.println();
-    for( int i=-1; i<8; i++ ) {
-      System.out.println(" searching for "+i+": " + arbol.search(i) );    
-    }
+	arbol.remove(0);
+	System.out.println();
+	System.out.println( arbol );
 
-    System.out.println();
-    System.out.println( arbol );
-
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
