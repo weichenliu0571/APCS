@@ -1,6 +1,12 @@
+// Team Yatlongstan (Yat Long Chan, Weichen Liu, Gabriel Thompson)
+// APCS
+// HW97 -- Prune Your Tree
+// 2022-05-11
+// time spent: 1.3hrs
+
 /**
  * class BST
- * v2:partial
+ * v1:partial
  * SKELETON
  * Implementation of the BINARY SEARCH TREE abstract data type (ADT)
  *
@@ -64,8 +70,11 @@ public class BST
   }//end insert()
 
 
+
+
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   //~~~~~~~~~~~~~v~~TRAVERSALS~~v~~~~~~~~~~~~~~~~~~~~~
+
   // each traversal should simply print to standard out
   // the nodes visited, in order
 
@@ -77,7 +86,7 @@ public class BST
   public void preOrderTrav( TreeNode currNode )
   {
     if ( currNode == null )
-      return;
+	    return;
     System.out.print( currNode.getValue() + " " );
     preOrderTrav( currNode.getLeft() );
     preOrderTrav( currNode.getRight() );
@@ -139,101 +148,187 @@ public class BST
     return retStr;
   }
 
+
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~~~v~~~COUNTERS~~v~~~~~~~~~~~~~~~~~~~~~
 
-  //~~~~~~~~~~~~~v~~MISC.HELPERS~~v~~~~~~~~~~~~~~~~~~~
-  public boolean isLeaf( TreeNode node )
-  {
-    return ( node.getLeft() == null
-             &&
-             node.getRight() == null );
-  }
-  //~~~~~~~~~~~~~^~~MISC.HELPERS~~^~~~~~~~~~~~~~~~~~~~
+    /*****************************************************
+     * TreeNode search(int)
+     * returns pointer to node containing target,
+     * or null if target not found
+     *****************************************************/
+    TreeNode search( int target )
+    {
+        return searchHelper(_root, target);
+    }
 
+    TreeNode searchHelper( TreeNode currNode, int target ) {
+	if (currNode == null) {
+		return null;
+	}
 
-  //overridden toString
-  public String toString()
-  {
-    return
-      " pre-order trav:" + preOrderTravStr( _root ) + '\n' +
-      "  in-order trav:" + inOrderTravStr( _root ) + '\n' +
-      "post-order trav:" + postOrderTravStr( _root ) + '\n' +
-      "         height: " + height() + '\n' +
-      "     num leaves: " + numLeaves() 
-      ;
-  }
-
-
-  /**
-   * TreeNode search(int)
-   * returns pointer to node containing target,
-   * or null if target not found
-   */
-  TreeNode search( int target )
-  {
-    return search( target, _root );
-  }
-  TreeNode search( int target, TreeNode currNode )
-  {
-    if ( currNode==null || currNode.getValue()==target )
-      return currNode;
-    else if ( target < currNode.getValue() )
-      return search( target, currNode.getLeft() );
-    else if ( target > currNode.getValue() )
-      return search( target, currNode.getRight() );
-    else
-      return null; //to get past compiler
-  }
+        if (currNode.getValue() < target) {
+		return searchHelper(currNode.getRight(), target);
+	} else if (currNode.getValue() > target) {
+		return searchHelper(currNode.getLeft(), target);
+	} else {
+		return currNode;
+	}
+   }
 
 
-  /**
-   * int height()
-   * returns height of this tree (length of longest leaf-to-root path)
-   * eg: a 1-node tree has height 0
-   */
-  public int height()
-  {
-    return height( _root );
-  }
-  //recursive helper for height()
-  public int height( TreeNode currNode )
-  {
-    if ( currNode==null ) //Q: Why cannot use .equals() ?
-      return 0;
-    if ( isLeaf(currNode) )
-      return 0;
-    else //height is 1 for this node + height of deepest subtree
-      return 1 + Math.max( height(currNode.getLeft()),
-                           height(currNode.getRight()) );
-  }
+    /*****************************************************
+     * int height()
+     * returns height of this tree (length of longest leaf-to-root path)
+     * eg: a 1-node tree has height 1
+     *****************************************************/
+    public int height()
+    {
+        return heightHelper(_root);
+    }
+
+    // recursive case:   (in the case where you're not at a null node) return max(height(left), height(right)) + 1
+    // base case:        (in the case where you ARE at a null node)    return 0
+    public int heightHelper(TreeNode currentNode) {
+	if (currentNode == null) {
+	    return 0;
+	} else {
+	    return Math.max(heightHelper(currentNode.getLeft()),
+                            heightHelper(currentNode.getRight())) + 1;
+	}
+    }
 
 
-  /**
-   * int numLeaves()
-   * returns number of leaves in tree
-   */
-  public int numLeaves()
-  {
-    return numLeaves( _root );
-  }
-  public int numLeaves( TreeNode currNode ) {
-    int foo = 0;
-    if ( currNode == null )
-      return 0;
-    foo += numLeaves( currNode.getLeft() );
-    if ( isLeaf(currNode) )
-      foo++;
-    foo += numLeaves( currNode.getRight() );
-    return foo;
-  }
+    /*****************************************************
+     * int numLeaves()
+     * returns number of leaves in tree
+     *****************************************************/
+    // recursive case: 
+    // base case: you're at a leaf (return 1)
+    public int numLeaves()
+    {
+	return numLeavesHelper( _root );
+    }
+
+    public int numLeavesHelper(TreeNode currentNode) {
+        if (currentNode == null)
+	    return 0;
+
+	if (currentNode.getLeft() == null && currentNode.getRight() == null) {
+	    return 1;
+	} else {
+	    return numLeavesHelper(currentNode.getLeft()) + numLeavesHelper(currentNode.getRight());
+	}
+    }
+
+    // ALGO:
+    //  1. Traverse the tree to find the node we're looking for. Make sure to store the parent node.
+    //  2. The case of a full node:
+    //    a. Take the rightmost node of the left subtree, and set the value of the target node to this newfound value
+    //  3. The case of a partially full node: (this is written in the code as two cases: only left connection and only right connection
+    //    a. If the current node is a root node
+    //      i. Set the root to the single connection of the child node
+    //    b. If the connection between the parent and target is right:
+    //      i. Set the right connection of the parent node to the single connection of the child node
+    //    c. If the connection between the parent and target is left:
+    //      i. Set the left connection of the parent node to the single connection of the child node
+    //  4. The case of a leaf node
+    //    a. If the current node is a root node
+    //      i. Set the root node to null
+    //    b. If the leaf node is to the left of the parent node
+    //      i. Set the left connection of the parent to null
+    //    c. If the leaf node is to the right of the parent node
+    //      i. Set the right connection of the parent to null
+    public void remove(int val) {
+        TreeNode parent = _root;
+	TreeNode child = _root;
+	boolean childIsToLeft = false;
+
+	while (child.getValue() != val) {
+	    parent = child;
+
+	    if (child.getValue() < val) {
+		child = child.getRight();
+		childIsToLeft = false;
+	    } else {
+		child = child.getLeft();
+		childIsToLeft = true;
+	    }
+	}
+
+	if (child.getLeft() != null && child.getRight() != null) {
+	   // child is a full node
+	    TreeNode largest = rightmostNodeFrom(child.getLeft());
+	    remove(largest.getValue());
+	    child.setValue(largest.getValue());
+	} else if (child.getLeft() == null && child.getRight() != null) {
+	    // child has no left node
+	    if (child == _root)
+		_root = child.getRight();
+	    else if (childIsToLeft)
+		parent.setLeft(child.getRight());
+	    else
+		parent.setRight(child.getRight());
+	} else if (child.getLeft() != null && child.getRight() == null) {
+	    // child has no right node
+            if (child == _root)
+		_root = child.getLeft();
+	    else if (childIsToLeft)
+                parent.setLeft(child.getLeft());
+            else
+                parent.setRight(child.getLeft());
+	} else {
+	    // child is a leaf node
+            if (child == _root)
+		_root = null;
+	    else if (childIsToLeft)
+		parent.setLeft(null);
+	    else
+		parent.setRight(null);
+	}
+    }
+
+    public TreeNode rightmostNodeFrom(TreeNode curr) {
+	while (curr.getRight() != null)
+	    curr = curr.getRight();
+	return curr;
+    }
+
+    //overridden toString
+    public String toString()
+    {
+        return
+          " pre-order trav:" + preOrderTravStr( _root ) + '\n' +
+          "  in-order trav:" + inOrderTravStr( _root ) + '\n' +
+          "post-order trav:" + postOrderTravStr( _root ) + '\n' +
+          "         height: " + height() + '\n' +
+          "     num leaves: " + numLeaves();
+    }
+
+// Traverse the tree to find the node we're looking for. Make sure to store the parent node.
+// The case of a full node:
+//   Take the rightmost node of the left subtree, and set the value of the target node to this newfound value
+// The case of a partially full node: (this is written in the code as two cases: only left connection and only right connection
+//   If the current node is a root node
+//      Set the root to the single connection of the child node
+//   If the connection between the parent and target is right:
+//      Set the right connection of the parent node to the single connection of the child node
+//   If the connection between the parent and target is left:
+//      Set the left connection of the parent node to the single connection of the child node
+// The case of a leaf node
+//   If the current node is a root node
+//     Set the root node to null
+//   If the leaf node is to the left of the parent node
+//     Set the left connection of the parent to null
+//   If the leaf node is to the right of the parent node
+//     Set the right connection of the parent to null
 
 
-
-
-  //main method for testing
-  public static void main( String[] args ) {
+    //main method for testing
+    public static void main( String[] args ) {
 
 	BST arbol = new BST();
 
@@ -271,8 +366,6 @@ public class BST
 
 	System.out.println();
 	System.out.println( arbol );
-    
-  /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
 
 	arbol.remove(6);
 	System.out.println();
@@ -301,10 +394,6 @@ public class BST
 	arbol.remove(0);
 	System.out.println();
 	System.out.println( arbol );
-
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
-  }
+    }
 
 }//end class
