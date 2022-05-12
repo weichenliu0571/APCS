@@ -1,3 +1,9 @@
+// Team Yatlongstan (Yat Long Chan, Weichen Liu, Gabriel Thompson)
+// APCS
+// HW97 -- Prune Your Tree
+// 2022-05-11
+// time spent: 1.3hrs
+
 /**
  * class TreeNode
  * SKELETON
@@ -87,6 +93,10 @@ public class TreeNode
   void setValue( int theNewValue ) 
   {
     _cargo = theNewValue;
+  }
+
+  public String toString() {
+    return "" + getValue();
   }
 
 }//end class
