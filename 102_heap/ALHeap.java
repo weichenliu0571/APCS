@@ -65,7 +65,7 @@ public class ALHeap
    */
   public void add( Integer addVal )
   {
-    _heap.add(_heap.getSize(), addVal); 
+    _heap.add(addVal); 
     while (addVal < ((_heap.get(addVal) - 1) / 2)) {
       swap(_heap.get(addVal), (_heap.get(addVal) - 1) / 2));
     }
@@ -78,11 +78,26 @@ public class ALHeap
    * Removes and returns least element in heap.
    * Postcondition: Tree maintains heap property.
    * ALGO:
-   * <your clear && concise procedure here>
+   * Replace the value of the first node with the last node. Remove the last node.  
    */
   public Integer removeMin()
   {
-  }//O(?)
+    if (_heap.size() == 0) {
+        return null;
+    }
+    
+    if (_heap.size() == 1) {
+        return _heap.remove(0);
+    }
+    
+    _rep = _heap.remove(_heap.size() - 1) 
+    _heap.set(0, _rep); 
+    Integer ret; 
+    
+    
+
+
+  }//O(log n)
 
 
   /**
@@ -93,6 +108,11 @@ public class ALHeap
    */
   private int minChildPos( int pos )
   {
+    
+      int left = 2 * pos + 1;
+      int right = 2 * pos + 2;
+    
+    
   }//O(?)
 
 
