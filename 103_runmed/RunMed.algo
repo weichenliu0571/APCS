@@ -1,0 +1,12 @@
+ALGO
+(Same as given)
+
+a. if next val < root of maxheap, add to maxheap
+   else add to minheap
+
+b. balance heaps (so that size difference < 2)
+   (remove from larger heap, add to smaller heap)
+
+c. at any time find med by:
+    a) heap sizes equal: med is mean of roots
+    b) heap sizes !equal: med is root of larger heap
