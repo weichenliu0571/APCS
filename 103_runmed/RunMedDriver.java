@@ -1,3 +1,26 @@
+// Yatlongstan (Yat Long Chan, Gabriel Thompson, Weichen Liu)
+// APCS
+// HW103 -- Erica's Friends, Hugo, and The One in the Middle
+// 2022-05-18
+// time spent: 0.8hrs
+
+/*
+DISCO
+- We throw NoSuchElementException() if there are no elements in either heaps 
+- bigVals corresponds to minHeap while lilVals corresponds to maxheap
+- We should use a while loop in balanced() to make sure that the heaps are balanced 
+
+
+QCC
+- Will we have to merge minHeaps and maxHeaps in the future?
+- What are some cases where you would need a running median? 
+- What other major types of heaps are there? 
+
+*/
+
+
+
+
 /**
    driver file for testing class RunMed
 
@@ -28,7 +51,7 @@ public class RunMedDriver
   public static void main( String[] args )
   {
 
-    // RunMed r = new RunMed();
+     RunMed r = new RunMed();
 
     int n;
     double median;
@@ -43,9 +66,9 @@ public class RunMedDriver
         count++;
         System.out.print("this many ints have been seen: " + count + "\n");
 
-        // r.add(n);
-        // median = r.getMedian();
-        // System.out.print("median is now " + median + "\n");
+        r.add(n);
+        median = r.getMedian();
+        System.out.print("median is now " + median + "\n");
       } catch (Exception e) {
         System.err.println("BOOP! probs w yer input:\n"+e);
       }

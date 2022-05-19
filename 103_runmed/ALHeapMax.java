@@ -1,3 +1,9 @@
+// Yatlongstan (Yat Long Chan, Gabriel Thompson, Weichen Liu)
+// APCS
+// HW103 -- Erica's Friends, Hugo, and The One in the Middle
+// 2022-05-18
+// time spent: 0.8hrs
+
 import java.util.ArrayList;
 
 public class ALHeapMax
