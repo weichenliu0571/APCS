@@ -1,0 +1,15 @@
+Yatlongstan (Yat Long Chan, Gabriel Thompson, Weichen Liu) 
+APCS 
+HW105 -- 'Tis Hard to Search for 'Processing'
+2022-05-23
+time spent: 0.5 hrs
+
+WHAT THIS DEMO SHOWS:
+
+* This pde file demos simple movement of an object controlled with key presses
+* Constantly refreshing background so that old objects are erased and so they appear at new location.
+* Can create window and processing app w/ little code unlike Swing set.
+
+WHY WE CARE:
+
+* A lot of our ideas involve moving objects and key presses so it would be nice to familiarize ourselves with how it works in Processing.
